@@ -3,5 +3,5 @@ export type RoutesParamList = {
   GameMode: undefined
   Team: undefined
   Achievement: undefined
-  Leaguae: undefined
+  League: undefined
 }
