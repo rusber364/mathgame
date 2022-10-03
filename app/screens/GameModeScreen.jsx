@@ -1,11 +1,10 @@
-import { View, Text } from 'react-native'
-import { Navigation } from '../components/Navigation'
+import { Text } from 'react-native'
+import { Paper } from '../layout/Paper'
 
-export function GameModeScreen({ navigation }) {
+export function GameModeScreen() {
   return (
-    <View>
-      <Navigation navigation={navigation} />
+    <Paper>
       <Text>GameModeScreen</Text>
-    </View>
+    </Paper>
   )
 }

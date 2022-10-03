@@ -1,5 +1,10 @@
-import { View } from 'react-native'
+import { Text } from 'react-native'
+import { Paper } from '../layout/Paper'
 
 export function AchievementScreen() {
-  return <View>AchievementScreen</View>
+  return (
+    <Paper>
+      <Text>AchievementScreen</Text>
+    </Paper>
+  )
 }

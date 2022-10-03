@@ -1,5 +1,10 @@
-import { View } from 'react-native'
+import { Text } from 'react-native'
+import { Paper } from '../layout/Paper'
 
 export function TeamScreen() {
-  return <View>TeamScreen</View>
+  return (
+    <Paper>
+      <Text>TeamScreen</Text>
+    </Paper>
+  )
 }
