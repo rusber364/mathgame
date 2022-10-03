@@ -1,11 +1,10 @@
-import { View, Text } from 'react-native'
 import { Navigation } from '../components/Navigation'
+import { Paper } from '../layout/Paper'
 
 export function HomeScreen({ navigation }) {
   return (
-    <View>
+    <Paper>
       <Navigation navigation={navigation} />
-      <Text>HomeSreen</Text>
-    </View>
+    </Paper>
   )
 }
