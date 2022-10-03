@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="GameMode">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="GameMode" component={GameModeScreen} />
         <Stack.Screen name="Team" component={TeamScreen} />
