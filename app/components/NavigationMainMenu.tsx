@@ -9,14 +9,14 @@ export function Navigation({ navigation }: Props) {
   const navigateToTeam = () => navigation.navigate('Team')
   const navigateToGameMode = () => navigation.navigate('GameMode')
   const navigateToAchievement = () => navigation.navigate('Achievement')
-  const navigateToLeaguae = () => navigation.navigate('Leaguae')
+  const navigateToLeague = () => navigation.navigate('League')
 
   return (
     <View style={style.nav}>
       <Button onPress={navigateToGameMode}>Game</Button>
       <Button onPress={navigateToTeam}>Team</Button>
       <Button onPress={navigateToAchievement}>Achievement</Button>
-      <Button onPress={navigateToLeaguae}>Leaguae</Button>
+      <Button onPress={navigateToLeague}>League</Button>
     </View>
   )
 }

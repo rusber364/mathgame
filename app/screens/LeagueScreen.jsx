@@ -1,10 +1,10 @@
 import { Text } from 'react-native'
 import { Paper } from '../layout/Paper'
 
-export function LeaguaeScreen() {
+export function LeagueScreen() {
   return (
     <Paper>
-      <Text>LeaguaeScreen</Text>
+      <Text>LeagueScreen</Text>
     </Paper>
   )
 }
