@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { StyleSheet, View, Text, Button } from 'react-native'
+
 export function Counter() {
   const [count, setCount] = useState(0)
 

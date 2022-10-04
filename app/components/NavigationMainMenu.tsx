@@ -1,11 +1,12 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import type { RoutesParamList } from '../types/RoutesParamList'
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import type { RoutesList } from '../types/RouteList'
 import { View, StyleSheet } from 'react-native'
 import { Button } from './common/Button'
+import { useNavigation } from '@react-navigation/native'
 
-type Props = NativeStackScreenProps<RoutesParamList>
+export function Navigation() {
+  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
-export function Navigation({ navigation }: Props) {
   const navigateToTeam = () => navigation.navigate('Team')
   const navigateToGameMode = () => navigation.navigate('GameMode')
   const navigateToAchievement = () => navigation.navigate('Achievement')
