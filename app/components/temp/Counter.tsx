@@ -17,11 +17,5 @@ export function Counter() {
 }
 
 const styles = StyleSheet.create({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%',
-  },
+  root: {},
 })

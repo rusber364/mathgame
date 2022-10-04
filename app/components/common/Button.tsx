@@ -1,16 +1,13 @@
-import { Text, StyleSheet, Pressable } from 'react-native'
-import { GestureResponderEvent } from 'react-native'
-import type { PropsWithChildren } from 'react'
+import { Text, StyleSheet, Pressable, PressableProps } from 'react-native'
+import { View } from 'react-native'
 
-type Props = PropsWithChildren & {
-  onPress?: (event: GestureResponderEvent) => void
-}
+type Props = PressableProps & React.RefAttributes<View> & React.PropsWithChildren
 
 export function Button(props: Props) {
-  const { children, onPress } = props
+  const { children, ...othersProps } = props
 
   return (
-    <Pressable style={style.button} onPress={onPress}>
+    <Pressable {...othersProps} style={style.button}>
       <Text style={style.text}>{children}</Text>
     </Pressable>
   )
