@@ -19,10 +19,14 @@ export function Navigator() {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="StoreMode" component={StoreModeScreen} />
-      <Stack.Screen name="SurvivalMode" component={SurvivalModeScreen} />
-      <Stack.Screen name="Knowledge" component={KnowledgeScreen} />
+
       <Stack.Screen name="GameMode" component={GameModeScreen} />
+      <Stack.Group>
+        <Stack.Screen name="StoreMode" component={StoreModeScreen} />
+        <Stack.Screen name="SurvivalMode" component={SurvivalModeScreen} />
+        <Stack.Screen name="Knowledge" component={KnowledgeScreen} />
+      </Stack.Group>
+
       <Stack.Screen name="Team" component={TeamScreen} />
       <Stack.Screen name="Achievement" component={AchievementScreen} />
       <Stack.Screen name="League" component={LeagueScreen} />
