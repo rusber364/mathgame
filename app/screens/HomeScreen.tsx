@@ -1,10 +1,10 @@
-import { Navigation } from '../components/NavigationMainMenu'
+import { NavigationMainMenu } from '../components/navigation/NavigationMainMenu'
 import { Paper } from '../layout/Paper'
 
 export function HomeScreen() {
   return (
     <Paper>
-      <Navigation />
+      <NavigationMainMenu />
     </Paper>
   )
 }
