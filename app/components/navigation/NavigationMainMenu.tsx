@@ -1,10 +1,10 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import type { RoutesList } from '../types/RouteList'
+import type { RoutesList } from '../../types/RouteList'
 import { View, StyleSheet } from 'react-native'
-import { Button } from './common/Button'
+import { Button } from '../common/Button'
 import { useNavigation } from '@react-navigation/native'
 
-export function Navigation() {
+export function NavigationMainMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
   const navigateToTeam = () => navigation.navigate('Team')

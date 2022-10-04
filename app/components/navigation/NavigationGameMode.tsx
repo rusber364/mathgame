@@ -2,8 +2,8 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-import type { RoutesList } from '../types/RouteList'
-import { Button } from './common/Button'
+import type { RoutesList } from '../../types/RouteList'
+import { Button } from '../common/Button'
 
 export function NavigationGameMode() {
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
