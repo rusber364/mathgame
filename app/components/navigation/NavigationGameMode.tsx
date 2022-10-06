@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 
 import type { RoutesList } from '../../types/RouteList'
 import { Button } from '../common/Button'
+import { Paper } from '../../layout/Paper'
 
 export function NavigationGameMode() {
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
