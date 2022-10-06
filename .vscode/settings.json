@@ -14,5 +14,6 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "npm.packageManager": "yarn",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "testing.automaticallyOpenPeekView": "never"
 }

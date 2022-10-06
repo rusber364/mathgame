@@ -10,7 +10,9 @@ import { StoreModeScreen } from './screens/ScreenInGameMode/StoreModeScreen'
 import { SurvivalModeScreen } from './screens/ScreenInGameMode/SurvivalModeScreen'
 import { KnowledgeScreen } from './screens/ScreenInGameMode/KnowledgeScreen'
 import { CheckScreen } from './screens/ScreenInGameMode/Check'
-
+import { AchievementsSingleScreen } from './screens/AchievementsScreen/AchievementsSingleScreen'
+import { AchievementsTeamScreen } from './screens/AchievementsScreen/AchievementsTeamScreen'
+import { BonusScreen } from './screens/AchievementsScreen/BonusScreen'
 import { Profile } from './components/Profile'
 import { OptionModal } from './components/OptionModal'
 
@@ -27,6 +29,12 @@ export function Navigator() {
         <Stack.Screen name="SurvivalMode" component={SurvivalModeScreen} />
         <Stack.Screen name="Knowledge" component={KnowledgeScreen} />
         <Stack.Screen name="Check" component={CheckScreen} />
+      </Stack.Group>
+
+      <Stack.Group>
+        <Stack.Screen name="SingleAchievements" component={AchievementsSingleScreen} />
+        <Stack.Screen name="TeamAchievements" component={AchievementsTeamScreen} />
+        <Stack.Screen name="Bonuses" component={BonusScreen} />
       </Stack.Group>
 
       <Stack.Screen name="Team" component={TeamScreen} />
