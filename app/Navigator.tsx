@@ -9,6 +9,7 @@ import { LeagueScreen } from './screens/LeagueScreen'
 import { StoreModeScreen } from './screens/ScreenInGameMode/StoreModeScreen'
 import { SurvivalModeScreen } from './screens/ScreenInGameMode/SurvivalModeScreen'
 import { KnowledgeScreen } from './screens/ScreenInGameMode/KnowledgeScreen'
+import { CheckScreen } from './screens/ScreenInGameMode/Check'
 
 import { Profile } from './components/Profile'
 import { OptionModal } from './components/OptionModal'
@@ -25,6 +26,7 @@ export function Navigator() {
         <Stack.Screen name="StoreMode" component={StoreModeScreen} />
         <Stack.Screen name="SurvivalMode" component={SurvivalModeScreen} />
         <Stack.Screen name="Knowledge" component={KnowledgeScreen} />
+        <Stack.Screen name="Check" component={CheckScreen} />
       </Stack.Group>
 
       <Stack.Screen name="Team" component={TeamScreen} />
