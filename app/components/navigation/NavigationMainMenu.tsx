@@ -3,8 +3,10 @@ import type { RoutesList } from '../../types/RouteList'
 import { View, StyleSheet } from 'react-native'
 import { Button } from '../common/Button'
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from 'react-i18next'
 
 export function NavigationMainMenu() {
+  const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
   const navigateToTeam = () => navigation.navigate('Team')
@@ -14,7 +16,7 @@ export function NavigationMainMenu() {
 
   return (
     <View style={style.nav}>
-      <Button onPress={navigateToGameMode}>Game</Button>
+      <Button onPress={navigateToGameMode}>{t('screens.main.game')}</Button>
       <Button onPress={navigateToTeam}>Team</Button>
       <Button onPress={navigateToAchievement}>Achievement</Button>
       <Button onPress={navigateToLeague}>League</Button>
