@@ -3,6 +3,7 @@ import { useFlipper } from '@react-navigation/devtools'
 
 import { Navigator } from './app/Navigator'
 import { TaskListProvider } from './app/context/useContextListTask'
+import './app/translation'
 
 export default function App() {
   const navigationRef = useNavigationContainerRef()
