@@ -7,6 +7,9 @@ declare module 'react-i18next' {
 
 declare module 'react-i18next' {
   interface CustomTypeOptions {
-    resources: typeof resources['en']
+    resources: {
+      en: typeof resources['en']
+      ru: typeof resources['ru']
+    }
   }
 }

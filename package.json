@@ -3,6 +3,7 @@
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
     "i18next": "^21.10.0",
+    "i18next-browser-languagedetector": "^6.1.8",
     "nanoid": "^4.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
