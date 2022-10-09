@@ -5,7 +5,9 @@ import { getRandomNumber } from '../utils/getRandomNumber'
 import { mixingArray } from '../utils/mixingArray'
 import { antiRandomDoubleAnswer } from './antiRandomDoubleAnswer'
 
-export const storeAnswers: Record<string, number> = {}
+const storeAnswers: Record<string, number> = {}
+
+export type TTask = ReturnType<typeof generationTask>
 
 export function generationTask() {
   const idTask = uuid.v4() as string
@@ -20,9 +22,9 @@ export function generationTask() {
   const operationToString = operation.join('')
 
   const result = +Number(eval(operationToString)).toPrecision(3)
-  const answers = mixingArray(antiRandomDoubleAnswer(result))
+  const answers = mixingArray(antiRandomDoubleAnswer(result, 8))
 
   storeAnswers[idTask] = result
 
-  return { id: idTask, answers, operandLeft, operandRight, operator }
+  return { id: idTask, answers, operandLeft, operandRight, operator, storeAnswers }
 }

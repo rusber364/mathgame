@@ -1,29 +1,35 @@
-import { View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { View, Text, StyleSheet } from 'react-native'
 
-import type { RoutesList } from '../../types/RouteList'
-import { useTaskListContext } from '../../context/useContextListTask'
 import { Task } from '../../components/Task'
 import { Paper } from '../../layout/Paper'
-import { Button } from '../../components/common/Button'
+import { useTaskStore } from '../../components/store/useTaskStore'
+
+function Timer() {
+  const { time } = useTaskStore()
+
+  return <Text style={style.text}>Time: {time < 100 ? 0 : time}</Text>
+}
 
 export function SurvivalModeScreen() {
-  const { tasks } = useTaskListContext()
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
-
-  const handleCheck = () => navigation.navigate('Check')
+  const { score } = useTaskStore()
 
   return (
-    <Paper>
-      <View>
-        <View>
-          {tasks.map((task) => (
-            <Task key={task.id} {...task}></Task>
-          ))}
-        </View>
-        <Button onPress={handleCheck}>Check</Button>
+    <>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={style.text}>Score: {score}</Text>
+        <Timer />
       </View>
-    </Paper>
+      <Paper>
+        <Task />
+      </Paper>
+    </>
   )
 }
+
+const style = StyleSheet.create({
+  text: {
+    borderWidth: 1,
+    fontSize: 20,
+    padding: 5,
+  },
+})

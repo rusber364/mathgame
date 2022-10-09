@@ -1,28 +1,41 @@
 import { Text, View, StyleSheet } from 'react-native'
-import { useTaskListContext } from '../context/useContextListTask'
+import { Paper } from '../layout/Paper'
+import { Button } from './common/Button'
+import { useTaskStore } from './store/useTaskStore'
 
-type Props = {
-  operandLeft: number
-  operandRight: number
-  operator: string
-  answers: number[]
-  id: string
-}
+export function Task() {
+  const { checkAnswer, currentTask, restartGame, startGame, pauseGame, isGameStarted, gameOver } = useTaskStore()
 
-export function Task(props: Props) {
-  const { answers, operandLeft, operator, operandRight, id } = props
-  const { checkedValues, setCheckedValues } = useTaskListContext()
+  const buttons = (
+    <View style={{ margin: 20 }}>
+      {gameOver ? (
+        <Button disabled onPress={restartGame}>
+          Game Over
+        </Button>
+      ) : (
+        <Button onPress={isGameStarted ? pauseGame : startGame}>{isGameStarted ? 'Pause Game' : 'Start Game'}</Button>
+      )}
+      <Button onPress={restartGame}>Reset Game</Button>
+    </View>
+  )
 
-  const handleSetAnswer = (variant: number) => () => {
-    if (Number.isFinite(variant)) {
-      setCheckedValues((state) => ({ ...state, [id]: variant }))
-    }
+  if (!isGameStarted) {
+    return (
+      <Paper>
+        <Text style={{ fontSize: 50 }}>{gameOver ? '😞' : '🙂'}</Text>
+        {buttons}
+      </Paper>
+    )
   }
+
+  const { answers, operandLeft, operator, operandRight } = currentTask
+
+  const handleSetAnswer = (variant: number) => () => checkAnswer(variant)
 
   return (
     <View>
       <Text style={style.operation}>
-        {operandLeft} {operator} {operandRight} = {checkedValues[id] ?? '?'}
+        {operandLeft} {operator} {operandRight} = ?
       </Text>
 
       <View style={style.answersContainer}>
@@ -32,23 +45,26 @@ export function Task(props: Props) {
           </Text>
         ))}
       </View>
+      {buttons}
     </View>
   )
 }
 
 const style = StyleSheet.create({
   operation: {
-    fontSize: 30,
+    fontSize: 60,
   },
   answersContainer: {
     flexDirection: 'row',
-    marginBottom: 8,
+    flexWrap: 'wrap',
   },
   answer: {
+    flexGrow: 1,
+    flexBasis: '25%',
     marginLeft: -1,
+    marginTop: -1,
     padding: 20,
     borderWidth: 1,
     borderStyle: 'dashed',
-    borderColor: 'black',
   },
 })

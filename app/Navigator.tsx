@@ -9,7 +9,6 @@ import { LeagueScreen } from './screens/main/LeagueScreen'
 import { StoreModeScreen } from './screens/game/StoreModeScreen'
 import { SurvivalModeScreen } from './screens/game/SurvivalModeScreen'
 import { KnowledgeScreen } from './screens/game/KnowledgeScreen'
-import { CheckScreen } from './screens/game/Check'
 import { AchievementsSingleScreen } from './screens/achievements/AchievementsSingleScreen'
 import { AchievementsTeamScreen } from './screens/achievements/AchievementsTeamScreen'
 import { BonusScreen } from './screens/achievements/BonusScreen'
@@ -32,7 +31,6 @@ export function Navigator() {
         <Stack.Screen name="StoreMode" component={StoreModeScreen} />
         <Stack.Screen name="SurvivalMode" component={SurvivalModeScreen} />
         <Stack.Screen name="Knowledge" component={KnowledgeScreen} />
-        <Stack.Screen name="Check" component={CheckScreen} />
       </Stack.Group>
 
       <Stack.Group>

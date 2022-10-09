@@ -2,7 +2,6 @@ import { NavigationContainer, useNavigationContainerRef } from '@react-navigatio
 import { useFlipper } from '@react-navigation/devtools'
 
 import { Navigator } from './app/Navigator'
-import { TaskListProvider } from './app/context/useContextListTask'
 import './app/translation'
 
 export default function App() {
@@ -11,10 +10,8 @@ export default function App() {
   useFlipper(navigationRef)
 
   return (
-    <TaskListProvider>
-      <NavigationContainer ref={navigationRef}>
-        <Navigator />
-      </NavigationContainer>
-    </TaskListProvider>
+    <NavigationContainer ref={navigationRef}>
+      <Navigator />
+    </NavigationContainer>
   )
 }
