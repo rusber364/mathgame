@@ -1,4 +1,4 @@
-import { resources, defaultNS } from './translation'
+import { resources } from './translation'
 
 declare module 'react-i18next' {
   type DefaultResources = typeof resources['en']
@@ -7,9 +7,6 @@ declare module 'react-i18next' {
 
 declare module 'react-i18next' {
   interface CustomTypeOptions {
-    resources: {
-      en: typeof resources['en']
-      ru: typeof resources['ru']
-    }
+    resources: typeof resources['en']
   }
 }
