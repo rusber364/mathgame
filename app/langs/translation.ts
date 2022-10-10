@@ -2,8 +2,8 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-import ru from './langs/ru.json'
-import en from './langs/en.json'
+import ru from './ru.json'
+import en from './en.json'
 
 export const resources = { en, ru }
 

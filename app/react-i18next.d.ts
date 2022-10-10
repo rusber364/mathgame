@@ -1,4 +1,4 @@
-import { resources } from './translation'
+import { resources } from './langs/translation'
 
 declare module 'react-i18next' {
   type DefaultResources = typeof resources['en']
