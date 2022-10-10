@@ -79,24 +79,17 @@ export const useTaskStore = create<TTask>()(
       const isValid = storeAnswers[id] === value
       const newTask = generationTask()
 
-      const resetStore = {
+      const reset = {
+        currentTask: newTask,
         time: defaultMilliseconds,
         finishTimeStamp: 0,
         pauseMilliseconds: 0,
       }
 
       if (isValid) {
-        set({
-          score: score + 1,
-          currentTask: newTask,
-          ...resetStore,
-        })
+        set({ ...reset, score: score + 1 })
       } else {
-        set({
-          score: score - 1,
-          currentTask: newTask,
-          ...resetStore,
-        })
+        set({ ...reset, score: score - 1 })
       }
     },
   }))
