@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "గేమ్ మోడ్",
+        "team": "జట్టు",
+        "league": "లీగ్",
+        "achievements": "విజయాలు"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "গেম মোড",
+        "team": "দল",
+        "league": "লীগ",
+        "achievements": "সাফল্যসমূহ"
+      }
+    }
+  }
+}

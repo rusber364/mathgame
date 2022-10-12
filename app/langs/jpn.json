@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ゲームモード",
+        "team": "チーム",
+        "league": "リーグ",
+        "achievements": "実績"
+      }
+    }
+  }
+}

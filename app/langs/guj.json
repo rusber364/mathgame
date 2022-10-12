@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ગેમ મોડ",
+        "team": "ટીમ",
+        "league": "લીગ",
+        "achievements": "સિદ્ધિઓ"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Chế độ trò chơi",
+        "team": "Đội",
+        "league": "League",
+        "achievements": "Thành tựu"
+      }
+    }
+  }
+}

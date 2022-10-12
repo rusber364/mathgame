@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Játék mód",
+        "team": "Csapat",
+        "league": " Liga",
+        "achievements": "Eredmények"
+      }
+    }
+  }
+}

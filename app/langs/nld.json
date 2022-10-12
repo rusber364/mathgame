@@ -2,12 +2,11 @@
   "translation": {
     "screens": {
       "main": {
-        "game": "Game",
+        "game": "Spelmodus",
         "team": "Team",
         "league": "League",
-        "achievements": "Achievements"
-      },
-      "league": {}
+        "achievements": "Prestaties"
+      }
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Game Mode",
+        "team": "Tim",
+        "league": "Liga",
+        "achievements": "Prestasi"
+      }
+    }
+  }
+}

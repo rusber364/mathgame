@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "खेल मोड",
+        "team": "टीम के",
+        "league": "लीग के",
+        "achievements": "उपलब्धियाँ"
+      }
+    }
+  }
+}

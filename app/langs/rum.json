@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "mod de joc",
+        "team": "Echipă",
+        "league": "Liga",
+        "achievements": "Realizări"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Modo juego",
+        "team": "Equipo",
+        "league": "Liga",
+        "achievements": "Logros"
+      }
+    }
+  }
+}

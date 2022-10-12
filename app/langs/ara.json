@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "وضع اللعبة",
+        "team": "فريق",
+        "league": "الدوري",
+        "achievements": "الإنجازات"
+      }
+    }
+  }
+}

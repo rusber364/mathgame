@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Рэжым гульні",
+        "team": "Каманда",
+        "league": "Ліга",
+        "achievements": "Дасягненні"
+      }
+    }
+  }
+}

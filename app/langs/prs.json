@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "حالت بازی",
+        "team": "تیم",
+        "league": "لیگ",
+        "achievements": "دستاوردها"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "游戏模式",
+        "team": "团队",
+        "league": "联赛",
+        "achievements": "成就"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Tryb gry",
+        "team": "Zespół",
+        "league": "Liga",
+        "achievements": "Osiągnięcia"
+      }
+    }
+  }
+}

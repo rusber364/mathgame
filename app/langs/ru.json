@@ -2,7 +2,10 @@
   "translation": {
     "screens": {
       "main": {
-        "game": "Игра"
+        "game": "Игра",
+        "team": "Команда",
+        "league": "Лига",
+        "achievements": "Вознаграждения"
       }
     }
   }

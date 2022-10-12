@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Mod Permainan",
+        "team": "Pasukan",
+        "league": "Liga",
+        "achievements": "Pencapaian"
+      }
+    }
+  }
+}

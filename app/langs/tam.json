@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "விளையாட்டு முறை",
+        "team": "அணி",
+        "league": "லீக்",
+        "achievements": "சாதனைகள்"
+      }
+    }
+  }
+}

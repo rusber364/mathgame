@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "게임 모드",
+        "team": "팀",
+        "league": "리그",
+        "achievements": "성과"
+      }
+    }
+  }
+}

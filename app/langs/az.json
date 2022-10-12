@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Oyun rejimi",
+        "team": "Komanda",
+        "league": "Liqa",
+        "achievements": "Nailiyyətlər"
+      }
+    }
+  }
+}

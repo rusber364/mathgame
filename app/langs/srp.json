@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Гаме Моде",
+        "team": "Теам",
+        "league": "Леагуе",
+        "achievements": "Ацхиевементс"
+      }
+    }
+  }
+}

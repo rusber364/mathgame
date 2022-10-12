@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "የጨዋታ ሁነታ",
+        "team": "ቡድን",
+        "league": "ሊግ",
+        "achievements": "ስኬቶች"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Modalità di gioco",
+        "team": "Squadra",
+        "league": "Lega",
+        "achievements": "Risultati"
+      }
+    }
+  }
+}

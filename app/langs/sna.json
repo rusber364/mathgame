@@ -2,12 +2,11 @@
   "translation": {
     "screens": {
       "main": {
-        "game": "Game",
+        "game": "Game Mode",
         "team": "Team",
-        "league": "League",
+        "league": "Ligi",
         "achievements": "Achievements"
-      },
-      "league": {}
+      }
     }
   }
 }

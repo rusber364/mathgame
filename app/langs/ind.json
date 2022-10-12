@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Mode Permainan",
+        "team": "Tim",
+        "league": "Liga",
+        "achievements": "Kemajuan"
+      }
+    }
+  }
+}

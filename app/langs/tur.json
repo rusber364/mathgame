@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Oyun Modu",
+        "team": "Takımı",
+        "league": " Lig",
+        "achievements": "Başarıları"
+      }
+    }
+  }
+}

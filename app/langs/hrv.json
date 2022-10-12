@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Način igre",
+        "team": "Tim",
+        "league": "Liga",
+        "achievements": "Postignuća"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Game Mode",
+        "team": "Team",
+        "league": "Liga",
+        "achievements": " Mga kalamposan"
+      }
+    }
+  }
+}
