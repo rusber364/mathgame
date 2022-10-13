@@ -6,7 +6,10 @@
         "team": "ቡድን",
         "league": "ሊግ",
         "achievements": "ስኬቶች"
-      }
+      },
+      "team": {},
+      "league": {},
+      "achievements": {}
     }
   }
 }
