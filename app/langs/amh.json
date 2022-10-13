@@ -8,8 +8,17 @@
         "achievements": "ስኬቶች"
       },
       "team": {},
-      "league": {},
-      "achievements": {}
+      "league": {
+        "singleTournament": "",
+        "teamTournament": "",
+        "topSinglePlayer": "",
+        "topTeam": ""
+      },
+      "achievements": {
+        "singleAchievements": "",
+        "teamAchievements": "",
+        "bonuses": ""
+      }
     }
   }
 }
