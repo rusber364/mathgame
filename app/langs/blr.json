@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Рэжым гульні",
+        "team": "Каманда",
+        "league": "Ліга",
+        "achievements": "Дасягненні"
+      },
+      "gameMode": {
+        "adventure": "Прыгоды",
+        "survivalMode": "Рэжым выжывання",
+        "knowledge": "веды"
+      },
+      "team": {
+        "nameOfTeam": "Назва каманды",
+        "rangOfTeamInGlobalRating": "Ранг каманды ў сусветным рэйтынгу",
+        "totalNumberOfPointsOfTheTeam": "Агульная колькасць балаў каманды",
+        "teamLeader ": "Кіраўнік каманды",
+        "member1": "член 1",
+        "member2": "член 2",
+        "member3": "член 3",
+        "member4": "член 4"
+      },
+      "league": {
+        "singleTournament": "Адзіночны турнір",
+        "teamTournament": "Камандны турнір",
+        "topSinglePlayer": "Лепшы адзіночны гулец",
+        "topTeam": "Лепшыя каманды"
+      },
+      "achievements": {
+        "singleAchievements": "Адзінкавыя дасягненні",
+        "teamAchievements": "Камандныя дасягненні",
+        "bonuses": "Бонусы"
+      }
+    }
+  }
+}

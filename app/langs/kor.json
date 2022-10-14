@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "게임 모드",
+        "team": "팀",
+        "league": "리그",
+        "achievements": "성과"
+      },
+      "gameMode": {
+        "adventure": "모험",
+        "survivalMode": "서바이벌 모드",
+        "knowledge": "지식"
+      },
+      "team": {
+        "nameOfTeam": "팀 이름",
+        "rangOfTeamInGlobalRating": "글로벌 팀 순위",
+        "totalNumberOfPointsOfTheTeam": "팀의 총 점수",
+        "teamLeader ": "팀장",
+        "member1": "멤버 1",
+        "member2": "멤버 2",
+        "member3": "멤버 3",
+        "member4": "멤버 4"
+      },
+      "league": {
+        "singleTournament": "싱글 토너먼트",
+        "teamTournament": "팀 토너먼트",
+        "topSinglePlayer": "탑 싱글 플레이어",
+        "topTeam": "상위 팀"
+      },
+      "achievements": {
+        "singleAchievements": "싱글 플레이어 업적",
+        "teamAchievements": "팀 업적",
+        "bonuses": "보너스"
+      }
+    }
+  }
+}

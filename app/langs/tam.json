@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "விளையாட்டு முறை",
+        "team": "அணி",
+        "league": "லீக்",
+        "achievements": "சாதனைகள்"
+      },
+      "gameMode": {
+        "adventure": "சாகசம்",
+        "survivalMode": "சர்வைவல் பயன்முறை",
+        "knowledge": "அறிவு"
+      },
+      "team": {
+        "nameOfTeam": "அணியின் பெயர்",
+        "rangOfTeamInGlobalRating": "உலகளாவிய மதிப்பீட்டில் குழு வரிசை",
+        "totalNumberOfPointsOfTheTeam": "அணியின் மொத்த புள்ளிகளின் எண்ணிக்கை",
+        "teamLeader ": "அணித் தலைவர்",
+        "member1": "உறுப்பினர் 1",
+        "member2": "உறுப்பினர் 2",
+        "member3": "உறுப்பினர் 3",
+        "member4": "உறுப்பினர் 4"
+      },
+      "league": {
+        "singleTournament": "ஒற்றையர் போட்டி",
+        "teamTournament": "குழு போட்டி",
+        "topSinglePlayer": "சிறந்த ஒற்றை வீரர்",
+        "topTeam": "சிறந்த அணிகள்"
+      },
+      "achievements": {
+        "singleAchievements": "ஒற்றை வெகுமதிகள்",
+        "teamAchievements": "குழு சாதனைகள்",
+        "bonuses": "போனஸ்"
+      }
+    }
+  }
+}

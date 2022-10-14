@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "وضع اللعبة",
+        "team": "فريق",
+        "league": "الدوري",
+        "achievements": "الإنجازات"
+      },
+      "gameMode": {
+        "adventure": "مغامرة",
+        "survivalMode": "وضع البقاء",
+        "knowledge": "معرفة"
+      },
+      "team": {
+        "nameOfTeam": "اسم الفريق",
+        "rangOfTeamInGlobalRating": "فريق في الترتيب العالمي",
+        "totalNumberOfPointsOfTheTeam": "إجمالي عدد نقاط الفريق",
+        "teamLeader": "قائد الفريق",
+        "member1": "العضو",
+        "member2": "العضو",
+        "member3": "العضو",
+        "member4": "العضو"
+      },
+      "league": {
+        "singleTournament": "بطولة الفردي",
+        "teamTournament": "بطولة الفريق",
+        "topSinglePlayer": "أفضل لاعب واحد",
+        "topTeam": "أفضل فريق"
+      },
+      "achievements": {
+        "singleAchievements": " إنجازات واحدة",
+        "teamAchievements": " إنجازات الفريق",
+        "bonuses": "الجوائز"
+      }
+    }
+  }
+}

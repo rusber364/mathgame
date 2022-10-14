@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "گیم موڈ",
+        "team": "ٹیم",
+        "league": "۔لیگ",
+        "achievements": "کامیابیاں"
+      },
+      "gameMode": {
+        "adventure": "مہم جوئی",
+        "survivalMode": "بقا کا موڈ",
+        "knowledge": "علم"
+      },
+      "team": {
+        "nameOfTeam": " ٹیم کا نام",
+        "rangOfTeamInGlobalRating": "عالمی درجہ بندی میں ٹیم",
+        "totalNumberOfPointsOfTheTeam": " ٹیم کے پوائنٹس کی کل تعداد",
+        "teamLeader ": "۔ٹیم لیڈر",
+        "member1": "رکن",
+        "member2": "رکن",
+        "member3": "رکن",
+        "member4": "رکن"
+      },
+      "league": {
+        "singleTournament": "سنگل ٹورنامنٹ",
+        "teamTournament": " ٹیم ٹورنامنٹ",
+        "topSinglePlayer": "ٹاپ سنگل پلیئر",
+        "topTeam": "ٹاپ ٹیمیں۔"
+      },
+      "achievements": {
+        "singleAchievements": "واحد کامیابیاں",
+        "teamAchievements": "ٹیم کی کامیابیاں",
+        "bonuses": "بونس"
+      }
+    }
+  }
+}

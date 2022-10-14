@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Гаме Моде",
+        "team": "Теам",
+        "league": "Леагуе",
+        "achievements": "Ацхиевементс"
+      },
+      "gameMode": {
+        "adventure": "Авантура",
+        "survivalMode": "Режим преживљавања",
+        "knowledge": "Знање"
+      },
+      "team": {
+        "nameOfTeam": "Име тима",
+        "rangOfTeamInGlobalRating": "Ранг тима у глобалном рејтингу",
+        "totalNumberOfPointsOfTheTeam": "Укупан број поена тима",
+        "teamLeader ": "Вођа тима",
+        "member1": "члан 1",
+        "member2": "члан 2",
+        "member3": "члан 3",
+        "member4": "члан 4"
+      },
+      "league": {
+        "singleTournament": "Сингле Тоурнамент",
+        "teamTournament": "Тимски турнир",
+        "topSinglePlayer": "Најбољи појединачни играч",
+        "topTeam": "Најбољи тимови"
+      },
+      "achievements": {
+        "singleAchievements": "Појединачна достигнућа",
+        "teamAchievements": "Тимска достигнућа",
+        "bonuses": "Бонуси"
+      }
+    }
+  }
+}

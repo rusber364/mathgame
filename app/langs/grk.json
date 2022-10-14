@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Λειτουργία παιχνιδιού",
+        "team": "Ομάδα",
+        "league": "Πρωτάθλημα",
+        "achievements": "Επιτεύγματα"
+      },
+      "gameMode": {
+        "adventure": "Περιπέτεια",
+        "survivalMode": "Λειτουργία επιβίωσης",
+        "knowledge": "Η γνώση"
+      },
+      "team": {
+        "nameOfTeam": "Όνομα Ομάδας",
+        "rangOfTeamInGlobalRating": "Rang της ομάδας στην παγκόσμια βαθμολογία",
+        "totalNumberOfPointsOfTheTeam": "Συνολικός αριθμός πόντων της ομάδας",
+        "teamLeader ": "Αρχηγός ομάδας",
+        "member1": "μέλος 1",
+        "member2": "μέλος 2",
+        "member3": "μέλος 3",
+        "member4": "μέλος 4"
+      },
+      "league": {
+        "singleTournament": "Μονό Τουρνουά",
+        "teamTournament": "Ομαδικό Τουρνουά",
+        "topSinglePlayer": "Κορυφαίος απλός παίκτης",
+        "topTeam": "Κορυφαίες ομάδες"
+      },
+      "achievements": {
+        "singleAchievements": "Μεμονωμένα επιτεύγματα",
+        "teamAchievements": "Επιτεύγματα ομάδας",
+        "bonuses": " Μπόνους"
+      }
+    }
+  }
+}

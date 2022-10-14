@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "গেম মোড",
+        "team": "দল",
+        "league": "লীগ",
+        "achievements": " অর্জন"
+      },
+      "gameMode": {
+        "adventure": "অ্যাডভেঞ্চার",
+        "survivalMode": "সারভাইভাল মোড",
+        "knowledge": "জ্ঞান"
+      },
+      "team": {
+        "nameOfTeam": "দলের নাম",
+        "rangOfTeamInGlobalRating": "গ্লোবাল রেটিংয়ে টিমের স্থান",
+        "totalNumberOfPointsOfTheTeam": "দলের মোট পয়েন্ট",
+        "teamLeader ": "দলনেতা",
+        "member1": "সদস্য ১",
+        "member2": "সদস্য 2",
+        "member3": "সদস্য ৩",
+        "member4": "সদস্য 4"
+      },
+      "league": {
+        "singleTournament": "একক টুর্নামেন্ট",
+        "teamTournament": "দলের টুর্নামেন্ট",
+        "topSinglePlayer": "শীর্ষ একক খেলোয়াড়",
+        "topTeam": "শীর্ষ দল"
+      },
+      "achievements": {
+        "singleAchievements": "একমাত্র অর্জন",
+        "teamAchievements": "টিম অ্যাচিভমেন্ট",
+        "bonuses": "বোনাস"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ਗੇਮ ਮੋਡ",
+        "team": "ਟੀਮ",
+        "league": "ਲੀਗ",
+        "achievements": "ਪ੍ਰਾਪਤੀਆਂ"
+      },
+      "gameMode": {
+        "adventure": "ਸਾਹਸ",
+        "survivalMode": "ਸਰਵਾਈਵਲ ਮੋਡ",
+        "knowledge": "ਗਿਆਨ"
+      },
+      "team": {
+        "nameOfTeam": "ਟੀਮ ਦਾ ਨਾਮ",
+        "rangOfTeamInGlobalRating": "ਗਲੋਬਲ ਰੈਂਕਿੰਗ ਵਿੱਚ ਟੀਮ",
+        "totalNumberOfPointsOfTheTeam": "ਟੀਮ ਦੇ ਕੁੱਲ ਅੰਕ",
+        "teamLeader ": "ਟੀਮ ਲੀਡਰ",
+        "member1": "ਮੈਂਬਰ 1",
+        "member2": "ਮੈਂਬਰ 2",
+        "member3": "ਮੈਂਬਰ 3",
+        "member4": "ਮੈਂਬਰ 4"
+      },
+      "league": {
+        "singleTournament": "ਸਿੰਗਲ ਟੂਰਨਾਮੈਂਟ",
+        "teamTournament": "ਟੀਮ ਟੂਰਨਾਮੈਂਟ",
+        "topSinglePlayer": "ਚੋਟੀ ਦਾ ਸਿੰਗਲ ਪਲੇਅਰ",
+        "topTeam": "ਚੋਟੀ ਦੀਆਂ ਟੀਮਾਂ"
+      },
+      "achievements": {
+        "singleAchievements": "ਸਿੰਗਲ ਪ੍ਰਾਪਤੀਆਂ",
+        "teamAchievements": "ਟੀਮ ਦੀਆਂ ਪ੍ਰਾਪਤੀਆਂ",
+        "bonuses": "ਬੋਨਸ"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "游戏模式",
+        "team": "团队",
+        "league": "联赛",
+        "achievements": "成就"
+      },
+      "gameMode": {
+        "adventure": "冒险",
+        "survivalMode": "生存模式",
+        "knowledge": "知识"
+      },
+      "team": {
+        "nameOfTeam": "团队名称",
+        "rangOfTeamInGlobalRating": "全球排名团队",
+        "totalNumberOfPointsOfTheTeam": "球队总积分",
+        "teamLeader ": "团队负责人",
+        "member1": "成员 1",
+        "member2": "成员 2",
+        "member3": "成员 3",
+        "member4": "成员 4"
+      },
+      "league": {
+        "singleTournament": "一名球员的比赛",
+        "teamTournament": " 团体赛",
+        "topSinglePlayer": "最佳单人选手",
+        "topTeam": "顶级球队"
+      },
+      "achievements": {
+        "singleAchievements": "单项成就",
+        "teamAchievements": "团队成绩",
+        "bonuses": "奖金"
+      }
+    }
+  }
+}

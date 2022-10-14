@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Mode Game",
+        "team": "Tim",
+        "league": "Liga",
+        "achievements": "Remunerasi"
+      },
+      "gameMode": {
+        "adventure": "Petualangan",
+        "survivalMode": "Mode urip",
+        "knowledge": "Kawruh"
+      },
+      "team": {
+        "nameOfTeam": "Jieneng Tim",
+        "rangOfTeamInGlobalRating": "Rang saka tim ing rating global",
+        "totalNumberOfPointsOfTheTeam": "Jumlah total poin saka tim",
+        "teamLeader ": "Pimpinan tim",
+        "member1": "anggota 1",
+        "member2": "anggota 2",
+        "member3": "anggota 3",
+        "member4": "anggota 4"
+      },
+      "league": {
+        "singleTournament": "Turnamen Tunggal",
+        "teamTournament": "Turnamen tim",
+        "topSinglePlayer": "Top Single pamuter",
+        "topTeam": "Tim paling dhuwur"
+      },
+      "achievements": {
+        "singleAchievements": "Prestasi tunggal",
+        "teamAchievements": "Prestasi tim",
+        "bonuses": "Bonus"
+      }
+    }
+  }
+}

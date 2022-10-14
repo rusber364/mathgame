@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ක්‍රීඩා ප්‍රකාරය",
+        "team": "කණ්ඩායම",
+        "league": "ලීගය",
+        "achievements": " ජයග්රහණ"
+      },
+      "gameMode": {
+        "adventure": "වික්රමය",
+        "survivalMode": "පැවැත්ම මාදිලිය",
+        "knowledge": "දැනුම"
+      },
+      "team": {
+        "nameOfTeam": "කණ්ඩායමේ නම",
+        "rangOfTeamInGlobalRating": "ගෝලීය ශ්‍රේණිගත කිරීම්වල කණ්ඩායම් පරාසය",
+        "totalNumberOfPointsOfTheTeam": "කණ්ඩායමේ මුළු ලකුණු ගණන",
+        "teamLeader ": "කණ්ඩායම් නායකයා",
+        "member1": "සාමාජික 1",
+        "member2": "සාමාජික 2",
+        "member3": "සාමාජික 3",
+        "member4": "සාමාජික 4"
+      },
+      "league": {
+        "singleTournament": "තනි තරඟාවලිය",
+        "teamTournament": "කණ්ඩායම් තරඟාවලිය",
+        "topSinglePlayer": "ඉහළම තනි ක්‍රීඩකයා",
+        "topTeam": "ඉහළම කණ්ඩායම්"
+      },
+      "achievements": {
+        "singleAchievements": "තනි ජයග්රහණ",
+        "teamAchievements": "කණ්ඩායම් ජයග්රහණ",
+        "bonuses": "බෝනස්"
+      }
+    }
+  }
+}

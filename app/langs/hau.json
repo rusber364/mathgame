@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Yanayin Wasa",
+        "team": "Tawagar",
+        "league": "League",
+        "achievements": "Nasara"
+      },
+      "gameMode": {
+        "adventure": "Wasan kasada",
+        "survivalMode": "Yanayin tsira",
+        "knowledge": "Ilimi"
+      },
+      "team": {
+        "nameOfTeam": "Sunan Tawagar",
+        "rangOfTeamInGlobalRating": "Rang na tawagar a duniya rating",
+        "totalNumberOfPointsOfTheTeam": "Jimlar yawan maki na ƙungiyar",
+        "teamLeader ": "Shugaban kungiya",
+        "member1": "memba 1",
+        "member2": "memba 2",
+        "member3": "memba 3",
+        "member4": "memba 4"
+      },
+      "league": {
+        "singleTournament": "Gasar don dan wasa daya",
+        "teamTournament": "Gasar Ƙungiya",
+        "topSinglePlayer": "Babban Dan wasa Single",
+        "topTeam": "Manyan Ƙungiyoyi"
+      },
+      "achievements": {
+        "singleAchievements": "Nasarorin guda ɗaya",
+        "teamAchievements": "Nasarar ƙungiyar",
+        "bonuses": "Kari"
+      }
+    }
+  }
+}

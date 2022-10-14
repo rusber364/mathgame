@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ଗେମ୍ ମୋଡ୍",
+        "team": "ଦଳ",
+        "league": "ଲିଗ୍",
+        "achievements": "ସଫଳତା"
+      },
+      "gameMode": {
+        "adventure": "ଦୁ venture ସାହସିକ କାର୍ଯ୍ୟ",
+        "survivalMode": "ସୁରଭିଭାଲ୍ ମୋଡ୍",
+        "knowledge": "ଜ୍ଞାନ"
+      },
+      "team": {
+        "nameOfTeam": "ଦଳର ନାମ",
+        "rangOfTeamInGlobalRating": "Команды в мировом рейтинге",
+        "totalNumberOfPointsOfTheTeam": "ଦଳର ମୋଟ ପଏଣ୍ଟ ସଂଖ୍ୟା ",
+        "teamLeader ": "ଟିମ୍ ନେତା",
+        "member1": "ସଦସ୍ୟ 1",
+        "member2": "ସଦସ୍ୟ 2",
+        "member3": "ସଦସ୍ୟ 3",
+        "member4": "ସଦସ୍ୟ 4"
+      },
+      "league": {
+        "singleTournament": "ଏକକ ଟୁର୍ନାମେଣ୍ଟ",
+        "teamTournament": "ଦଳ ଟୁର୍ନାମେଣ୍ଟ",
+        "topSinglePlayer": "ଟପ୍ ସିଙ୍ଗଲ୍ ପ୍ଲେୟାର୍",
+        "topTeam": "ଶ୍ରେଷ୍ଠ ଦଳ "
+      },
+      "achievements": {
+        "singleAchievements": "ଏକକ ସଫଳତା",
+        "teamAchievements": "ଦଳ ସଫଳତା",
+        "bonuses": "ବୋନସ୍"
+      }
+    }
+  }
+}

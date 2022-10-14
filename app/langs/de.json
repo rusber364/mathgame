@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Spiel Modus",
+        "team": "Mannschaft",
+        "league": "Liga",
+        "achievements": "Erfolge"
+      },
+      "gameMode": {
+        "adventure": "Abenteuer",
+        "survivalMode": "Überlebensmodus",
+        "knowledge": "Wissen"
+      },
+      "team": {
+        "nameOfTeam": "Name des Teams",
+        "rangOfTeamInGlobalRating": "Rang des Teams in der globalen Wertung",
+        "totalNumberOfPointsOfTheTeam": "Gesamtpunktzahl des Teams",
+        "teamLeader ": "Teamleiter",
+        "member1": "Mitglied 1",
+        "member2": "Mitglied 2",
+        "member3": "Mitglied 3",
+        "member4": "Mitglied 4"
+      },
+      "league": {
+        "singleTournament": "Einzel Turnier",
+        "teamTournament": "Mannschaftsturnier",
+        "topSinglePlayer": "Top Einzelspieler",
+        "topTeam": "Top-Teams"
+      },
+      "achievements": {
+        "singleAchievements": "Einzelne Erfolge",
+        "teamAchievements": "Team Erfolge",
+        "bonuses": "Boni"
+      }
+    }
+  }
+}

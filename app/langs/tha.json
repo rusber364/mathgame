@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "โหมดเกม",
+        "team": "ทีม",
+        "league": "ลีก",
+        "achievements": "ความสำเร็จ"
+      },
+      "gameMode": {
+        "adventure": "การผจญภัย",
+        "survivalMode": "โหมดเอาตัวรอด",
+        "knowledge": "ความรู้"
+      },
+      "team": {
+        "nameOfTeam": "ชื่อทีม",
+        "rangOfTeamInGlobalRating": "ทีมอันดับโลก",
+        "totalNumberOfPointsOfTheTeam": "จำนวนแต้มรวมของทีม",
+        "teamLeader ": "หัวหน้าทีม",
+        "member1": "สมาชิก 1",
+        "member2": "สมาชิก 2",
+        "member3": "สมาชิก 3",
+        "member4": "สมาชิก 4"
+      },
+      "league": {
+        "singleTournament": "แชมป์เพื่อหนึ่ง",
+        "teamTournament": "การแข่งขันแบบทีม",
+        "topSinglePlayer": "ผู้เล่นคนเดียวที่ดีที่สุด",
+        "topTeam": "ทีมชั้นนำ"
+      },
+      "achievements": {
+        "singleAchievements": "ความสำเร็จเดียว",
+        "teamAchievements": "ความสำเร็จของทีม",
+        "bonuses": " โบนัส"
+      }
+    }
+  }
+}

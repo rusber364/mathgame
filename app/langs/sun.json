@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Game Mode",
+        "team": "Tim",
+        "league": "Liga",
+        "achievements": "Prestasi"
+      },
+      "gameMode": {
+        "adventure": "Pangumbaraan",
+        "survivalMode": "Modeu salamet",
+        "knowledge": "Pangaweruh"
+      },
+      "team": {
+        "nameOfTeam": "Ngaran Tim",
+        "rangOfTeamInGlobalRating": "Rang of tim dina rating global",
+        "totalNumberOfPointsOfTheTeam": "Jumlah total titik tim",
+        "teamLeader ": "Pamimpin tim",
+        "member1": " anggota 1",
+        "member2": " anggota 2",
+        "member3": " anggota 3",
+        "member4": " anggota 4"
+      },
+      "league": {
+        "singleTournament": "Pasanggiri Tunggal",
+        "teamTournament": "Turnamén Tim",
+        "topSinglePlayer": "Top pamuter Single",
+        "topTeam": "Tim luhur"
+      },
+      "achievements": {
+        "singleAchievements": "Prestasi tunggal",
+        "teamAchievements": "Prestasi Tim",
+        "bonuses": " bonus"
+      }
+    }
+  }
+}

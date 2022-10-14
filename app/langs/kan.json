@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ಆಟದ ಮೋಡ್",
+        "team": "ತಂಡ",
+        "league": "ಲೀಗ್",
+        "achievements": "ಸಾಧನೆಗಳು"
+      },
+      "gameMode": {
+        "adventure": "ಸಾಹಸ",
+        "survivalMode": "ಸರ್ವೈವಲ್ ಮೋಡ್",
+        "knowledge": "ಜ್ಞಾನ"
+      },
+      "team": {
+        "nameOfTeam": "ತಂಡದ ಹೆಸರು",
+        "rangOfTeamInGlobalRating": "ಜಾಗತಿಕ ರೇಟಿಂಗ್‌ನಲ್ಲಿ ತಂಡದ ಶ್ರೇಣಿ",
+        "totalNumberOfPointsOfTheTeam": "ತಂಡದ ಒಟ್ಟು ಅಂಕಗಳ ಸಂಖ್ಯೆ",
+        "teamLeader ": "ತಂಡದ ನಾಯಕ",
+        "member1": "ಸದಸ್ಯ 1",
+        "member2": "ಸದಸ್ಯ 2",
+        "member3": "ಸದಸ್ಯ 3",
+        "member4": "ಸದಸ್ಯ 4"
+      },
+      "league": {
+        "singleTournament": "ಏಕ ಟೂರ್ನಮೆಂಟ್",
+        "teamTournament": "ತಂಡದ ಪಂದ್ಯಾವಳಿ",
+        "topSinglePlayer": "ಟಾಪ್ ಸಿಂಗಲ್ ಪ್ಲೇಯರ್",
+        "topTeam": "ಅಗ್ರ ತಂಡಗಳು"
+      },
+      "achievements": {
+        "singleAchievements": "ಏಕ ಸಾಧನೆಗಳು",
+        "teamAchievements": "ತಂಡದ ಸಾಧನೆಗಳು",
+        "bonuses": "ಬೋನಸ್ಗಳು"
+      }
+    }
+  }
+}
