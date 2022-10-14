@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Haala Tapha",
+        "team": "Garee",
+        "league": "Liigii",
+        "achievements": "Bu'aa ba'ii"
+      },
+      "gameMode": {
+        "adventure": "Sodaachisaa",
+        "survivalMode": "Haala lubbuun jiraachuu",
+        "knowledge": "Beekumsa"
+      },
+      "team": {
+        "nameOfTeam": "Maqaa Garee",
+        "rangOfTeamInGlobalRating": "Rang of team sadarkaa addunyaa irratti",
+        "totalNumberOfPointsOfTheTeam": "Waliigala qabxii garee kanaa",
+        "teamLeader ": "Hogganaa garee",
+        "member1": "miseensa 1",
+        "member2": "miseensa 2",
+        "member3": "miseensa 3",
+        "member4": "miseensa 4"
+      },
+      "league": {
+        "singleTournament": "Dorgommii Taphattoota Tokko",
+        "teamTournament": "Dorgommii Garee",
+        "topSinglePlayer": "Top Taphataan Tokkicha",
+        "topTeam": "Garee Olaanoo"
+      },
+      "achievements": {
+        "singleAchievements": "Bu’aa ba’ii tokkicha",
+        "teamAchievements": "Bu’aa garee",
+        "bonuses": "Bonus"
+      }
+    }
+  }
+}

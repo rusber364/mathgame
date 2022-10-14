@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Spelmodus",
+        "team": "Team",
+        "league": "League",
+        "achievements": "Prestaties"
+      },
+      "gameMode": {
+        "adventure": "Avontuur",
+        "survivalMode": "Overlevingsmodus",
+        "knowledge": "Kennis"
+      },
+      "team": {
+        "nameOfTeam": "Naam van team",
+        "rangOfTeamInGlobalRating": "Team op de wereldranglijst",
+        "totalNumberOfPointsOfTheTeam": "Totaal aantal punten van het team",
+        "teamLeader ": "Teamleider",
+        "member1": "lid 1",
+        "member2": "lid 2",
+        "member3": "lid 3",
+        "member4": "lid 4"
+      },
+      "league": {
+        "singleTournament": "Enkel Toernooi",
+        "teamTournament": "Team Toernooi",
+        "topSinglePlayer": "Top Singleplayer",
+        "topTeam": "Topteams"
+      },
+      "achievements": {
+        "singleAchievements": "Enkele prestaties",
+        "teamAchievements": "Teamprestaties",
+        "bonuses": "Bonussen"
+      }
+    }
+  }
+}

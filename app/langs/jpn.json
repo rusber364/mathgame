@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ゲームモード",
+        "team": "チーム",
+        "league": "リーグ",
+        "achievements": "実績"
+      },
+      "gameMode": {
+        "adventure": "冒険",
+        "survivalMode": "サバイバルモード",
+        "knowledge": "知識"
+      },
+      "team": {
+        "nameOfTeam": "チーム名",
+        "rangOfTeamInGlobalRating": "グローバル評価のチームの範囲",
+        "totalNumberOfPointsOfTheTeam": "チームの合計ポイント数",
+        "teamLeader ": "チームリーダー",
+        "member1": "メンバー1",
+        "member2": "メンバー2",
+        "member3": "メンバー3",
+        "member4": "メンバー4"
+      },
+      "league": {
+        "singleTournament": "シングルトーナメント",
+        "teamTournament": " チームトーナメント",
+        "topSinglePlayer": "トップシングルプレイヤー",
+        "topTeam": "トップチーム"
+      },
+      "achievements": {
+        "singleAchievements": "シングルプレイヤーの実績",
+        "teamAchievements": "チームの成果",
+        "bonuses": "ボーナス"
+      }
+    }
+  }
+}

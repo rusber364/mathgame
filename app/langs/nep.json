@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "खेल मोड",
+        "team": " टोली",
+        "league": "लीग",
+        "achievements": "उपलब्धिहरू"
+      },
+      "gameMode": {
+        "adventure": "साहसिक",
+        "survivalMode": "सर्भाइभल मोड",
+        "knowledge": "ज्ञान"
+      },
+      "team": {
+        "nameOfTeam": "टोलीको नाम",
+        "rangOfTeamInGlobalRating": "ग्लोबल रेटिङमा टोलीको दायरा",
+        "totalNumberOfPointsOfTheTeam": "टोलीको कुल अंक संख्या",
+        "teamLeader ": "टोली नेता",
+        "member1": "सदस्य १",
+        "member2": "सदस्य २",
+        "member3": "सदस्य ३",
+        "member4": "सदस्य ४"
+      },
+      "league": {
+        "singleTournament": "एकल प्रतियोगिता",
+        "teamTournament": "टोली टूर्नामेंट",
+        "topSinglePlayer": "शीर्ष एकल खेलाडी",
+        "topTeam": "शीर्ष टोलीहरू"
+      },
+      "achievements": {
+        "singleAchievements": "एकल उपलब्धिहरू",
+        "teamAchievements": "टोली उपलब्धिहरू",
+        "bonuses": "बोनसहरू"
+      }
+    }
+  }
+}

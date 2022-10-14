@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ગેમ મોડ",
+        "team": "ટીમ",
+        "league": "લીગ",
+        "achievements": "સિદ્ધિઓ"
+      },
+      "gameMode": {
+        "adventure": "સાહસ",
+        "survivalMode": "સર્વાઇવલ મોડ",
+        "knowledge": "જ્ઞાન"
+      },
+      "team": {
+        "nameOfTeam": "ટીમનું નામ",
+        "rangOfTeamInGlobalRating": "વિશ્વ રેન્કિંગમાં ટીમ",
+        "totalNumberOfPointsOfTheTeam": "ટીમના કુલ પોઈન્ટની સંખ્યા",
+        "teamLeader ": "ટીમ લીડર",
+        "member1": "સભ્ય 1",
+        "member2": "સભ્ય 2",
+        "member3": "સભ્ય 3",
+        "member4": "સભ્ય 4"
+      },
+      "league": {
+        "singleTournament": "સિંગલ ટુર્નામેન્ટ",
+        "teamTournament": "ટીમ ટુર્નામેન્ટ",
+        "topSinglePlayer": "ટોચના સિંગલ ખેલાડી",
+        "topTeam": "ટોચની ટીમો"
+      },
+      "achievements": {
+        "singleAchievements": "સિંગલ પ્લેયરની સિદ્ધિઓ",
+        "teamAchievements": "ટીમ સિદ્ધિઓ",
+        "bonuses": "બોનસ"
+      }
+    }
+  }
+}

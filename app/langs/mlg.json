@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Lalao Mode",
+        "team": "Ekipa",
+        "league": "Ligy",
+        "achievements": "Zava-bita"
+      },
+      "gameMode": {
+        "adventure": "Orinasa",
+        "survivalMode": "lalao velona",
+        "knowledge": "FAHALALANA"
+      },
+      "team": {
+        "nameOfTeam": "Anaran'ny Ekipa",
+        "rangOfTeamInGlobalRating": "Rang ny ekipa amin'ny naoty manerantany",
+        "totalNumberOfPointsOfTheTeam": "Isan'ny isa totalin'ny ekipa",
+        "teamLeader ": "Mpitarika ny ekipa",
+        "member1": "mpikambana 1",
+        "member2": "mpikambana 2",
+        "member3": "mpikambana 3",
+        "member4": "mpikambana 4"
+      },
+      "league": {
+        "singleTournament": "Fifaninanana tokana",
+        "teamTournament": "Fifaninanana ekipa",
+        "topSinglePlayer": "Top Single mpilalao",
+        "topTeam": "Ekipa tsara indrindra"
+      },
+      "achievements": {
+        "singleAchievements": "Zava-bita tokana",
+        "teamAchievements": "Ny zava-bitan'ny ekipa",
+        "bonuses": "tombony"
+      }
+    }
+  }
+}

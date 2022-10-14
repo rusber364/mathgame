@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Ụdị egwuregwu",
+        "team": "Otu",
+        "league": "Asọmpi",
+        "achievements": "Mmezu"
+      },
+      "gameMode": {
+        "adventure": "Adventure",
+        "survivalMode": "Ọnọdụ ịlanahụ",
+        "knowledge": "Ọmụma"
+      },
+      "team": {
+        "nameOfTeam": "Aha otu",
+        "rangOfTeamInGlobalRating": "Ọnụ ọgụgụ nke otu na ọkwa mba ụwa",
+        "totalNumberOfPointsOfTheTeam": "Ngụkọta ọnụ ọgụgụ nke otu",
+        "teamLeader ": "Ndu otu",
+        "member1": " onye otu 1",
+        "member2": " onye otu 2",
+        "member3": " onye otu 3",
+        "member4": " onye otu 4"
+      },
+      "league": {
+        "singleTournament": "asọmpi maka otu",
+        "teamTournament": "Asọmpi otu",
+        "topSinglePlayer": "Otu ọkpụkpọ kacha elu",
+        "topTeam": "Otu kacha mma"
+      },
+      "achievements": {
+        "singleAchievements": "Otu rụzuru",
+        "teamAchievements": "Mmezu otu",
+        "bonuses": "Ego"
+      }
+    }
+  }
+}

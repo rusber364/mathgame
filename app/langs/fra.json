@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Mode de jeu",
+        "team": "Équipe",
+        "league": "Ligue",
+        "achievements": "Réalisations"
+      },
+      "gameMode": {
+        "adventure": "Aventure",
+        "survivalMode": "Mode de survie",
+        "knowledge": "Connaissances"
+      },
+      "team": {
+        "nameOfTeam": "Nom de l'équipe",
+        "rangOfTeamInGlobalRating": "Rang de l'équipe dans la note globale",
+        "totalNumberOfPointsOfTheTeam": "Nombre total de points de l'équipe",
+        "teamLeader ": "Chef d'équipe",
+        "member1": "membre 1",
+        "member2": "membre 2",
+        "member3": "membre 3",
+        "member4": "membre 4"
+      },
+      "league": {
+        "singleTournament": "Tournoi simple",
+        "teamTournament": "Tournoi par équipe",
+        "topSinglePlayer": "Meilleur joueur solo",
+        "topTeam": "Meilleures équipes"
+      },
+      "achievements": {
+        "singleAchievements": "Réalisations uniques",
+        "teamAchievements": "Réalisations d'équipe",
+        "bonuses": "Bonus"
+      }
+    }
+  }
+}

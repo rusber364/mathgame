@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Chế độ trò chơi",
+        "team": "Đội",
+        "league": "League",
+        "achievements": "Thành tựu"
+      },
+      "gameMode": {
+        "adventure": "Cuộc phiêu lưu",
+        "survivalMode": "Chế độ sinh tồn",
+        "knowledge": "Hiểu biết"
+      },
+      "team": {
+        "nameOfTeam": "Tên đội",
+        "rangOfTeamInGlobalRating": "đội trong bảng xếp hạng toàn cầu",
+        "totalNumberOfPointsOfTheTeam": "Tổng số điểm của đội",
+        "teamLeader ": "Trưởng nhóm",
+        "member1": "thành viên 1",
+        "member2": "thành viên 2",
+        "member3": "thành viên 3",
+        "member4": "thành viên 4"
+      },
+      "league": {
+        "singleTournament": "Giải đấu đơn",
+        "teamTournament": "Giải đấu đồng đội",
+        "topSinglePlayer": "Người chơi đơn hàng đầu",
+        "topTeam": "Đội xuất sắc nhất"
+      },
+      "achievements": {
+        "singleAchievements": "Thành tích đơn lẻ",
+        "teamAchievements": "Thành tích nhóm",
+        "bonuses": "Tiền thưởng"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "گيم موڊ",
+        "team": "ٽيم",
+        "league": " ليگ",
+        "achievements": "حاصلات"
+      },
+      "gameMode": {
+        "adventure": "ايڊونچر",
+        "survivalMode": "بقا جو طريقو",
+        "knowledge": "علم"
+      },
+      "team": {
+        "nameOfTeam": "ٽيم جو نالو",
+        "rangOfTeamInGlobalRating": "عالمي درجه بندي ۾ ٽيم جو سلسلو",
+        "totalNumberOfPointsOfTheTeam": "ٽيم جي پوائنٽن جو ڪل تعداد",
+        "teamLeader ": "ٽيم ليڊر",
+        "member1": "ميمبر 1",
+        "member2": "ميمبر 2",
+        "member3": "ميمبر 3",
+        "member4": "ميمبر 4"
+      },
+      "league": {
+        "singleTournament": "سنگل ٽورنامينٽ",
+        "teamTournament": "ٽيم ٽورنامينٽ",
+        "topSinglePlayer": "ٽاپ سنگل پليئر",
+        "topTeam": "ٽاپ ٽيمون"
+      },
+      "achievements": {
+        "singleAchievements": "اڪيلو ڪاميابيون",
+        "teamAchievements": "ٽيم جي ڪاميابين",
+        "bonuses": "بونس"
+      }
+    }
+  }
+}

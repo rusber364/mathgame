@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Mod Permainan",
+        "team": "Pasukan",
+        "league": "Liga",
+        "achievements": "Pencapaian"
+      },
+      "gameMode": {
+        "adventure": "Pengembaraan",
+        "survivalMode": "Mod hidup",
+        "knowledge": "Pengetahuan"
+      },
+      "team": {
+        "nameOfTeam": "Nama Pasukan",
+        "rangOfTeamInGlobalRating": "Kedudukan pasukan dalam ranking global",
+        "totalNumberOfPointsOfTheTeam": "Jumlah mata pasukan",
+        "teamLeader ": "Ketua pasukan",
+        "member1": "ahli 1",
+        "member2": "ahli 2",
+        "member3": "ahli 3",
+        "member4": "ahli 4"
+      },
+      "league": {
+        "singleTournament": "Kejohanan Tunggal",
+        "teamTournament": "Kejohanan Berpasukan",
+        "topSinglePlayer": "Pemain Tunggal Teratas",
+        "topTeam": "Pasukan teratas"
+      },
+      "achievements": {
+        "singleAchievements": "Pencapaian tunggal",
+        "teamAchievements": "Pencapaian pasukan",
+        "bonuses": "Bonus"
+      }
+    }
+  }
+}

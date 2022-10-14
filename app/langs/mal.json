@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ഗെയിം മോഡ്",
+        "team": "ടീം",
+        "league": "ലീഗ്",
+        "achievements": "നേട്ടങ്ങൾ"
+      },
+      "gameMode": {
+        "adventure": "സാഹസികത",
+        "survivalMode": "സർവൈവൽ മോഡ്",
+        "knowledge": "അറിവ്"
+      },
+      "team": {
+        "nameOfTeam": "ടീമിന്റെ പേര്",
+        "rangOfTeamInGlobalRating": "ആഗോള റേറ്റിംഗിൽ ടീമിന്റെ ശ്രേണി",
+        "totalNumberOfPointsOfTheTeam": "ടീമിന്റെ ആകെ പോയിന്റുകളുടെ എണ്ണം",
+        "teamLeader ": "ടീം ലീഡർ",
+        "member1": "അംഗം 1",
+        "member2": "അംഗം 2",
+        "member3": "അംഗം 3",
+        "member4": "അംഗം 4"
+      },
+      "league": {
+        "singleTournament": "സിംഗിൾ ടൂർണമെന്റ്",
+        "teamTournament": "ടീം ടൂർണമെന്റ്",
+        "topSinglePlayer": "മുൻനിര സിംഗിൾ പ്ലെയർ",
+        "topTeam": "മുൻനിര ടീമുകൾ"
+      },
+      "achievements": {
+        "singleAchievements": "സിംഗിൾ പ്ലെയർ നേട്ടങ്ങൾ",
+        "teamAchievements": "ടീം നേട്ടങ്ങൾ",
+        "bonuses": "ബോണസുകൾ"
+      }
+    }
+  }
+}

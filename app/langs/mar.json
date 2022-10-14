@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "गेम मोड",
+        "team": "संघ",
+        "league": "लीग",
+        "achievements": "प्राप्ती"
+      },
+      "gameMode": {
+        "adventure": "साहस",
+        "survivalMode": "सर्व्हायव्हल मोड",
+        "knowledge": "ज्ञान"
+      },
+      "team": {
+        "nameOfTeam": "संघाचे नाव",
+        "rangOfTeamInGlobalRating": " जागतिक रेटिंगमध्ये संघाची श्रेणी",
+        "totalNumberOfPointsOfTheTeam": "संघाच्या एकूण गुणांची संख्या",
+        "teamLeader ": "संघ नेता",
+        "member1": "सदस्य १",
+        "member2": "सदस्य 2",
+        "member3": "सदस्य ३",
+        "member4": "सदस्य ४"
+      },
+      "league": {
+        "singleTournament": "एकल स्पर्धा",
+        "teamTournament": "सांघिक स्पर्धा",
+        "topSinglePlayer": "अव्वल एकल खेळाडू",
+        "topTeam": "शीर्ष संघ"
+      },
+      "achievements": {
+        "singleAchievements": "एकल यश",
+        "teamAchievements": "सांघिक यश",
+        "bonuses": "बोनस"
+      }
+    }
+  }
+}

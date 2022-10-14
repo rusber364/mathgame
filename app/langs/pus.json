@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "د لوبې حالت",
+        "team": "ټیم",
+        "league": "لیګ",
+        "achievements": "لاسته راوړنې"
+      },
+      "gameMode": {
+        "adventure": "ساہسک",
+        "survivalMode": "د بقا حالت",
+        "knowledge": "پوهه"
+      },
+      "team": {
+        "nameOfTeam": "د ټیم نوم",
+        "rangOfTeamInGlobalRating": " په نړیواله درجه بندۍ کې د ټیم درجه",
+        "totalNumberOfPointsOfTheTeam": "د ټیم د ټولو پوائنټونو شمیر",
+        "teamLeader ": "د ټیم مشر",
+        "member1": "غړی 1",
+        "member2": "غړی 2",
+        "member3": "غړی 3",
+        "member4": "غړی 4"
+      },
+      "league": {
+        "singleTournament": "واحد ټورنمنټ",
+        "teamTournament": "ټیم ټورنمنټ",
+        "topSinglePlayer": "غوره واحد لوبغاړی",
+        "topTeam": "غوره ټیمونه"
+      },
+      "achievements": {
+        "singleAchievements": "واحد لاسته راوړنې",
+        "teamAchievements": "د ټیم لاسته راوړنې",
+        "bonuses": " بونس"
+      }
+    }
+  }
+}

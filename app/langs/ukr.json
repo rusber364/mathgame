@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Гра",
+        "team": "Команда",
+        "league": "Ліга",
+        "achievements": "Винагородження"
+      },
+      "gameMode": {
+        "adventure": "",
+        "survivalMode": "",
+        "knowledge": ""
+      },
+      "team": {
+        "nameOfTeam": "",
+        "rangOfTeamInGlobalRating": "",
+        "totalNumberOfPointsOfTheTeam": "",
+        "teamLeader ": "",
+        "member1": "",
+        "member2": "",
+        "member3": "",
+        "member4": ""
+      },
+      "league": {
+        "singleTournament": "",
+        "teamTournament": "",
+        "topSinglePlayer": "",
+        "topTeam": ""
+      },
+      "achievements": {
+        "singleAchievements": "",
+        "teamAchievements": "",
+        "bonuses": ""
+      }
+    }
+  }
+}

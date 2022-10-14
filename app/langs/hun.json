@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Játék mód",
+        "team": "Csapat",
+        "league": " Liga",
+        "achievements": "Eredmények"
+      },
+      "gameMode": {
+        "adventure": "Kaland",
+        "survivalMode": "Túlélési mód",
+        "knowledge": "Tudás"
+      },
+      "team": {
+        "nameOfTeam": "A csapat neve",
+        "rangOfTeamInGlobalRating": "A csapatok köre a globális értékelésben",
+        "totalNumberOfPointsOfTheTeam": " A csapat összpontszáma",
+        "teamLeader ": "Csapatvezető",
+        "member1": "tag 1",
+        "member2": "tag 2",
+        "member3": "tag 3",
+        "member4": "tag 4"
+      },
+      "league": {
+        "singleTournament": "Egyéni bajnokság",
+        "teamTournament": "Csapatverseny",
+        "topSinglePlayer": "Legjobb egyjátékos",
+        "topTeam": "Legjobb csapatok"
+      },
+      "achievements": {
+        "singleAchievements": "Egyedi eredmények",
+        "teamAchievements": "Csapateredmények",
+        "bonuses": "Bónuszok"
+      }
+    }
+  }
+}

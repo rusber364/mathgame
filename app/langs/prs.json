@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "حالت بازی",
+        "team": "تیم",
+        "league": "لیگ",
+        "achievements": "دستاوردها"
+      },
+      "gameMode": {
+        "adventure": " ماجرا",
+        "survivalMode": "حالت بقا",
+        "knowledge": "دانش"
+      },
+      "team": {
+        "nameOfTeam": "نام تیم",
+        "rangOfTeamInGlobalRating": "تیم در رده بندی جهانی",
+        "totalNumberOfPointsOfTheTeam": "تعداد کل امتیازات تیم",
+        "teamLeader ": " رهبر تیم",
+        "member1": "عضو 1",
+        "member2": "عضو 2",
+        "member3": "عضو 3",
+        "member4": "عضو 4"
+      },
+      "league": {
+        "singleTournament": " مسابقات انفرادی",
+        "teamTournament": "مسابقات تیمی",
+        "topSinglePlayer": "بهترین بازیکن تک",
+        "topTeam": "تیم های برتر"
+      },
+      "achievements": {
+        "singleAchievements": " دستاوردهای مجرد",
+        "teamAchievements": "دستاوردهای تیم",
+        "bonuses": "جوایز"
+      }
+    }
+  }
+}

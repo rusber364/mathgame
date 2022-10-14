@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Herní režim",
+        "team": "Tým",
+        "league": "Liga",
+        "achievements": "Úspěchy"
+      },
+      "gameMode": {
+        "adventure": "Dobrodružství",
+        "survivalMode": "Režim přežití",
+        "knowledge": "Znalost"
+      },
+      "team": {
+        "nameOfTeam": "Název týmu",
+        "rangOfTeamInGlobalRating": "Rang týmu v globálním hodnocení",
+        "totalNumberOfPointsOfTheTeam": "Celkový počet bodů týmu",
+        "teamLeader ": "Vedoucí týmu",
+        "member1": "člen 1",
+        "member2": "člen 2",
+        "member3": "člen 3",
+        "member4": "člen 4"
+      },
+      "league": {
+        "singleTournament": "Jednotný turnaj",
+        "teamTournament": "Turnaj družstev",
+        "topSinglePlayer": "Nejlepší pro jednoho hráče",
+        "topTeam": "Nejlepší týmy"
+      },
+      "achievements": {
+        "singleAchievements": "Jednotlivé úspěchy",
+        "teamAchievements": " Úspěchy týmu",
+        "bonuses": "Bonusy"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Oyun Modu",
+        "team": "Takımı",
+        "league": " Lig",
+        "achievements": "Başarıları"
+      },
+      "gameMode": {
+        "adventure": "Macera",
+        "survivalMode": "Hayatta kalma modu",
+        "knowledge": "Bilgi"
+      },
+      "team": {
+        "nameOfTeam": "Takımın Adı",
+        "rangOfTeamInGlobalRating": "Küresel Takım Sıralaması",
+        "totalNumberOfPointsOfTheTeam": "Takımın toplam puan sayısı",
+        "teamLeader ": "Takım lideri",
+        "member1": "üye 1",
+        "member2": "üye 2",
+        "member3": "üye 3",
+        "member4": "üye 4"
+      },
+      "league": {
+        "singleTournament": "Tek Turnuva",
+        "teamTournament": "Takım Turnuvası",
+        "topSinglePlayer": "En İyi Tek oyuncu",
+        "topTeam": "En iyi takımlar"
+      },
+      "achievements": {
+        "singleAchievements": "Tek başarılar",
+        "teamAchievements": "Takım başarıları",
+        "bonuses": "bonuslar"
+      }
+    }
+  }
+}

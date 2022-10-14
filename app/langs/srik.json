@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Game Mode",
+        "team": "Team",
+        "league": "Liga",
+        "achievements": " Mga kalamposan"
+      },
+      "gameMode": {
+        "adventure": "Adventure",
+        "survivalMode": "Survival mode",
+        "knowledge": "Kahibalo"
+      },
+      "team": {
+        "nameOfTeam": "Ngalan sa Team",
+        "rangOfTeamInGlobalRating": "Rang sa team sa global nga rating",
+        "totalNumberOfPointsOfTheTeam": "Kinatibuk-ang gidaghanon sa mga puntos sa team",
+        "teamLeader ": "Lider sa grupo",
+        "member1": "membro 1",
+        "member2": "membro 2",
+        "member3": "membro 3",
+        "member4": "membro 4"
+      },
+      "league": {
+        "singleTournament": "Usa ka Tournament",
+        "teamTournament": "Team Tournament",
+        "topSinglePlayer": "Top Single player",
+        "topTeam": "Nanguna nga mga team"
+      },
+      "achievements": {
+        "singleAchievements": "Single nga mga kalampusan",
+        "teamAchievements": "Mga nahimo sa team",
+        "bonuses": "Mga bonus"
+      }
+    }
+  }
+}

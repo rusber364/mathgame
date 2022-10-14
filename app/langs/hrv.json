@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Način igre",
+        "team": "Tim",
+        "league": "Liga",
+        "achievements": "Postignuća"
+      },
+      "gameMode": {
+        "adventure": "Avantura",
+        "survivalMode": " Način preživljavanja",
+        "knowledge": "Znanje"
+      },
+      "team": {
+        "nameOfTeam": "Ime tima",
+        "rangOfTeamInGlobalRating": "Rang tima u globalnom rejtingu",
+        "totalNumberOfPointsOfTheTeam": "Ukupan broj bodova ekipe",
+        "teamLeader ": "Vođa tima",
+        "member1": "član 1",
+        "member2": "član 2",
+        "member3": "član 3",
+        "member4": "član 4"
+      },
+      "league": {
+        "singleTournament": "Pojedinačni turnir",
+        "teamTournament": "Ekipni turnir",
+        "topSinglePlayer": "Najbolji igrač za jednog igrača",
+        "topTeam": "Najbolji timovi"
+      },
+      "achievements": {
+        "singleAchievements": "Pojedinačna postignuća",
+        "teamAchievements": "Timska postignuća",
+        "bonuses": "Bonusi"
+      }
+    }
+  }
+}

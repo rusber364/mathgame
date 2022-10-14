@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Oyun rejimi",
+        "team": "Komanda",
+        "league": "Liqa",
+        "achievements": "Nailiyyətlər"
+      },
+      "gameMode": {
+        "adventure": " Macəra",
+        "survivalMode": "Sağ qalma rejimi",
+        "knowledge": "Bilik"
+      },
+      "team": {
+        "nameOfTeam": "Kumandanın Adı",
+        "rangOfTeamInGlobalRating": "Qlobal reytinqdə komanda sıralaması",
+        "totalNumberOfPointsOfTheTeam": "Komandanın ümumi xal sayı",
+        "teamLeader ": "Komanda rəhbəri",
+        "member1": "üzv 1",
+        "member2": "üzv 2",
+        "member3": "üzv 3",
+        "member4": "üzv 4"
+      },
+      "league": {
+        "singleTournament": "Tək Turnir",
+        "teamTournament": "Komanda Turniri",
+        "topSinglePlayer": "Ən yaxşı tək oyunçu",
+        "topTeam": "Ən yaxşı komandalar"
+      },
+      "achievements": {
+        "singleAchievements": "Tək nailiyyətlər",
+        "teamAchievements": "Komandanın nailiyyətləri",
+        "bonuses": "Bonuslar"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "mod de joc",
+        "team": "Echipă",
+        "league": "Liga",
+        "achievements": "Realizări"
+      },
+      "gameMode": {
+        "adventure": "Aventuri",
+        "survivalMode": "Modul de supraviețuire",
+        "knowledge": "Cunoştinţe"
+      },
+      "team": {
+        "nameOfTeam": "Numele echipei",
+        "rangOfTeamInGlobalRating": "Echipa în clasamentul mondial",
+        "totalNumberOfPointsOfTheTeam": "Numărul total de puncte ale echipei",
+        "teamLeader ": "Lider de echipă",
+        "member1": "membru 1",
+        "member2": "membru 2",
+        "member3": "membru 3",
+        "member4": "membru 4"
+      },
+      "league": {
+        "singleTournament": "Turneu pentru unul",
+        "teamTournament": "Turneu pe echipe",
+        "topSinglePlayer": "Cel mai bun jucător de simplu",
+        "topTeam": "Echipe de top"
+      },
+      "achievements": {
+        "singleAchievements": "Realizările unuia",
+        "teamAchievements": "Realizările echipei",
+        "bonuses": "Bonusuri"
+      }
+    }
+  }
+}

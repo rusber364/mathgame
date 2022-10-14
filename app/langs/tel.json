@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "గేమ్ మోడ్",
+        "team": "జట్టు",
+        "league": "లీగ్",
+        "achievements": "విజయాలు"
+      },
+      "gameMode": {
+        "adventure": "సాహసం",
+        "survivalMode": "సర్వైవల్ మోడ్",
+        "knowledge": "జ్ఞానం"
+      },
+      "team": {
+        "nameOfTeam": "జట్టు పేరు",
+        "rangOfTeamInGlobalRating": "ప్రపంచ రేటింగ్‌లో జట్టు శ్రేణి",
+        "totalNumberOfPointsOfTheTeam": "జట్టు యొక్క మొత్తం పాయింట్ల సంఖ్య",
+        "teamLeader ": "బృంద నాయకుడు",
+        "member1": "సభ్యుడు 1",
+        "member2": "సభ్యుడు 2",
+        "member3": "సభ్యుడు 3",
+        "member4": "సభ్యుడు 4"
+      },
+      "league": {
+        "singleTournament": "సింగిల్ టోర్నమెంట్",
+        "teamTournament": "టీమ్ టోర్నమెంట్",
+        "topSinglePlayer": "టాప్ సింగిల్ ప్లేయర్",
+        "topTeam": "అగ్ర జట్లు"
+      },
+      "achievements": {
+        "singleAchievements": "ఒకే విజయాలు",
+        "teamAchievements": "జట్టు విజయాలు",
+        "bonuses": "బోనస్‌లు"
+      }
+    }
+  }
+}

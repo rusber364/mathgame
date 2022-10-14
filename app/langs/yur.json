@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Ipo Ere",
+        "team": "Egbe",
+        "league": "Ajumọṣe",
+        "achievements": "Aṣeyọri"
+      },
+      "gameMode": {
+        "adventure": "Ìrìn",
+        "survivalMode": "Iwalaaye mode",
+        "knowledge": "Imọye"
+      },
+      "team": {
+        "nameOfTeam": "Orukọ Ẹgbẹ",
+        "rangOfTeamInGlobalRating": "Rang ti egbe ni agbaye Rating",
+        "totalNumberOfPointsOfTheTeam": "Lapapọ nọmba ti ojuami ti awọn egbe",
+        "teamLeader ": "Olori egbe",
+        "member1": "omo egbe 1",
+        "member2": "omo egbe 2",
+        "member3": "omo egbe 3",
+        "member4": "omo egbe 4"
+      },
+      "league": {
+        "singleTournament": "Idije Nikan",
+        "teamTournament": "Egbe figagbaga",
+        "topSinglePlayer": "Top Single player",
+        "topTeam": "Top awọn ẹgbẹ"
+      },
+      "achievements": {
+        "singleAchievements": "Awọn aṣeyọri ẹyọkan",
+        "teamAchievements": "Aseyori Egbe",
+        "bonuses": "Awọn imoriri"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "የጨዋታ ሁነታ",
+        "team": "ቡድን",
+        "league": "ሊግ",
+        "achievements": "ስኬቶች"
+      },
+      "gameMode": {
+        "adventure": "ጀብዱ",
+        "survivalMode": "የሰርቫይቫል ሁነታ",
+        "knowledge": "እውቀት"
+      },
+      "team": {
+        "nameOfTeam": "የቡድኑ ስም",
+        "rangOfTeamInGlobalRating": "በአለምአቀፍ ደረጃ አሰጣጥ ውስጥ የቡድን ስብስብ",
+        "totalNumberOfPointsOfTheTeam": "የቡድኑ አጠቃላይ ነጥቦች ብዛት",
+        "teamLeader ": "የቡድን መሪ",
+        "member1": "አባል 1",
+        "member2": "አባል 2",
+        "member3": "አባል 3",
+        "member4": "አባል 4"
+      },
+      "league": {
+        "singleTournament": "የነጠላዎች ውድድር",
+        "teamTournament": "የቡድን ውድድር",
+        "topSinglePlayer": "ከፍተኛ ነጠላ ተጫዋች",
+        "topTeam": "ከፍተኛ ቡድኖች"
+      },
+      "achievements": {
+        "singleAchievements": "ነጠላ ስኬቶች",
+        "teamAchievements": "የቡድን ስኬቶች",
+        "bonuses": "ጉርሻዎች"
+      }
+    }
+  }
+}

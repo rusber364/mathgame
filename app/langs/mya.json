@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "ဂိမ်းမုဒ်",
+        "team": "အဖွဲ့",
+        "league": "။လိဂ်",
+        "achievements": "အောင်မြင်မှုများ"
+      },
+      "gameMode": {
+        "adventure": "စွန့်စားမှု",
+        "survivalMode": "Survival မုဒ်",
+        "knowledge": "ဗဟုသုတ"
+      },
+      "team": {
+        "nameOfTeam": "အသင်းအမည်",
+        "rangOfTeamInGlobalRating": "ကမ္ဘာ့အဆင့်သတ်မှတ်ချက်တွင် အသင်း၏အဆင့်",
+        "totalNumberOfPointsOfTheTeam": "အသင်း၏စုစုပေါင်းအမှတ်",
+        "teamLeader ": "အဖွဲ့ခေါင်းဆောင်",
+        "member1": "အဖွဲ့ဝင် ၁",
+        "member2": "အဖွဲ့ဝင် ၂",
+        "member3": "အဖွဲ့ဝင် ၃",
+        "member4": "အဖွဲ့ဝင် ၄"
+      },
+      "league": {
+        "singleTournament": "ထိပ်တန်းအသင်းမျာ",
+        "teamTournament": "အသင်းလိုက်ပြိုင်ပွဲ",
+        "topSinglePlayer": "ထိပ်တန်း Single ကစားသမား",
+        "topTeam": "ထိပ်တန်းအသင်းများ"
+      },
+      "achievements": {
+        "singleAchievements": "တစ်ခုတည်းသော အောင်မြင်မှုများ",
+        "teamAchievements": "အသင်းအောင်မြင်မှုများ",
+        "bonuses": "ဆုကြေးငွေများ"
+      }
+    }
+  }
+}

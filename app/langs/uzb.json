@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "screens": {
+      "main": {
+        "game": "Oʻyin rejimi",
+        "team": "Jamoa",
+        "league": "Liga",
+        "achievements": "Yutuqlar"
+      },
+      "gameMode": {
+        "adventure": "Sarguzasht",
+        "survivalMode": "Omon qolish rejimi",
+        "knowledge": "Bilim"
+      },
+      "team": {
+        "nameOfTeam": "Jamoa nomi",
+        "rangOfTeamInGlobalRating": "Global reytingdagi jamoalar reytingi",
+        "totalNumberOfPointsOfTheTeam": "Jamoaning umumiy ochkolari soni",
+        "teamLeader ": "Guruh rahbari",
+        "member1": "a'zo 1",
+        "member2": "a'zo 2",
+        "member3": "a'zo 3",
+        "member4": "a'zo 4"
+      },
+      "league": {
+        "singleTournament": "Yagona turnir",
+        "teamTournament": "Jamoa turniri",
+        "topSinglePlayer": "Eng yaxshi yagona o'yinchi",
+        "topTeam": "Eng yaxshi jamoalar"
+      },
+      "achievements": {
+        "singleAchievements": "Yagona yutuqlar",
+        "teamAchievements": "Jamoa yutuqlari",
+        "bonuses": "Bonuslar"
+      }
+    }
+  }
+}
