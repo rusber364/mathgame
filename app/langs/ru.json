@@ -2,7 +2,36 @@
   "translation": {
     "screens": {
       "main": {
-        "game": "Игра"
+        "game": "Игра",
+        "team": "Команда",
+        "league": "Лига",
+        "achievements": "Вознаграждения"
+      },
+      "gameMode": {
+        "adventure": "Приключение",
+        "survivalMode": "Режим выживания",
+        "knowledge": "Знания"
+      },
+      "team": {
+        "nameOfTeam": "Название команды",
+        "rangOfTeamInGlobalRating": "Ранг команды в глобальном рейтинге",
+        "totalNumberOfPointsOfTheTeam": "Общее количество очков команды",
+        "teamLeader ": "Лидер группы",
+        "member1": "член 1",
+        "member2": "член 2",
+        "member3": "член 3",
+        "member4": "член 4"
+      },
+      "league": {
+        "singleTournament": "Одиночный турнир",
+        "teamTournament": "Командный турнир",
+        "topSinglePlayer": "Лучший одиночный игрок",
+        "topTeam": " Лучшие команды"
+      },
+      "achievements": {
+        "singleAchievements": "Одиночные достижения",
+        "teamAchievements": "Достижения команды",
+        "bonuses": "Бонусы"
       }
     }
   }
