@@ -126,9 +126,9 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    lng: 'ara',
+    lng: 'en',
     resources,
-    fallbackLng: 'ara',
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },
