@@ -5,8 +5,10 @@ import { useNavigation } from '@react-navigation/native'
 import type { RoutesList } from '../../types/RouteList'
 import { Button } from '../common/Button'
 import { Paper } from '../../layout/Paper'
+import { useTranslation } from 'react-i18next'
 
 export function NavigationGameMode() {
+  const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
   const navigationToStoreMode = () => navigation?.navigate('StoreMode')
@@ -15,9 +17,9 @@ export function NavigationGameMode() {
 
   return (
     <View style={style.nav}>
-      <Button onPress={navigationToStoreMode}>StoreMode</Button>
-      <Button onPress={navigationToSurvivalMode}>SurvivalMode</Button>
-      <Button onPress={navigationToKnowledge}>Knowledge</Button>
+      <Button onPress={navigationToStoreMode}>{t('screens.gameMode.adventure')}</Button>
+      <Button onPress={navigationToSurvivalMode}>{t('screens.gameMode.survivalMode')}</Button>
+      <Button onPress={navigationToKnowledge}>{t('screens.gameMode.knowledge')}</Button>
     </View>
   )
 }

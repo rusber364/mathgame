@@ -5,8 +5,10 @@ import { useNavigation } from '@react-navigation/native'
 import type { RoutesList } from '../../types/RouteList'
 import { Button } from '../common/Button'
 import { Paper } from '../../layout/Paper'
+import { useTranslation } from 'react-i18next'
 
 export function NavigationLeague() {
+  const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
   const navigateToSingleTournament = () => navigation?.navigate('SingleTournament')
@@ -16,10 +18,10 @@ export function NavigationLeague() {
 
   return (
     <View style={style.nav}>
-      <Button onPress={navigateToSingleTournament}>SingleTournament</Button>
-      <Button onPress={navigateToTeamTournament}>TeamTournament</Button>
-      <Button onPress={navigateToTopSinglePlayer}>TopSinglePlayer</Button>
-      <Button onPress={navigateToTopTeam}>TopTeam</Button>
+      <Button onPress={navigateToSingleTournament}>{t('screens.league.singleTournament')}</Button>
+      <Button onPress={navigateToTeamTournament}>{t('screens.league.teamTournament')}</Button>
+      <Button onPress={navigateToTopSinglePlayer}>{t('screens.league.topSinglePlayer')}</Button>
+      <Button onPress={navigateToTopTeam}>{t('screens.league.topTeam')}</Button>
     </View>
   )
 }

@@ -4,8 +4,10 @@ import { useNavigation } from '@react-navigation/native'
 
 import type { RoutesList } from '../../types/RouteList'
 import { Button } from '../common/Button'
+import { useTranslation } from 'react-i18next'
 
 export function NavigationAchievement() {
+  const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
   const navigateToAchievementSingleScreen = () => navigation?.navigate('SingleAchievements')
@@ -14,9 +16,9 @@ export function NavigationAchievement() {
 
   return (
     <View style={style.nav}>
-      <Button onPress={navigateToAchievementSingleScreen}>SingleAchievements</Button>
-      <Button onPress={navigateToAchievementTeamScreen}>TeamAchievements</Button>
-      <Button onPress={navigateToBonusScreen}>Bonuses</Button>
+      <Button onPress={navigateToAchievementSingleScreen}>{t('screens.achievements.singleAchievements')}</Button>
+      <Button onPress={navigateToAchievementTeamScreen}>{t('screens.achievements.teamAchievements')}</Button>
+      <Button onPress={navigateToBonusScreen}>{t('screens.achievements.bonuses')}</Button>
     </View>
   )
 }

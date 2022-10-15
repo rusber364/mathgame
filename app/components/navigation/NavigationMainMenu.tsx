@@ -17,9 +17,9 @@ export function NavigationMainMenu() {
   return (
     <View style={style.nav}>
       <Button onPress={navigateToGameMode}>{t('screens.main.game')}</Button>
-      <Button onPress={navigateToTeam}>Team</Button>
-      <Button onPress={navigateToAchievement}>Achievement</Button>
-      <Button onPress={navigateToLeague}>League</Button>
+      <Button onPress={navigateToTeam}>{t('screens.main.team')}</Button>
+      <Button onPress={navigateToAchievement}>{t('screens.main.achievements')}</Button>
+      <Button onPress={navigateToLeague}>{t('screens.main.league')}</Button>
     </View>
   )
 }
