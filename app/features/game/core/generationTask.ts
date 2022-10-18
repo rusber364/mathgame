@@ -1,4 +1,4 @@
-import uuid  from 'react-native-uuid'
+import uuid from 'react-native-uuid'
 import { maxRandomNumbersMap, operators } from './operators'
 import { getRandomOperator } from '../utils/getRandomOperator'
 import { getRandomNumber } from '../utils/getRandomNumber'

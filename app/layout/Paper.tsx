@@ -8,7 +8,7 @@ export function Paper({ children }: PropsWithChildren) {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 15,
   },
 })

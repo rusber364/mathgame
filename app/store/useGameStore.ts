@@ -1,6 +1,7 @@
 import create from 'zustand'
 import { devtools } from 'zustand/middleware'
-import { generationTask } from '../../core/generationTask'
+import { generationTask } from '../features/game/core/generationTask'
+import { defaultMilliseconds, initFinishTime } from '../features/game/utils/initFinishTime'
 
 type TTask = {
   score: number
@@ -17,10 +18,7 @@ type TTask = {
   checkAnswer(value: number): void
 }
 
-const initFinishTime = (milliseconds: number) => Date.now() + milliseconds
-const defaultMilliseconds = 10000
-
-export const useTaskStore = create<TTask>()(
+export const useGameStore = create<TTask>()(
   devtools((set, get) => ({
     score: 0,
     isGameStarted: false,

@@ -1,4 +1,4 @@
-import resources from './langs/en.json'
+import resources from './langs/data/en.json'
 
 declare module 'react-i18next' {
   type DefaultResources = typeof resources

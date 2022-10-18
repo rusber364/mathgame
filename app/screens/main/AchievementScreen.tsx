@@ -1,11 +1,13 @@
-import { Text } from 'react-native'
 import { NavigationAchievement } from '../../components/navigation/NavigationAchievementScreen'
+import { Background } from '../../layout/Background'
 import { Paper } from '../../layout/Paper'
 
 export function AchievementScreen() {
   return (
-    <Paper>
-      <NavigationAchievement />
-    </Paper>
+    <Background>
+      <Paper>
+        <NavigationAchievement />
+      </Paper>
+    </Background>
   )
 }

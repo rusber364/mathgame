@@ -1,14 +1,13 @@
 import { Text, View, StyleSheet } from 'react-native'
-import { Paper } from '../layout/Paper'
-import { Button } from './common/Button'
-import { useTaskStore } from './store/useTaskStore'
+import { Button } from '../../../components/common/Button'
+import { useGameContext } from '../context/GameProvider'
 
 export function Task() {
-  const { checkAnswer, currentTask, restartGame, startGame, pauseGame, isGameStarted, gameOver } = useTaskStore()
+  const { checkAnswer, currentTask, restartGame, startGame, pauseGame, isGameStarted, isGameOver } = useGameContext()
 
   const buttons = (
-    <View style={{ margin: 20 }}>
-      {gameOver ? (
+    <View>
+      {isGameOver ? (
         <Button disabled onPress={restartGame}>
           Game Over
         </Button>
@@ -21,10 +20,10 @@ export function Task() {
 
   if (!isGameStarted) {
     return (
-      <Paper>
-        <Text style={{ fontSize: 50 }}>{gameOver ? '😞' : '🙂'}</Text>
+      <View>
+        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{isGameOver ? '😞' : '🙂'}</Text>
         {buttons}
-      </Paper>
+      </View>
     )
   }
 
@@ -53,10 +52,12 @@ export function Task() {
 const style = StyleSheet.create({
   operation: {
     fontSize: 60,
+    alignSelf: 'center',
   },
   answersContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    marginVertical: 20,
   },
   answer: {
     flexGrow: 1,
