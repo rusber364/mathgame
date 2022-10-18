@@ -1,27 +1,35 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-
 import type { RoutesList } from './types/RouteList'
+
 import { HomeScreen } from './screens/main/HomeScreen'
 import { GameModeScreen } from './screens/main/GameModeScreen'
 import { TeamScreen } from './screens/main/TeamScreen'
 import { AchievementScreen } from './screens/main/AchievementScreen'
 import { LeagueScreen } from './screens/main/LeagueScreen'
+import { OptionScreen } from './screens/main/OptionScreen'
+import { ProfileScreen } from './screens/main/ProfileScreen'
+import { PurchaseScreen } from './screens/main/PurchaseScreen'
+
 import { StoreModeScreen } from './screens/game/StoreModeScreen'
 import { SurvivalModeScreen } from './screens/game/SurvivalModeScreen'
 import { KnowledgeScreen } from './screens/game/KnowledgeScreen'
+
 import { AchievementsSingleScreen } from './screens/achievements/AchievementsSingleScreen'
 import { AchievementsTeamScreen } from './screens/achievements/AchievementsTeamScreen'
 import { BonusScreen } from './screens/achievements/BonusScreen'
+
 import { TopSinglePlayerScreen } from './screens/league/TopSinglePlayerScreen'
 import { TopTeamScreen } from './screens/league/TopTeamScreen'
 import { SingleTournamentScreen } from './screens/league/SingleTournamentScreen'
 import { TeamTournamentScreen } from './screens/league/TeamTournamentScreen'
-import { Profile } from './components/Profile'
-import { OptionModal } from './components/OptionModal'
+
+import { useAuthContext } from './context/AuthProvider'
 
 const Stack = createNativeStackNavigator<RoutesList>()
 
 export function Navigator() {
+  const isAuth = useAuthContext()
+
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
@@ -49,6 +57,9 @@ export function Navigator() {
       <Stack.Screen name="Team" component={TeamScreen} />
       <Stack.Screen name="Achievement" component={AchievementScreen} />
       <Stack.Screen name="League" component={LeagueScreen} />
+      <Stack.Screen name="Option" component={OptionScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Purchase" component={PurchaseScreen} />
     </Stack.Navigator>
   )
 }

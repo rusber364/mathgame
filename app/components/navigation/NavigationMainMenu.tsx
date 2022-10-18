@@ -13,6 +13,9 @@ export function NavigationMainMenu() {
   const navigateToGameMode = () => navigation.navigate('GameMode')
   const navigateToAchievement = () => navigation.navigate('Achievement')
   const navigateToLeague = () => navigation.navigate('League')
+  const navigateToOption = () => navigation.navigate('Option')
+  const navigateToProfile = () => navigation.navigate('Profile')
+  const navigateToPurchase = () => navigation.navigate('Purchase')
 
   return (
     <View>
@@ -20,6 +23,9 @@ export function NavigationMainMenu() {
       <Button onPress={navigateToTeam}>{t('screens.main.team')}</Button>
       <Button onPress={navigateToAchievement}>{t('screens.main.achievements')}</Button>
       <Button onPress={navigateToLeague}>{t('screens.main.league')}</Button>
+      <Button onPress={navigateToOption}>Option</Button>
+      <Button onPress={navigateToProfile}>Profile</Button>
+      <Button onPress={navigateToPurchase}>Purchase</Button>
     </View>
   )
 }
