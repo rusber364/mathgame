@@ -1,5 +1,5 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { View, StyleSheet } from 'react-native'
+import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import type { RoutesList } from '../../types/RouteList'
@@ -15,14 +15,10 @@ export function NavigationAchievement() {
   const navigateToBonusScreen = () => navigation?.navigate('Bonuses')
 
   return (
-    <View style={style.nav}>
+    <View>
       <Button onPress={navigateToAchievementSingleScreen}>{t('screens.achievements.singleAchievements')}</Button>
       <Button onPress={navigateToAchievementTeamScreen}>{t('screens.achievements.teamAchievements')}</Button>
       <Button onPress={navigateToBonusScreen}>{t('screens.achievements.bonuses')}</Button>
     </View>
   )
 }
-
-const style = StyleSheet.create({
-  nav: { alignSelf: 'stretch', paddingHorizontal: 15 },
-})

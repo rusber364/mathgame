@@ -1,35 +1,22 @@
-import { View, Text, StyleSheet } from 'react-native'
-
-import { Task } from '../../components/Task'
+import { View } from 'react-native'
+import { Task } from '../../features/game/components/Task'
+import { Score } from '../../features/game/components/Score'
+import { Timer } from '../../features/game/components/Timer'
+import { Background } from '../../layout/Background'
 import { Paper } from '../../layout/Paper'
-import { useTaskStore } from '../../components/store/useTaskStore'
-
-function Timer() {
-  const { time } = useTaskStore()
-
-  return <Text style={style.text}>Time: {time < 100 ? 0 : time}</Text>
-}
 
 export function SurvivalModeScreen() {
-  const { score } = useTaskStore()
-
   return (
-    <>
+    <Background>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        <Text style={style.text}>Score: {score}</Text>
+        <Score />
         <Timer />
       </View>
       <Paper>
-        <Task />
+        <View>
+          <Task />
+        </View>
       </Paper>
-    </>
+    </Background>
   )
 }
-
-const style = StyleSheet.create({
-  text: {
-    borderWidth: 1,
-    fontSize: 20,
-    padding: 5,
-  },
-})

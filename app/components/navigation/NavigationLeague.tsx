@@ -1,10 +1,9 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { View, StyleSheet } from 'react-native'
+import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import type { RoutesList } from '../../types/RouteList'
 import { Button } from '../common/Button'
-import { Paper } from '../../layout/Paper'
 import { useTranslation } from 'react-i18next'
 
 export function NavigationLeague() {
@@ -17,7 +16,7 @@ export function NavigationLeague() {
   const navigateToTopTeam = () => navigation?.navigate('TopTeam')
 
   return (
-    <View style={style.nav}>
+    <View>
       <Button onPress={navigateToSingleTournament}>{t('screens.league.singleTournament')}</Button>
       <Button onPress={navigateToTeamTournament}>{t('screens.league.teamTournament')}</Button>
       <Button onPress={navigateToTopSinglePlayer}>{t('screens.league.topSinglePlayer')}</Button>
@@ -25,7 +24,3 @@ export function NavigationLeague() {
     </View>
   )
 }
-
-const style = StyleSheet.create({
-  nav: { alignSelf: 'stretch', paddingHorizontal: 15 },
-})

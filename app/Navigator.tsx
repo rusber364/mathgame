@@ -24,7 +24,7 @@ const Stack = createNativeStackNavigator<RoutesList>()
 export function Navigator() {
   return (
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
 
       <Stack.Screen name="GameMode" component={GameModeScreen} />
       <Stack.Group>

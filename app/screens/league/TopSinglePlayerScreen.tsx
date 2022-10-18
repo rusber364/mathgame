@@ -1,10 +1,13 @@
 import { Text } from 'react-native'
+import { Background } from '../../layout/Background'
 import { Paper } from '../../layout/Paper'
 
 export function TopSinglePlayerScreen() {
   return (
-    <Paper>
-      <Text>TopSinglePlayer</Text>
-    </Paper>
+    <Background>
+      <Paper>
+        <Text style={{ alignSelf: 'center' }}>TopSinglePlayer</Text>
+      </Paper>
+    </Background>
   )
 }
