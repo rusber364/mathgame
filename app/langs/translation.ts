@@ -10,6 +10,7 @@ i18n
     lng: 'en',
     resources,
     fallbackLng: 'en',
+    compatibilityJSON: 'v3',
     interpolation: {
       escapeValue: false,
     },

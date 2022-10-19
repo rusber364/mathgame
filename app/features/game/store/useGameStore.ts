@@ -56,11 +56,11 @@ export function useGameStore() {
   }
 
   function checkAnswer(value: number) {
-    const { id, storeAnswers } = currentTask.current
-    const isValid = storeAnswers[id] === value
-    const newTask = generationTask()
+    const isValid = currentTask.current.result === value
 
     const reset = () => {
+      const newTask = generationTask()
+
       setTime(defaultMilliseconds)
       currentTask.current = newTask
       finishTimeStamp.current = 0
