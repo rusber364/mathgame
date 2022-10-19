@@ -29,8 +29,6 @@ export function Task() {
 
   const { answers, operandLeft, operator, operandRight } = currentTask
 
-  const handleSetAnswer = (variant: number) => () => checkAnswer(variant)
-
   return (
     <View>
       <Text style={style.operation}>
@@ -39,7 +37,7 @@ export function Task() {
 
       <View style={style.answersContainer}>
         {answers.map((variant, idx) => (
-          <Text style={style.answer} key={idx} onPress={handleSetAnswer(variant)}>
+          <Text style={style.answer} key={idx} onPress={() => checkAnswer(variant)}>
             {variant}
           </Text>
         ))}
