@@ -14,7 +14,6 @@ export function NavigationMainMenu() {
   const navigateToAchievement = () => navigation.navigate('Achievement')
   const navigateToLeague = () => navigation.navigate('League')
   const navigateToOption = () => navigation.navigate('Option')
-  const navigateToProfile = () => navigation.navigate('Profile')
   const navigateToPurchase = () => navigation.navigate('Purchase')
 
   return (
@@ -24,7 +23,6 @@ export function NavigationMainMenu() {
       <Button onPress={navigateToAchievement}>{t('screens.main.achievements')}</Button>
       <Button onPress={navigateToLeague}>{t('screens.main.league')}</Button>
       <Button onPress={navigateToOption}>Option</Button>
-      <Button onPress={navigateToProfile}>Profile</Button>
       <Button onPress={navigateToPurchase}>Purchase</Button>
     </View>
   )
