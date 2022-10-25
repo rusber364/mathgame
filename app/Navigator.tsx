@@ -24,6 +24,8 @@ import { SingleTournamentScreen } from './screens/league/SingleTournamentScreen'
 import { TeamTournamentScreen } from './screens/league/TeamTournamentScreen'
 
 import { useAuthContext } from './context/AuthProvider'
+import { SignInScreen } from './screens/auth/SignInScreen'
+import { SignUpScreen } from './screens/auth/SignUpScreen'
 
 const Stack = createNativeStackNavigator<RoutesList>()
 
@@ -33,6 +35,9 @@ export function Navigator() {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+
+      <Stack.Screen name="SignIn" component={SignInScreen} />
+      <Stack.Screen name="SignUp" component={SignUpScreen} />
 
       <Stack.Screen name="GameMode" component={GameModeScreen} />
       <Stack.Group>
