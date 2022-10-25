@@ -1,14 +1,21 @@
-import { Text, StyleSheet, Pressable, PressableProps } from 'react-native'
+import { Text, StyleSheet, Pressable, PressableProps, ActivityIndicator } from 'react-native'
 import { View } from 'react-native'
 
-type Props = PressableProps & React.RefAttributes<View> & React.PropsWithChildren
+type Props = PressableProps &
+  React.RefAttributes<View> &
+  React.PropsWithChildren & {
+    isLoading?: boolean
+  }
 
 export function Button(props: Props) {
-  const { children, ...othersProps } = props
+  const { children, isLoading, ...othersProps } = props
 
   return (
     <Pressable {...othersProps} style={style.button}>
-      <Text style={style.text}>{children}</Text>
+      <View style={{ flexDirection: 'row' }}>
+        {isLoading && <ActivityIndicator style={style.indicator} color="#fff" />}
+        <Text style={style.text}>{children}</Text>
+      </View>
     </Pressable>
   )
 }
@@ -29,7 +36,6 @@ const style = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
-
     elevation: 2,
   },
   text: {
@@ -38,5 +44,10 @@ const style = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+  },
+  indicator: {
+    position: 'absolute',
+    top: 1,
+    left: -25,
   },
 })
