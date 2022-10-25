@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react'
 import { ImageBackground, View, StyleSheet } from 'react-native'
-import bg from '../assets/bg.svg'
+import bg from '../assets/bg.png'
 
 export function Background({ children }: PropsWithChildren) {
   return (
