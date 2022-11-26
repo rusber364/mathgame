@@ -1,13 +1,13 @@
 import { getRandomNumber } from './getRandomNumber'
 
-export function mixingArray(values: number[]) {
+export function mixingArray<T>(values: T[]): T[] {
   const copyValues = values.slice()
-  const mixedArray = []
+  const mixedArray: T[] = []
 
   while (copyValues.length) {
     const randomIndex = getRandomNumber(copyValues.length - 1, 0)
-    const value = copyValues.splice(randomIndex, 1)
-    mixedArray.push(value[0])
+    const [value] = copyValues.splice(randomIndex, 1)
+    mixedArray.push(value)
   }
 
   return mixedArray

@@ -23,21 +23,29 @@ import { TopTeamScreen } from './screens/league/TopTeamScreen'
 import { SingleTournamentScreen } from './screens/league/SingleTournamentScreen'
 import { TeamTournamentScreen } from './screens/league/TeamTournamentScreen'
 
-import { useAuthContext } from './context/AuthProvider'
-import { SignInScreen } from './screens/auth/SignInScreen'
-import { SignUpScreen } from './screens/auth/SignUpScreen'
+import { useAuthContext } from './features/auth/context/AuthProvider'
+import { SignInScreen } from './features/auth/screens/SignInScreen'
+import { SignUpScreen } from './features/auth/screens/SignUpScreen'
+import { LanguagesScreen } from './screens/LanguagesScreen'
 
 const Stack = createNativeStackNavigator<RoutesList>()
 
 export function Navigator() {
-  const isAuth = useAuthContext()
+  const { isAuth } = useAuthContext()
 
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Languages" component={LanguagesScreen} />
 
-      <Stack.Screen name="SignIn" component={SignInScreen} />
-      <Stack.Screen name="SignUp" component={SignUpScreen} />
+      {isAuth ? (
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+      ) : (
+        <>
+          <Stack.Screen name="SignIn" component={SignInScreen} />
+          <Stack.Screen name="SignUp" component={SignUpScreen} />
+        </>
+      )}
 
       <Stack.Screen name="GameMode" component={GameModeScreen} />
       <Stack.Group>
@@ -63,7 +71,6 @@ export function Navigator() {
       <Stack.Screen name="Achievement" component={AchievementScreen} />
       <Stack.Screen name="League" component={LeagueScreen} />
       <Stack.Screen name="Option" component={OptionScreen} />
-      <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Purchase" component={PurchaseScreen} />
     </Stack.Navigator>
   )
