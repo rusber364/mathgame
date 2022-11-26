@@ -2,14 +2,15 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View, KeyboardAvoidingView, Platform } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useState } from 'react'
+import Toast from 'react-native-toast-message'
 
-import type { RoutesList } from '../../types/RouteList'
-import { Paper } from '../../layout/Paper'
-import { Background } from '../../layout/Background'
-import { Button } from '../../components/common/Button'
-import { delay } from '../../utils/delay'
-import { AuthTitle } from '../../features/auth/components/AuthTitle'
-import { AuthField } from '../../features/auth/components/AuthField'
+import { supabase } from '../../../database/supabase'
+import type { RoutesList } from '../../../types/RouteList'
+import { Paper } from '../../../layout/Paper'
+import { Background } from '../../../layout/Background'
+import { Button } from '../../../components/common/Button'
+import { AuthTitle } from '../components/AuthTitle'
+import { AuthField } from '../components/AuthField'
 
 export function SignInScreen() {
   const [email, setEmail] = useState('')
@@ -19,9 +20,18 @@ export function SignInScreen() {
 
   async function handleLogin() {
     setLoading(true)
-    await delay(1000)
-    setEmail('')
-    setPassword('')
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+
+    if (!error) {
+      navigation.navigate('Profile')
+    } else {
+      Toast.show({
+        type: 'error',
+        text1: error.name,
+        text2: error.message,
+      })
+    }
+
     setLoading(false)
   }
 

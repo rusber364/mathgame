@@ -1,89 +1,75 @@
-import { useState, useRef } from 'react'
-import { generationTask } from '../core/generationTask'
-import { defaultMilliseconds, initFinishTime } from '../utils/initFinishTime'
+import { useState } from 'react'
+import { useGenerationTask } from '../hooks/useGenerationTask'
+import { useInterval } from '../hooks/useInterval'
 
 export type GameStore = ReturnType<typeof useGameStore>
 
-export function useGameStore() {
-  const idTimer = useRef<NodeJS.Timer>()
-  const finishTimeStamp = useRef<number>(0)
-  const pauseMilliseconds = useRef<number>(0)
-  const currentTask = useRef(generationTask())
+const defaultTime = 20000
 
+export function useGameStore() {
   const [score, setScore] = useState(0)
+  const [time, setTime] = useState(defaultTime)
   const [isGameStarted, setGameStarted] = useState(false)
   const [isGameOver, setGameOver] = useState(false)
-  const [time, setTime] = useState(defaultMilliseconds)
+
+  const { currentTask, resetTask } = useGenerationTask()
+
+  const { startInterval, endInterval } = useInterval(() => {
+    setTime((time) => {
+      if (time <= 1000) {
+        setGameOver(true)
+        setGameStarted(false)
+        endInterval()
+        return 0
+      }
+
+      return time - 1000
+    })
+  })
 
   function startGame() {
     if (!isGameStarted) {
-      idTimer.current = setInterval(() => {
-        if (!finishTimeStamp.current) {
-          finishTimeStamp.current = pauseMilliseconds.current
-            ? initFinishTime(pauseMilliseconds.current)
-            : initFinishTime(defaultMilliseconds)
-        }
-        const leftMilliseconds = finishTimeStamp.current - Date.now() - 1000
-
-        setTime(leftMilliseconds)
-
-        if (leftMilliseconds <= 100) {
-          clearInterval(idTimer.current)
-          setGameOver(true)
-          setGameStarted(false)
-        }
-      }, 1000)
-
       setGameStarted(true)
+      startInterval()
     }
   }
 
   function pauseGame() {
     setGameStarted(false)
-    finishTimeStamp.current = 0
-    pauseMilliseconds.current = time
-    clearInterval(idTimer.current)
+    endInterval()
   }
 
-  function restartGame() {
+  function resetGame() {
     setGameStarted(false)
     setScore(0)
     setGameOver(false)
-    setTime(defaultMilliseconds)
-    finishTimeStamp.current = 0
-    pauseMilliseconds.current = 0
-    clearInterval(idTimer.current)
+    setTime(defaultTime)
+    endInterval()
   }
 
   function checkAnswer(value: number) {
-    const isValid = currentTask.current.result === value
-
-    const reset = () => {
-      const newTask = generationTask()
-
-      setTime(defaultMilliseconds)
-      currentTask.current = newTask
-      finishTimeStamp.current = 0
-      pauseMilliseconds.current = 0
-    }
+    const isValid = currentTask.result === value
 
     if (isValid) {
-      setScore(score + 1)
-      reset()
+      setScore((score) => score + 1)
+      setTime(() => defaultTime)
     } else {
-      setScore(score - 1)
-      reset()
+      setTime((time) => time - 2000)
     }
+
+    resetTask()
   }
 
   return {
-    startGame,
-    pauseGame,
-    restartGame,
+    game: {
+      start: startGame,
+      reset: resetGame,
+      pause: pauseGame,
+      isStarted: isGameStarted,
+      isOver: isGameOver,
+    },
     checkAnswer,
-    isGameStarted,
-    isGameOver,
-    currentTask: currentTask.current,
+    currentTask,
     score,
     time,
   }

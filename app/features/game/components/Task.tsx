@@ -3,25 +3,27 @@ import { Button } from '../../../components/common/Button'
 import { useGameContext } from '../context/GameProvider'
 
 export function Task() {
-  const { checkAnswer, currentTask, restartGame, startGame, pauseGame, isGameStarted, isGameOver } = useGameContext()
+  const { checkAnswer, currentTask, game } = useGameContext()
 
   const buttons = (
     <View>
-      {isGameOver ? (
-        <Button disabled onPress={restartGame}>
+      {game.isOver ? (
+        <Button disabled onPress={game.reset}>
           Game Over
         </Button>
       ) : (
-        <Button onPress={isGameStarted ? pauseGame : startGame}>{isGameStarted ? 'Pause Game' : 'Start Game'}</Button>
+        <Button onPress={game.isStarted ? game.pause : game.start}>
+          {game.isStarted ? 'Pause Game' : 'Start Game'}
+        </Button>
       )}
-      <Button onPress={restartGame}>Reset Game</Button>
+      <Button onPress={game.reset}>Reset Game</Button>
     </View>
   )
 
-  if (!isGameStarted) {
+  if (!game.isStarted) {
     return (
       <View>
-        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{isGameOver ? '😞' : '🙂'}</Text>
+        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{game.isOver ? '😞' : '🙂'}</Text>
         {buttons}
       </View>
     )
