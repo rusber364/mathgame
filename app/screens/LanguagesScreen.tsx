@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
+import { View, ScrollView, StyleSheet, FlatList } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { Button } from '../components/common/Button'
 import { languageKeys } from '../langs/translation'
@@ -20,15 +20,16 @@ export function LanguagesScreen() {
   )
 
   return (
-    <ScrollView>
-      <View style={styles.root}>
-        {languageKeys.map((lang) => (
-          <View key={lang} style={styles.lang}>
-            <Button onPress={handleChangeLang(lang)}>{lang}</Button>
+    <View style={styles.root}>
+      <FlatList
+        data={languageKeys}
+        renderItem={(lang) => (
+          <View key={lang.index} style={styles.lang}>
+            <Button onPress={handleChangeLang(lang.item)}>{lang.item}</Button>
           </View>
-        ))}
-      </View>
-    </ScrollView>
+        )}
+      />
+    </View>
   )
 }
 
