@@ -16,7 +16,7 @@ export function LanguagesScreen() {
       i18n.changeLanguage(lang)
       navigation.navigate('Home')
     },
-    []
+    [i18n, navigation]
   )
 
   return (

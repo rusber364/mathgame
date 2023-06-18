@@ -16,6 +16,5 @@
   "npm.packageManager": "yarn",
   "editor.formatOnSave": true,
   "testing.automaticallyOpenPeekView": "never",
-  "vscode-edge-devtools.webhint": false,
   "vitest.enable": true
 }
