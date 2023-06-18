@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { View, ScrollView, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList, SafeAreaView, StatusBar } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { Button } from '../components/common/Button'
 import { languageKeys } from '../langs/translation'
@@ -20,24 +20,27 @@ export function LanguagesScreen() {
   )
 
   return (
-    <View style={styles.root}>
+    <SafeAreaView style={styles.root}>
       <FlatList
+        style={styles.listLang}
         data={languageKeys}
         renderItem={(lang) => (
-          <View key={lang.index} style={styles.lang}>
+          <View style={styles.lang}>
             <Button onPress={handleChangeLang(lang.item)}>{lang.item}</Button>
           </View>
         )}
       />
-    </View>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   root: {
-    padding: 30,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flex: 1,
+    marginVertical: StatusBar.currentHeight || 0,
+  },
+  listLang: {
+    paddingHorizontal: 10,
   },
   lang: {
     flexGrow: 1,
