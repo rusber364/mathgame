@@ -16,6 +16,7 @@ export function useInterval(callback: TimerHandler, ms = 1000) {
       clearInterval(interval.current)
       interval.current = void 0
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isStart.current])
 
   return { interval, startInterval, endInterval }
