@@ -53,5 +53,5 @@
   "version": "0.2.0",
   "private": true,
   "name": "mathgame",
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@4.0.0-rc.46"
 }
