@@ -3,10 +3,11 @@ import ToastMessage from 'react-native-toast-message'
 import { StrictMode } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { Navigator } from './app/Navigator'
-import { GameProvider } from './app/features/game/context/GameProvider'
-import { AuthProvider } from './app/features/auth/context/AuthProvider'
-import './app/langs/translation'
+
+import { Navigator } from '~/Navigator'
+import { GameProvider } from '~/features/game/context/GameProvider'
+import { AuthProvider } from '~/features/auth/context/AuthProvider'
+import '~/langs/translation'
 
 export default function App() {
   return (
