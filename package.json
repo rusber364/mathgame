@@ -35,7 +35,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "expo": "~48.0.19",
-    "expo-community-flipper": "^47.0.0",
     "expo-dev-client": "~2.2.1",
     "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",

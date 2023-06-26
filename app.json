@@ -11,6 +11,5 @@
     "ios": {
       "bundleIdentifier": "rusber364.mathgame"
     }
-  },
-  "plugins": ["expo-community-flipper"]
+  }
 }

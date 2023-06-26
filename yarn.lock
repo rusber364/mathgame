@@ -7975,18 +7975,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-community-flipper@npm:^47.0.0":
-  version: 47.0.0
-  resolution: "expo-community-flipper@npm:47.0.0"
-  dependencies:
-    semver: "npm:^7.3.8"
-    ts-dedent: "npm:^2.2.0"
-  peerDependencies:
-    expo: ">=47.0.0-beta.0 <48"
-  checksum: a3f873bf5f0d90d17513918d07866de22c7191e25244c331cc5255c5959c1422f1cc2b53c99c4878fc2c2280f739b87f455b10c70a508eca4901d777bff138a2
-  languageName: node
-  linkType: hard
-
 "expo-constants@npm:~14.2.1":
   version: 14.2.1
   resolution: "expo-constants@npm:14.2.1"
@@ -11001,7 +10989,6 @@ __metadata:
     eslint-plugin-react: "npm:^7.32.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     expo: "npm:~48.0.19"
-    expo-community-flipper: "npm:^47.0.0"
     expo-dev-client: "npm:~2.2.1"
     expo-splash-screen: "npm:~0.18.2"
     expo-status-bar: "npm:~1.4.4"
@@ -15635,13 +15622,6 @@ __metadata:
   version: 0.6.6
   resolution: "traverse@npm:0.6.6"
   checksum: 8c300c9d15aa6149d6086eedd5f42475a4bfd942de1ac54ef8acc7026c970943d207a4b1d92ebdf86a73a030be11367ec50d307dddf5296df8d615199210bc01
-  languageName: node
-  linkType: hard
-
-"ts-dedent@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "ts-dedent@npm:2.2.0"
-  checksum: 93ed8f7878b6d5ed3c08d99b740010eede6bccfe64bce61c5a4da06a2c17d6ddbb80a8c49c2d15251de7594a4f93ffa21dd10e7be75ef66a4dc9951b4a94e2af
   languageName: node
   linkType: hard
 
