@@ -1,6 +1,6 @@
-import { NavigationAchievement } from '../../components/navigation/NavigationAchievementScreen'
-import { Background } from '../../layout/Background'
-import { Paper } from '../../layout/Paper'
+import { NavigationAchievement } from '~/components/navigation/NavigationAchievementScreen'
+import { Background } from '~/layout/Background'
+import { Paper } from '~/layout/Paper'
 
 export function AchievementScreen() {
   return (

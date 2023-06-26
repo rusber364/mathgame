@@ -1,11 +1,12 @@
 import { useCallback } from 'react'
 import { View, StyleSheet, FlatList, SafeAreaView, StatusBar } from 'react-native'
 import { useTranslation } from 'react-i18next'
-import { Button } from '../components/common/Button'
-import { languageKeys } from '../langs/translation'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { RoutesList } from '../types/RouteList'
+
+import { Button } from '~/components/common/Button'
+import { languageKeys } from '~/langs/translation'
+import { RoutesList } from '~/types/RouteList'
 
 export function LanguagesScreen() {
   const { i18n } = useTranslation()
