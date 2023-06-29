@@ -1,7 +1,7 @@
 import type { Session } from '@supabase/supabase-js'
 import type { PropsWithChildren } from 'react'
 import { createContext, useContext, useState, useEffect } from 'react'
-import { supabase } from '../../../database/supabase'
+import { supabase } from '~/database/supabase'
 
 type TAuthContext = {
   isAuth: boolean

@@ -1,10 +1,10 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-
-import type { RoutesList } from '../../types/RouteList'
-import { Button } from '../common/Button'
 import { useTranslation } from 'react-i18next'
+
+import type { RoutesList } from '~/types/RouteList'
+import { Button } from '~/components/common/Button'
 
 export function NavigationAchievement() {
   const { t } = useTranslation()
