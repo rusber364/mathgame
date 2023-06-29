@@ -65,7 +65,9 @@ const style = StyleSheet.create({
     marginLeft: -1,
     marginTop: -1,
     padding: 20,
-    borderWidth: 1,
-    borderStyle: 'dashed',
+    borderWidth: 3,
+    borderStyle: 'solid',
+    borderRadius: 300,
+    textAlign: 'center',
   },
 })

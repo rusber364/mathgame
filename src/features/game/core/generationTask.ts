@@ -17,7 +17,7 @@ export function generationTask() {
   const operationToString = operation.join('')
 
   const result = +Number(eval(operationToString)).toPrecision(3)
-  const answers = mixingArray(antiRandomDoubleAnswer(result, 8))
+  const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
   return { answers, operandLeft, operandRight, operator, result }
 }
