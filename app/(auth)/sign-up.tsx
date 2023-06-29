@@ -2,15 +2,15 @@ import Toast from 'react-native-toast-message'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View, KeyboardAvoidingView, Platform } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { supabase } from '../../../database/supabase'
 import { useState } from 'react'
 
-import type { RoutesList } from '../../../types/RouteList'
-import { Paper } from '../../../layout/Paper'
-import { Background } from '../../../layout/Background'
-import { Button } from '../../../components/common/Button'
-import { AuthTitle } from '../components/AuthTitle'
-import { AuthField } from '../components/AuthField'
+import type { RoutesList } from '~/types/RouteList'
+import { supabase } from '~/database/supabase'
+import { Paper } from '~/layout/Paper'
+import { Background } from '~/layout/Background'
+import { Button } from '~/components/common/Button'
+import { AuthTitle } from '~/features/auth/components/AuthTitle'
+import { AuthField } from '~/features/auth/components/AuthField'
 
 export function SignUpScreen() {
   const [email, setEmail] = useState('')

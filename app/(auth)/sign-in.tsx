@@ -4,13 +4,13 @@ import { useNavigation } from '@react-navigation/native'
 import { useState } from 'react'
 import Toast from 'react-native-toast-message'
 
-import { supabase } from '../../../database/supabase'
-import type { RoutesList } from '../../../types/RouteList'
-import { Paper } from '../../../layout/Paper'
-import { Background } from '../../../layout/Background'
-import { Button } from '../../../components/common/Button'
-import { AuthTitle } from '../components/AuthTitle'
-import { AuthField } from '../components/AuthField'
+import { supabase } from '~/database/supabase'
+import type { RoutesList } from '~/types/RouteList'
+import { Paper } from '~/layout/Paper'
+import { Background } from '~/layout/Background'
+import { Button } from '~/components/common/Button'
+import { AuthTitle } from '~/features/auth/components/AuthTitle'
+import { AuthField } from '~/features/auth/components/AuthField'
 
 export function SignInScreen() {
   const [email, setEmail] = useState('')
