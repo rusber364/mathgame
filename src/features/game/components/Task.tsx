@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from 'react-native'
-import { Button } from '../../../components/common/Button'
+import { Button } from '~/components/common/Button'
 import { useGameContext } from '../context/GameProvider'
 
 export function Task() {

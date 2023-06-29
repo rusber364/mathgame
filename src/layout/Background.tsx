@@ -1,9 +1,10 @@
 import type { PropsWithChildren } from 'react'
-import type { RoutesList } from '../types/RouteList'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { ImageBackground, StyleSheet, View } from 'react-native'
 import { useRoute, RouteProp } from '@react-navigation/native'
-import bg from '../assets/bg.png'
+
+import type { RoutesList } from '~/types/RouteList'
+import bg from '~/assets/bg.png'
 
 export function Background({ children }: PropsWithChildren) {
   const insets = useSafeAreaInsets()

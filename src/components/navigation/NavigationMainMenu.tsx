@@ -1,9 +1,10 @@
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import type { RoutesList } from '../../types/RouteList'
 import { View } from 'react-native'
-import { Button } from '../common/Button'
 import { useNavigation } from '@react-navigation/native'
 import { useTranslation } from 'react-i18next'
+
+import type { RoutesList } from '~/types/RouteList'
+import { Button } from '~/components/common/Button'
 
 export function NavigationMainMenu() {
   const { t } = useTranslation()

@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons'
 import { View, StyleSheet, Pressable } from 'react-native'
 
 import { useAuthContext } from '../context/AuthProvider'
-import { RoutesList } from '../../../types/RouteList'
+import { RoutesList } from '~/types/RouteList'
 
 export function Profile() {
   const { isAuth } = useAuthContext()
