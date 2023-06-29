@@ -9,7 +9,7 @@ import bg from '~/assets/bg.png'
 export function Background({ children }: PropsWithChildren) {
   const insets = useSafeAreaInsets()
   const router = useRoute<RouteProp<RoutesList>>()
-  const isHomeScreen = router.name === 'Home'
+  const isHomeScreen = router.name === 'home'
 
   return (
     <View style={[styles.root, isHomeScreen && insets]}>

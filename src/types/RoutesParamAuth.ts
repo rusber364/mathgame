@@ -1,4 +1,4 @@
 export type RoutesParamAuth = {
-  SignIn: undefined
-  SignUp: undefined
+  'sign-in': undefined
+  'sign-up': undefined
 }

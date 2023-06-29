@@ -64,7 +64,7 @@ export default function SignUpScreen() {
           <Button onPress={handleRegistration} isLoading={isLoading}>
             Registration
           </Button>
-          <Button onPress={() => navigation.navigate('SignIn')}>Login</Button>
+          <Button onPress={() => navigation.navigate('sign-in')}>Login</Button>
         </Paper>
       </Background>
     </KeyboardAvoidingView>

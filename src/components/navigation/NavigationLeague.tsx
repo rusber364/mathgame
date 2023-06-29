@@ -10,10 +10,10 @@ export function NavigationLeague() {
   const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
-  const navigateToSingleTournament = () => navigation?.navigate('SingleTournament')
-  const navigateToTeamTournament = () => navigation?.navigate('TeamTournament')
-  const navigateToTopSinglePlayer = () => navigation?.navigate('TopSinglePlayer')
-  const navigateToTopTeam = () => navigation?.navigate('TopTeam')
+  const navigateToSingleTournament = () => navigation?.navigate('single-tournament')
+  const navigateToTeamTournament = () => navigation?.navigate('team-tournament')
+  const navigateToTopSinglePlayer = () => navigation?.navigate('top-single-player')
+  const navigateToTopTeam = () => navigation?.navigate('top-team')
 
   return (
     <View>

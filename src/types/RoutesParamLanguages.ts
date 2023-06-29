@@ -1,3 +1,3 @@
 export type RoutesParamLanguages = {
-  Languages: undefined
+  languages: undefined
 }

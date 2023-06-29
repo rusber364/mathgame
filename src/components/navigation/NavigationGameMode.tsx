@@ -10,9 +10,9 @@ export function NavigationGameMode() {
   const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
-  const navigationToStoreMode = () => navigation?.navigate('StoreMode')
-  const navigationToSurvivalMode = () => navigation?.navigate('SurvivalMode')
-  const navigationToKnowledge = () => navigation?.navigate('Knowledge')
+  const navigationToStoreMode = () => navigation?.navigate('store-mode')
+  const navigationToSurvivalMode = () => navigation?.navigate('survival-mode')
+  const navigationToKnowledge = () => navigation?.navigate('knowledge')
 
   return (
     <View>

@@ -15,7 +15,7 @@ export default function LanguagesScreen() {
   const handleChangeLang = useCallback(
     (lang: string) => () => {
       i18n.changeLanguage(lang)
-      navigation.navigate('Home')
+      navigation.navigate('home')
     },
     [i18n, navigation]
   )

@@ -1,5 +1,5 @@
 export type RoutesParamListAchievements = {
-  SingleAchievements: undefined
-  TeamAchievements: undefined
-  Bonuses: undefined
+  'achievements-single': undefined
+  'achievements-team': undefined
+  bonus: undefined
 }

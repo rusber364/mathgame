@@ -34,44 +34,44 @@ export function Navigator() {
   const { isAuth } = useAuthContext()
 
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="Languages" component={LanguagesScreen} />
+    <Stack.Navigator initialRouteName="home">
+      <Stack.Screen name="home" component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="languages" component={LanguagesScreen} />
 
       {isAuth ? (
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="profile" component={ProfileScreen} />
       ) : (
         <>
-          <Stack.Screen name="SignIn" component={SignInScreen} />
-          <Stack.Screen name="SignUp" component={SignUpScreen} />
+          <Stack.Screen name="sign-in" component={SignInScreen} />
+          <Stack.Screen name="sign-up" component={SignUpScreen} />
         </>
       )}
 
-      <Stack.Screen name="GameMode" component={GameModeScreen} />
+      <Stack.Screen name="game-mode" component={GameModeScreen} />
       <Stack.Group>
-        <Stack.Screen name="StoreMode" component={StoreModeScreen} />
-        <Stack.Screen name="SurvivalMode" component={SurvivalModeScreen} />
-        <Stack.Screen name="Knowledge" component={KnowledgeScreen} />
+        <Stack.Screen name="store-mode" component={StoreModeScreen} />
+        <Stack.Screen name="survival-mode" component={SurvivalModeScreen} />
+        <Stack.Screen name="knowledge" component={KnowledgeScreen} />
       </Stack.Group>
 
       <Stack.Group>
-        <Stack.Screen name="SingleAchievements" component={AchievementsSingleScreen} />
-        <Stack.Screen name="TeamAchievements" component={AchievementsTeamScreen} />
-        <Stack.Screen name="Bonuses" component={BonusScreen} />
+        <Stack.Screen name="achievements-single" component={AchievementsSingleScreen} />
+        <Stack.Screen name="achievements-team" component={AchievementsTeamScreen} />
+        <Stack.Screen name="bonus" component={BonusScreen} />
       </Stack.Group>
 
       <Stack.Group>
-        <Stack.Screen name="SingleTournament" component={SingleTournamentScreen} />
-        <Stack.Screen name="TeamTournament" component={TeamTournamentScreen} />
-        <Stack.Screen name="TopSinglePlayer" component={TopSinglePlayerScreen} />
-        <Stack.Screen name="TopTeam" component={TopTeamScreen} />
+        <Stack.Screen name="single-tournament" component={SingleTournamentScreen} />
+        <Stack.Screen name="team-tournament" component={TeamTournamentScreen} />
+        <Stack.Screen name="top-single-player" component={TopSinglePlayerScreen} />
+        <Stack.Screen name="top-team" component={TopTeamScreen} />
       </Stack.Group>
 
-      <Stack.Screen name="Team" component={TeamScreen} />
-      <Stack.Screen name="Achievement" component={AchievementScreen} />
-      <Stack.Screen name="League" component={LeagueScreen} />
-      <Stack.Screen name="Option" component={OptionScreen} />
-      <Stack.Screen name="Purchase" component={PurchaseScreen} />
+      <Stack.Screen name="team" component={TeamScreen} />
+      <Stack.Screen name="achievement" component={AchievementScreen} />
+      <Stack.Screen name="league" component={LeagueScreen} />
+      <Stack.Screen name="option" component={OptionScreen} />
+      <Stack.Screen name="purchase" component={PurchaseScreen} />
     </Stack.Navigator>
   )
 }

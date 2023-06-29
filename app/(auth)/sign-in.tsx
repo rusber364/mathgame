@@ -23,7 +23,7 @@ export default function SignInScreen() {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (!error) {
-      navigation.navigate('Profile')
+      navigation.navigate('profile')
     } else {
       Toast.show({
         type: 'error',
@@ -59,7 +59,7 @@ export default function SignInScreen() {
           <Button onPress={handleLogin} isLoading={isLoading}>
             Login
           </Button>
-          <Button onPress={() => navigation.navigate('SignUp')}>Registration</Button>
+          <Button onPress={() => navigation.navigate('sign-up')}>Registration</Button>
         </Paper>
       </Background>
     </KeyboardAvoidingView>

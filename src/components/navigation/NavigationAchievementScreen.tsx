@@ -10,9 +10,9 @@ export function NavigationAchievement() {
   const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
-  const navigateToAchievementSingleScreen = () => navigation?.navigate('SingleAchievements')
-  const navigateToAchievementTeamScreen = () => navigation?.navigate('TeamAchievements')
-  const navigateToBonusScreen = () => navigation?.navigate('Bonuses')
+  const navigateToAchievementSingleScreen = () => navigation?.navigate('achievements-single')
+  const navigateToAchievementTeamScreen = () => navigation?.navigate('achievements-team')
+  const navigateToBonusScreen = () => navigation?.navigate('bonus')
 
   return (
     <View>

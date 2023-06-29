@@ -12,11 +12,11 @@ export function Profile() {
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
   const handleProfile = () => {
-    navigation.navigate(isAuth ? 'Profile' : 'SignUp')
+    navigation.navigate(isAuth ? 'profile' : 'sign-up')
   }
 
   const handleLanguages = () => {
-    navigation.navigate('Languages')
+    navigation.navigate('languages')
   }
 
   return (

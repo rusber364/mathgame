@@ -1,6 +1,6 @@
 export type RoutesParamListLeague = {
-  SingleTournament: undefined
-  TeamTournament: undefined
-  TopSinglePlayer: undefined
-  TopTeam: undefined
+  'single-tournament': undefined
+  'team-tournament': undefined
+  'top-single-player': undefined
+  'top-team': undefined
 }

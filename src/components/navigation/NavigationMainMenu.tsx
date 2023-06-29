@@ -10,12 +10,12 @@ export function NavigationMainMenu() {
   const { t } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
-  const navigateToTeam = () => navigation.navigate('Team')
-  const navigateToGameMode = () => navigation.navigate('GameMode')
-  const navigateToAchievement = () => navigation.navigate('Achievement')
-  const navigateToLeague = () => navigation.navigate('League')
-  const navigateToOption = () => navigation.navigate('Option')
-  const navigateToPurchase = () => navigation.navigate('Purchase')
+  const navigateToTeam = () => navigation.navigate('team')
+  const navigateToGameMode = () => navigation.navigate('game-mode')
+  const navigateToAchievement = () => navigation.navigate('achievement')
+  const navigateToLeague = () => navigation.navigate('league')
+  const navigateToOption = () => navigation.navigate('option')
+  const navigateToPurchase = () => navigation.navigate('purchase')
 
   return (
     <View>

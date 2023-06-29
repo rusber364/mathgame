@@ -1,10 +1,10 @@
 export type RoutesParamList = {
-  Home: undefined
-  GameMode: undefined
-  Team: undefined
-  Achievement: undefined
-  League: undefined
-  Option: undefined
-  Profile: undefined
-  Purchase: undefined
+  home: undefined
+  'game-mode': undefined
+  team: undefined
+  achievement: undefined
+  league: undefined
+  option: undefined
+  profile: undefined
+  purchase: undefined
 }
