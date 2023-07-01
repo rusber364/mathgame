@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Image } from 'react-native'
+
 import { Button } from '~/components/common/Button'
 import { useGameContext } from '../context/GameProvider'
 
@@ -9,14 +10,23 @@ export function Task() {
     <View>
       {game.isOver ? (
         <Button disabled onPress={game.reset}>
-          Game Over
+          <Image
+            source={require('~/assets/reload.png')}
+            style={{ width: 15, height: 15 }} // указываете размеры векторной картинки
+          />
         </Button>
       ) : (
         <Button onPress={game.isStarted ? game.pause : game.start}>
-          {game.isStarted ? 'Pause Game' : 'Start Game'}
+          {game.isStarted ? (
+            <Image source={require('~/assets/pause.png')} style={{ width: 15, height: 15 }} />
+          ) : (
+            <Image source={require('~/assets/play.png')} style={{ width: 15, height: 15 }} />
+          )}
         </Button>
       )}
-      <Button onPress={game.reset}>Reset Game</Button>
+      <Button onPress={game.reset}>
+        <Image source={require('~/assets/reload.png')} style={{ width: 15, height: 15 }} />
+      </Button>
     </View>
   )
 
