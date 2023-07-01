@@ -2,6 +2,9 @@ import { Text, View, StyleSheet, Image } from 'react-native'
 
 import { Button } from '~/components/common/Button'
 import { useGameContext } from '../context/GameProvider'
+import reload from '~/assets/reload.png'
+import pause from '~/assets/pause.png'
+import play from '~/assets/play.png'
 
 export function Task() {
   const { checkAnswer, currentTask, game } = useGameContext()
@@ -10,22 +13,19 @@ export function Task() {
     <View>
       {game.isOver ? (
         <Button disabled onPress={game.reset}>
-          <Image
-            source={require('~/assets/reload.png')}
-            style={{ width: 15, height: 15 }} // указываете размеры векторной картинки
-          />
+          <Image source={reload} style={{ width: 15, height: 15 }} />
         </Button>
       ) : (
         <Button onPress={game.isStarted ? game.pause : game.start}>
           {game.isStarted ? (
-            <Image source={require('~/assets/pause.png')} style={{ width: 15, height: 15 }} />
+            <Image source={pause} style={{ width: 15, height: 15 }} />
           ) : (
-            <Image source={require('~/assets/play.png')} style={{ width: 15, height: 15 }} />
+            <Image source={play} style={{ width: 15, height: 15 }} />
           )}
         </Button>
       )}
       <Button onPress={game.reset}>
-        <Image source={require('~/assets/reload.png')} style={{ width: 15, height: 15 }} />
+        <Image source={reload} style={{ width: 15, height: 15 }} />
       </Button>
     </View>
   )
