@@ -8,10 +8,10 @@ type Props = PressableProps &
   }
 
 export function Button(props: Props) {
-  const { children, isLoading, ...othersProps } = props
+  const { children, isLoading, style: outStyle, ...othersProps } = props
 
   return (
-    <Pressable {...othersProps} style={style.button}>
+    <Pressable {...othersProps} style={[style.button, typeof outStyle !== 'function' && outStyle]}>
       <View style={{ flexDirection: 'row' }}>
         {isLoading && <ActivityIndicator style={style.indicator} color="#fff" />}
         <Text style={style.text}>{children}</Text>
