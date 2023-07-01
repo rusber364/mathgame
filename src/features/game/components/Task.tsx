@@ -12,11 +12,11 @@ export function Task() {
   const buttons = (
     <View>
       {game.isOver ? (
-        <Button disabled onPress={game.reset}>
+        <Button disabled onPress={game.reset} style={style.button}>
           <Image source={reload} style={{ width: 15, height: 15 }} />
         </Button>
       ) : (
-        <Button onPress={game.isStarted ? game.pause : game.start}>
+        <Button onPress={game.isStarted ? game.pause : game.start} style={style.button}>
           {game.isStarted ? (
             <Image source={pause} style={{ width: 15, height: 15 }} />
           ) : (
@@ -24,7 +24,7 @@ export function Task() {
           )}
         </Button>
       )}
-      <Button onPress={game.reset}>
+      <Button onPress={game.reset} style={style.button}>
         <Image source={reload} style={{ width: 15, height: 15 }} />
       </Button>
     </View>
@@ -68,6 +68,9 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginVertical: 20,
+  },
+  button: {
+    backgroundColor: '#f5deb3',
   },
   answer: {
     flexGrow: 1,
