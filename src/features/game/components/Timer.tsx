@@ -6,7 +6,7 @@ import { FlasherView } from './FlasherView'
 export function Timer() {
   const { time } = useGameContext()
 
-  if (time < 5000) {
+  if (time > 0 && time < 5999) {
     return (
       <FlasherView style={styles.circle}>
         <Text style={styles.text}>{formatTimer(time)}</Text>
