@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react'
-import { View, Animated, Easing } from 'react-native'
+import { useEffect, useRef } from 'react'
+import { Animated, Easing } from 'react-native'
 
-const App = () => {
+export function useFlasher() {
   const colorAnimation = useRef(new Animated.Value(0)).current
 
   useEffect(() => {
@@ -29,23 +29,8 @@ const App = () => {
     }
   }, [colorAnimation])
 
-  const interpolatedColor = colorAnimation.interpolate({
+  return colorAnimation.interpolate({
     inputRange: [0, 1],
     outputRange: ['red', 'white'],
   })
-
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Animated.View
-        style={{
-          width: 100,
-          height: 100,
-          borderRadius: 50,
-          backgroundColor: interpolatedColor,
-        }}
-      />
-    </View>
-  )
 }
-
-export default App
