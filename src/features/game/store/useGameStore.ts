@@ -4,7 +4,7 @@ import { useInterval } from '../hooks/useInterval'
 
 export type GameStore = ReturnType<typeof useGameStore>
 
-const defaultTime = 20000
+const defaultTime = 60000
 
 export function useGameStore() {
   const [score, setScore] = useState(0)
@@ -52,7 +52,6 @@ export function useGameStore() {
 
     if (isValid) {
       setScore((score) => score + 1)
-      setTime(() => defaultTime)
     } else {
       setTime((time) => time - 2000)
     }
