@@ -19,17 +19,13 @@ describe('render hook useGameStore', () => {
   test('start await 10s, pause, start await 5s, reset', () => {
     const { result } = renderHook(() => useGameStore(20000))
     act(() => result.current.game.start())
-    act(() => {
-      vi.advanceTimersByTime(10000)
-    })
+    act(() => void vi.advanceTimersByTime(10000))
     act(() => result.current.game.pause())
     expect(result.current.game.isStarted).toBe(false)
     expect(result.current.game.isOver).toBe(false)
     expect(result.current.time).toBe(10000)
     act(() => result.current.game.start())
-    act(() => {
-      vi.advanceTimersByTime(5000)
-    })
+    act(() => void vi.advanceTimersByTime(5000))
     expect(result.current.time).toBe(5000)
     act(() => result.current.game.reset())
     expect(result.current.time).toBe(20000)
@@ -38,9 +34,7 @@ describe('render hook useGameStore', () => {
   test('pause timer after 5s', () => {
     const { result } = renderHook(() => useGameStore(20000))
     act(() => result.current.game.start())
-    act(() => {
-      vi.advanceTimersByTime(5000)
-    })
+    act(() => void vi.advanceTimersByTime(5000))
     act(() => result.current.game.pause())
     expect(result.current.game.isStarted).toBe(false)
     expect(result.current.time).toBe(15000)
@@ -49,9 +43,7 @@ describe('render hook useGameStore', () => {
   test('reset timer after 1s', () => {
     const { result } = renderHook(() => useGameStore(20000))
     act(() => result.current.game.start())
-    act(() => {
-      vi.advanceTimersByTime(1000)
-    })
+    act(() => void vi.advanceTimersByTime(1000))
     act(() => result.current.game.reset())
     expect(result.current.time).toBe(20000)
   })
