@@ -12,12 +12,12 @@ describe('render hook useGameStore', () => {
   })
 
   test('init state timer', () => {
-    const { result } = renderHook(useGameStore)
+    const { result } = renderHook(() => useGameStore(20000))
     expect(result.current.time).toBe(20000)
   })
 
   test('start await 10s, pause, start await 5s, reset', () => {
-    const { result } = renderHook(useGameStore)
+    const { result } = renderHook(() => useGameStore(20000))
     act(() => result.current.game.start())
     act(() => {
       vi.advanceTimersByTime(10000)
@@ -36,7 +36,7 @@ describe('render hook useGameStore', () => {
   })
 
   test('pause timer after 5s', () => {
-    const { result } = renderHook(useGameStore)
+    const { result } = renderHook(() => useGameStore(20000))
     act(() => result.current.game.start())
     act(() => {
       vi.advanceTimersByTime(5000)
@@ -47,7 +47,7 @@ describe('render hook useGameStore', () => {
   })
 
   test('reset timer after 1s', () => {
-    const { result } = renderHook(useGameStore)
+    const { result } = renderHook(() => useGameStore(20000))
     act(() => result.current.game.start())
     act(() => {
       vi.advanceTimersByTime(1000)

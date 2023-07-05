@@ -4,9 +4,7 @@ import { useInterval } from '../hooks/useInterval'
 
 export type GameStore = ReturnType<typeof useGameStore>
 
-const defaultTime = 60000
-
-export function useGameStore() {
+export function useGameStore(defaultTime = 60000) {
   const [score, setScore] = useState(0)
   const [time, setTime] = useState(defaultTime)
   const [isGameStarted, setGameStarted] = useState(false)

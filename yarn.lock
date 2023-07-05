@@ -9414,6 +9414,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"husky@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "husky@npm:8.0.3"
+  bin:
+    husky: lib/bin.js
+  checksum: b754cf70fdc97c3b60fec5b80056b9c11436464953b1691bf2b5dcf0081fb6685d2c5f47abb8b2b1c49f504aabea5321fdd6496f8b755d9f6e7525a493406abb
+  languageName: node
+  linkType: hard
+
 "hyphenate-style-name@npm:^1.0.2":
   version: 1.0.4
   resolution: "hyphenate-style-name@npm:1.0.4"
@@ -10992,6 +11001,7 @@ __metadata:
     expo-dev-client: "npm:~2.2.1"
     expo-splash-screen: "npm:~0.18.2"
     expo-status-bar: "npm:~1.4.4"
+    husky: "npm:^8.0.3"
     i18next: "npm:^22.0.6"
     i18next-browser-languagedetector: "npm:^7.0.1"
     jsdom: "npm:^20.0.3"
