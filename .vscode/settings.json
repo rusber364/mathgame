@@ -16,5 +16,6 @@
   "npm.packageManager": "yarn",
   "editor.formatOnSave": true,
   "testing.automaticallyOpenPeekView": "never",
-  "vitest.enable": true
+  "vitest.enable": true,
+  "vitest.commandLine": "yarn vitest"
 }

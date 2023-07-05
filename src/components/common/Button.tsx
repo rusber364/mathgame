@@ -1,17 +1,17 @@
-import { Text, StyleSheet, Pressable, PressableProps, ActivityIndicator } from 'react-native'
-import { View } from 'react-native'
+import type { PressableProps, StyleProp, ViewStyle } from 'react-native'
+import { View, Text, StyleSheet, Pressable, ActivityIndicator } from 'react-native'
 
-type Props = PressableProps &
-  React.RefAttributes<View> &
-  React.PropsWithChildren & {
-    isLoading?: boolean
-  }
+type NativeProps<T> = PressableProps & React.RefAttributes<View> & React.PropsWithChildren<T>
+type Props = {
+  isLoading?: boolean
+  style?: StyleProp<ViewStyle>
+}
 
-export function Button(props: Props) {
+export function Button(props: NativeProps<Props>) {
   const { children, isLoading, style: outStyle, ...othersProps } = props
 
   return (
-    <Pressable {...othersProps} style={[style.button, typeof outStyle !== 'function' && outStyle]}>
+    <Pressable {...othersProps} style={[style.button, outStyle]}>
       <View style={{ flexDirection: 'row' }}>
         {isLoading && <ActivityIndicator style={style.indicator} color="#fff" />}
         <Text style={style.text}>{children}</Text>
