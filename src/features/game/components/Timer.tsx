@@ -1,9 +1,18 @@
 import { Text, View, StyleSheet } from 'react-native'
 import { useGameContext } from '../context/GameProvider'
 import { formatTimer } from '../utils/formatTimer'
+import { FlasherView } from './FlasherView'
 
 export function Timer() {
   const { time } = useGameContext()
+
+  if (time < 5000) {
+    return (
+      <FlasherView style={styles.circle}>
+        <Text style={styles.text}>{formatTimer(time)}</Text>
+      </FlasherView>
+    )
+  }
 
   return (
     <View style={styles.circle}>
