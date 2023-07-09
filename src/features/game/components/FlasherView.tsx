@@ -1,11 +1,18 @@
 import { useEffect, useRef, type PropsWithChildren } from 'react'
-import { Animated, Easing } from 'react-native'
+import { Animated, Easing, StyleProp, TextStyle } from 'react-native'
 
 type Props = {
-  style?: any
+  style?: StyleProp<TextStyle>
+  duration?: number
+  outputRange?: string[]
 }
 
-export function FlasherView({ children, style }: PropsWithChildren<Props>) {
+export function FlasherView({
+  children,
+  style,
+  duration = 500,
+  outputRange = ['red', 'white'],
+}: PropsWithChildren<Props>) {
   const colorAnimation = useRef(new Animated.Value(0)).current
 
   useEffect(() => {
@@ -13,13 +20,13 @@ export function FlasherView({ children, style }: PropsWithChildren<Props>) {
       Animated.sequence([
         Animated.timing(colorAnimation, {
           toValue: 1,
-          duration: 500,
+          duration,
           easing: Easing.linear,
           useNativeDriver: false,
         }),
         Animated.timing(colorAnimation, {
           toValue: 0,
-          duration: 500,
+          duration,
           easing: Easing.linear,
           useNativeDriver: false,
         }),
@@ -31,12 +38,12 @@ export function FlasherView({ children, style }: PropsWithChildren<Props>) {
     return () => {
       animation.stop()
     }
-  }, [colorAnimation])
+  }, [colorAnimation, duration])
 
   const backgroundColor = colorAnimation.interpolate({
     inputRange: [0, 1],
-    outputRange: ['red', 'white'],
+    outputRange,
   })
 
-  return <Animated.View style={[style.circle, { backgroundColor }]}>{children}</Animated.View>
+  return <Animated.View style={[style, { backgroundColor }]}>{children}</Animated.View>
 }
