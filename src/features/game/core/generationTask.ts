@@ -1,3 +1,4 @@
+import { evaluate } from 'mathjs'
 import { maxRandomNumbersMap, operators } from './operators'
 import { getRandomOperator } from '../utils/getRandomOperator'
 import { getRandomNumber } from '../utils/getRandomNumber'
@@ -16,7 +17,7 @@ export function generationTask() {
   operation.push(operandLeft, operator, operandRight)
   const operationToString = operation.join('')
 
-  const result = +Number(eval(operationToString)).toPrecision(3)
+  const result = +Number(evaluate(operationToString)).toPrecision(3)
   const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
   return { answers, operandLeft, operandRight, operator, result }
