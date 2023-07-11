@@ -7,7 +7,7 @@ import { GameProvider } from '~/features/game/context/GameProvider'
 import { AuthProvider } from '~/features/auth/context/AuthProvider'
 import '~/langs/translation'
 
-export default function App() {
+export default function Layout() {
   return (
     <>
       <SafeAreaProvider>

@@ -2,7 +2,7 @@ import { NavigationLeague } from '~/components/navigation/NavigationLeague'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 
-export function LeagueScreen() {
+export default function LeagueScreen() {
   return (
     <Background>
       <Paper>

@@ -6,7 +6,7 @@ import { Timer } from '~/features/game/components/Timer'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 
-export function SurvivalModeScreen() {
+export default function SurvivalModeScreen() {
   return (
     <Background>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>

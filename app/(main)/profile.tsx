@@ -5,7 +5,7 @@ import { Paper } from '~/layout/Paper'
 import { supabase } from '~/database/supabase'
 import { Button } from '~/components/common/Button'
 
-export function ProfileScreen() {
+export default function ProfileScreen() {
   function logOut() {
     supabase?.auth.signOut()
   }

@@ -3,7 +3,7 @@ import { Text } from 'react-native'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 
-export function AchievementsSingleScreen() {
+export default function AchievementsSingleScreen() {
   return (
     <Background>
       <Paper>

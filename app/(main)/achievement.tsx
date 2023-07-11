@@ -2,7 +2,7 @@ import { NavigationAchievement } from '~/components/navigation/NavigationAchieve
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 
-export function AchievementScreen() {
+export default function AchievementScreen() {
   return (
     <Background>
       <Paper>

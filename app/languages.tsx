@@ -8,7 +8,7 @@ import { Button } from '~/components/common/Button'
 import { languageKeys } from '~/langs/translation'
 import { RoutesList } from '~/types/RouteList'
 
-export function LanguagesScreen() {
+export default function LanguagesScreen() {
   const { i18n } = useTranslation()
   const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
 
