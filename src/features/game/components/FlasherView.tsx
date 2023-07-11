@@ -4,7 +4,7 @@ import { Animated, Easing, StyleProp, TextStyle } from 'react-native'
 type Props = {
   style?: StyleProp<TextStyle>
   duration?: number
-  outputRange?: string[]
+  outputRange?: [string, string]
 }
 
 export function FlasherView({
