@@ -2417,7 +2417,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.8.4":
   version: 7.19.0
   resolution: "@babel/runtime@npm:7.19.0"
   dependencies:
@@ -9945,21 +9945,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next-browser-languagedetector@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "i18next-browser-languagedetector@npm:7.0.1"
+"i18next-browser-languagedetector@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "i18next-browser-languagedetector@npm:7.1.0"
   dependencies:
     "@babel/runtime": "npm:^7.19.4"
-  checksum: cc10ffa1bf2d3de48114ccc7762f06992cb1d754e5c95f35802207abefb21514e40efd61ea5b70dfcd33a623171847623cc77adb6e7e135694b9aa3b7f5b30ed
+  checksum: 3b06c8a5df09092cffc0b6637b542bb572e8a25dcba97d0d8a5e5dd7539b90bf00000f3a279654693f4b5908c5fc4d1d4f3766dfb461dacab46be3d071266384
   languageName: node
   linkType: hard
 
-"i18next@npm:^22.0.6":
-  version: 22.0.6
-  resolution: "i18next@npm:22.0.6"
+"i18next@npm:^23.2.9":
+  version: 23.2.9
+  resolution: "i18next@npm:23.2.9"
   dependencies:
-    "@babel/runtime": "npm:^7.17.2"
-  checksum: 853e1369bff0a3808f353f9e66b9a5df2a6901f8157c3d9a51ae688c9b66bddb4b643a3ef22d4c891947c9be24197c47e95b63208a06d56954a7240f44a349d7
+    "@babel/runtime": "npm:^7.22.5"
+  checksum: 16f78f92be18e06464bc4d69e7d23c7ee816876e1f187c3fbcab3fa7172ee5c200757ba8ef8fede2ec0261be6bfd658e31935d713d3adbd53bb0467d135aef75
   languageName: node
   linkType: hard
 
@@ -11548,15 +11548,15 @@ __metadata:
     expo-splash-screen: "npm:~0.18.2"
     expo-status-bar: "npm:~1.4.4"
     husky: "npm:^8.0.3"
-    i18next: "npm:^22.0.6"
-    i18next-browser-languagedetector: "npm:^7.0.1"
+    i18next: "npm:^23.2.9"
+    i18next-browser-languagedetector: "npm:^7.1.0"
     jsdom: "npm:^22.1.0"
     mathjs: "npm:^11.8.2"
     nanoid: "npm:^4.0.0"
     prettier: "npm:^3.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-i18next: "npm:^12.0.0"
+    react-i18next: "npm:^13.0.2"
     react-native: "npm:0.71.8"
     react-native-flipper: "npm:^0.174.0"
     react-native-gesture-handler: "npm:~2.9.0"
@@ -14375,21 +14375,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:^12.0.0":
-  version: 12.0.0
-  resolution: "react-i18next@npm:12.0.0"
+"react-i18next@npm:^13.0.2":
+  version: 13.0.2
+  resolution: "react-i18next@npm:13.0.2"
   dependencies:
-    "@babel/runtime": "npm:^7.14.5"
+    "@babel/runtime": "npm:^7.22.5"
     html-parse-stringify: "npm:^3.0.1"
   peerDependencies:
-    i18next: ">= 19.0.0"
+    i18next: ">= 23.2.3"
     react: ">= 16.8.0"
   peerDependenciesMeta:
     react-dom:
       optional: true
     react-native:
       optional: true
-  checksum: 91da29572d0059783277b468999092d1d2a96efacdc29b0ab143e9b7ac22e293925c972b713ac08b57e65618b75f2848416e64751e210148f94bc87d86589e0f
+  checksum: bdc639135e1337578098abef48707ed03919d568c673fbcb6235706accd6591ed56fb9f5f1efbfa518c45d05326ed8b0fb79f38b1dbd7bff5195b2cd94da847d
   languageName: node
   linkType: hard
 
