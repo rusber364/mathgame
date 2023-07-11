@@ -8574,7 +8574,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-router@npm:^1.0.0":
+"expo-router@npm:^1.5.3":
   version: 1.5.3
   resolution: "expo-router@npm:1.5.3"
   dependencies:
@@ -11544,7 +11544,7 @@ __metadata:
     expo-constants: "npm:~14.2.1"
     expo-dev-client: "npm:~2.2.1"
     expo-linking: "npm:~4.0.1"
-    expo-router: "npm:^1.0.0"
+    expo-router: "npm:^1.5.3"
     expo-splash-screen: "npm:~0.18.2"
     expo-status-bar: "npm:~1.4.4"
     husky: "npm:^8.0.3"
