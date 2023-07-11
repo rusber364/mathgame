@@ -1,5 +1,6 @@
 import type { Session } from '@supabase/supabase-js'
 import type { PropsWithChildren } from 'react'
+import { useRouter, useSegments } from 'expo-router'
 import { createContext, useContext, useState, useEffect } from 'react'
 import { supabase } from '~/database/supabase'
 
@@ -15,6 +16,8 @@ const AuthContext = createContext<TAuthContext>({ isAuth: false, session: null }
 export function AuthProvider({ children }: PropsWithChildren) {
   const [isAuth, setAuth] = useState(false)
   const [session, setSession] = useState<TSession>(null)
+  const [protectedRoutes] = useSegments()
+  const router = useRouter()
 
   useEffect(() => {
     async function getAuthSession() {
@@ -35,6 +38,12 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
     return () => authListener.subscription.unsubscribe()
   }, [])
+
+  useEffect(() => {
+    if (protectedRoutes === '(protected)' && !isAuth) {
+      router.replace('/sign-in')
+    }
+  }, [isAuth, protectedRoutes, router])
 
   return <AuthContext.Provider value={{ isAuth, session }}>{children}</AuthContext.Provider>
 }
