@@ -15,7 +15,7 @@ export default function LanguagesScreen() {
       i18n.changeLanguage(lang)
       router.push('home')
     },
-    [i18n, router]
+    [i18n, router],
   )
 
   return (

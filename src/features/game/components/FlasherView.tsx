@@ -30,7 +30,7 @@ export function FlasherView({
           easing: Easing.linear,
           useNativeDriver: false,
         }),
-      ])
+      ]),
     )
 
     animation.start()
