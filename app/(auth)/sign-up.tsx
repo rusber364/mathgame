@@ -1,10 +1,8 @@
 import Toast from 'react-native-toast-message'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View, KeyboardAvoidingView, Platform } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useRouter } from 'expo-router'
 import { useState } from 'react'
 
-import type { RoutesList } from '~/types/RouteList'
 import { supabase } from '~/database/supabase'
 import { Paper } from '~/layout/Paper'
 import { Background } from '~/layout/Background'
@@ -16,7 +14,7 @@ export default function SignUpScreen() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setLoading] = useState(false)
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
   async function handleRegistration() {
     setLoading(true)
@@ -64,7 +62,7 @@ export default function SignUpScreen() {
           <Button onPress={handleRegistration} isLoading={isLoading}>
             Registration
           </Button>
-          <Button onPress={() => navigation.navigate('sign-in')}>Login</Button>
+          <Button onPress={() => router.push('sign-in')}>Login</Button>
         </Paper>
       </Background>
     </KeyboardAvoidingView>

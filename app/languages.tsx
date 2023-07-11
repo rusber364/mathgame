@@ -1,23 +1,21 @@
 import { useCallback } from 'react'
 import { View, StyleSheet, FlatList, SafeAreaView, StatusBar } from 'react-native'
 import { useTranslation } from 'react-i18next'
-import { useNavigation } from '@react-navigation/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { useRouter } from 'expo-router'
 
 import { Button } from '~/components/common/Button'
 import { languageKeys } from '~/langs/translation'
-import { RoutesList } from '~/types/RouteList'
 
 export default function LanguagesScreen() {
   const { i18n } = useTranslation()
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
   const handleChangeLang = useCallback(
     (lang: string) => () => {
       i18n.changeLanguage(lang)
-      navigation.navigate('home')
+      router.push('home')
     },
-    [i18n, navigation]
+    [i18n, router]
   )
 
   return (

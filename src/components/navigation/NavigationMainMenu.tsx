@@ -1,21 +1,19 @@
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import type { RoutesList } from '~/types/RouteList'
 import { Button } from '~/components/common/Button'
 
 export function NavigationMainMenu() {
   const { t } = useTranslation()
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
-  const navigateToTeam = () => navigation.navigate('team')
-  const navigateToGameMode = () => navigation.navigate('game-mode')
-  const navigateToAchievement = () => navigation.navigate('achievement')
-  const navigateToLeague = () => navigation.navigate('league')
-  const navigateToOption = () => navigation.navigate('option')
-  const navigateToPurchase = () => navigation.navigate('purchase')
+  const navigateToTeam = () => router.push('team')
+  const navigateToGameMode = () => router.push('game-mode')
+  const navigateToAchievement = () => router.push('achievement')
+  const navigateToLeague = () => router.push('league')
+  const navigateToOption = () => router.push('option')
+  const navigateToPurchase = () => router.push('purchase')
 
   return (
     <View>

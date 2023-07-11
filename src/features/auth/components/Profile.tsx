@@ -1,22 +1,20 @@
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { useNavigation } from '@react-navigation/native'
+import { useRouter } from 'expo-router'
 import { Entypo } from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons'
 import { View, StyleSheet, Pressable } from 'react-native'
 
 import { useAuthContext } from '../context/AuthProvider'
-import { RoutesList } from '~/types/RouteList'
 
 export function Profile() {
   const { isAuth } = useAuthContext()
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
   const handleProfile = () => {
-    navigation.navigate(isAuth ? 'profile' : 'sign-up')
+    router.push(isAuth ? 'profile' : 'sign-up')
   }
 
   const handleLanguages = () => {
-    navigation.navigate('languages')
+    router.push('languages')
   }
 
   return (

@@ -1,19 +1,17 @@
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import type { RoutesList } from '~/types/RouteList'
 import { Button } from '~/components/common/Button'
 
 export function NavigationLeague() {
   const { t } = useTranslation()
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
-  const navigateToSingleTournament = () => navigation?.navigate('single-tournament')
-  const navigateToTeamTournament = () => navigation?.navigate('team-tournament')
-  const navigateToTopSinglePlayer = () => navigation?.navigate('top-single-player')
-  const navigateToTopTeam = () => navigation?.navigate('top-team')
+  const navigateToSingleTournament = () => router.push('single-tournament')
+  const navigateToTeamTournament = () => router.push('team-tournament')
+  const navigateToTopSinglePlayer = () => router.push('top-single-player')
+  const navigateToTopTeam = () => router.push('top-team')
 
   return (
     <View>

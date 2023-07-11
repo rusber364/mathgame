@@ -1,11 +1,9 @@
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View, KeyboardAvoidingView, Platform } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useRouter } from 'expo-router'
 import { useState } from 'react'
 import Toast from 'react-native-toast-message'
 
 import { supabase } from '~/database/supabase'
-import type { RoutesList } from '~/types/RouteList'
 import { Paper } from '~/layout/Paper'
 import { Background } from '~/layout/Background'
 import { Button } from '~/components/common/Button'
@@ -16,14 +14,14 @@ export default function SignInScreen() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setLoading] = useState(false)
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
   async function handleLogin() {
     setLoading(true)
     const { error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (!error) {
-      navigation.navigate('profile')
+      router.push('profile')
     } else {
       Toast.show({
         type: 'error',
@@ -59,7 +57,7 @@ export default function SignInScreen() {
           <Button onPress={handleLogin} isLoading={isLoading}>
             Login
           </Button>
-          <Button onPress={() => navigation.navigate('sign-up')}>Registration</Button>
+          <Button onPress={() => router.push('sign-up')}>Registration</Button>
         </Paper>
       </Background>
     </KeyboardAvoidingView>

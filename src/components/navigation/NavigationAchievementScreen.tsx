@@ -1,18 +1,16 @@
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import type { RoutesList } from '~/types/RouteList'
 import { Button } from '~/components/common/Button'
 
 export function NavigationAchievement() {
   const { t } = useTranslation()
-  const navigation = useNavigation<NativeStackNavigationProp<RoutesList>>()
+  const router = useRouter()
 
-  const navigateToAchievementSingleScreen = () => navigation?.navigate('achievements-single')
-  const navigateToAchievementTeamScreen = () => navigation?.navigate('achievements-team')
-  const navigateToBonusScreen = () => navigation?.navigate('bonus')
+  const navigateToAchievementSingleScreen = () => router.push('achievements-single')
+  const navigateToAchievementTeamScreen = () => router.push('achievements-team')
+  const navigateToBonusScreen = () => router.push('bonus')
 
   return (
     <View>
