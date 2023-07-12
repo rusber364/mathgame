@@ -25,7 +25,7 @@ export function useGameStore(defaultTime = 60000) {
     })
   })
 
-  function startGame(templateTask: string) {
+  function startGame(templateTask = '') {
     if (!isGameStarted) {
       setGameStarted(true)
       startInterval()

@@ -4,13 +4,13 @@ import { getRandomOperator } from '../utils/getRandomOperator'
 import { getRandomNumber } from '../utils/getRandomNumber'
 import { mixingArray } from '../utils/mixingArray'
 import { antiRandomDoubleAnswer } from './antiRandomDoubleAnswer'
-import { loopReplaceLetter } from '../utils/loopReplaceLetter'
+import { replacingLettersWithRandom } from '../utils/replacingLettersWithRandom'
 
 export type TTask = ReturnType<typeof generationTask>
 
 export function generationTask(template?: string) {
   if (template) {
-    const expression = loopReplaceLetter(template)
+    const expression = replacingLettersWithRandom(template)
     const result = +Number(evaluate(expression)).toPrecision(3)
     const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
