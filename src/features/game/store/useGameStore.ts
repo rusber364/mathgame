@@ -10,7 +10,7 @@ export function useGameStore(defaultTime = 60000) {
   const [isGameStarted, setGameStarted] = useState(false)
   const [isGameOver, setGameOver] = useState(false)
 
-  const { currentTask, resetTask } = useGenerationTask()
+  const { currentTask, resetTask, template } = useGenerationTask()
 
   const { startInterval, endInterval } = useInterval(() => {
     setTime((time) => {
@@ -25,10 +25,11 @@ export function useGameStore(defaultTime = 60000) {
     })
   })
 
-  function startGame() {
+  function startGame(templateTask: string) {
     if (!isGameStarted) {
       setGameStarted(true)
       startInterval()
+      template.register(templateTask)
     }
   }
 
@@ -43,6 +44,7 @@ export function useGameStore(defaultTime = 60000) {
     setGameOver(false)
     setTime(defaultTime)
     endInterval()
+    template.reset()
   }
 
   function checkAnswer(value: number) {

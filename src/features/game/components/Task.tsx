@@ -6,7 +6,7 @@ import reload from '~/assets/reload.png'
 import pause from '~/assets/pause.png'
 import play from '~/assets/play.png'
 
-export function Task() {
+export function Task({ template }: { template: string }) {
   const { checkAnswer, currentTask, game } = useGameContext()
 
   const buttons = (
@@ -16,7 +16,7 @@ export function Task() {
           <Image source={reload} style={{ width: 15, height: 15 }} />
         </Button>
       ) : (
-        <Button onPress={game.isStarted ? game.pause : game.start} style={style.button}>
+        <Button onPress={game.isStarted ? game.pause : () => game.start(template)} style={style.button}>
           {game.isStarted ? (
             <Image source={pause} style={{ width: 15, height: 15 }} />
           ) : (
@@ -39,13 +39,11 @@ export function Task() {
     )
   }
 
-  const { answers, operandLeft, operator, operandRight } = currentTask
+  const { answers, expression } = currentTask
 
   return (
     <View>
-      <Text style={style.operation}>
-        {operandLeft} {operator} {operandRight} = ?
-      </Text>
+      <Text style={style.operation}>{expression} = ?</Text>
 
       <View style={style.answersContainer}>
         {answers.map((variant, idx) => (

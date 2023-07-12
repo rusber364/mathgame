@@ -15,7 +15,7 @@ export default function SurvivalModeScreen() {
       </View>
       <Paper>
         <View>
-          <Task />
+          <Task template={''} />
         </View>
       </Paper>
     </Background>
