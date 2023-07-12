@@ -8,7 +8,7 @@ export function NavigationGameMode() {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const navigationToStoreMode = () => router.push('store-mode')
+  const navigationToStoreMode = () => router.push('adventure-mode')
   const navigationToSurvivalMode = () => router.push('survival-mode')
   const navigationToKnowledge = () => router.push('knowledge')
 

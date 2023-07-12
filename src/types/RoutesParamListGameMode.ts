@@ -1,5 +1,5 @@
 export type RoutesParamListGameMode = {
-  'store-mode': undefined
+  'adventure-mode': undefined
   'survival-mode': undefined
   knowledge: undefined
   check: undefined
