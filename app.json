@@ -11,6 +11,9 @@
     "ios": {
       "bundleIdentifier": "rusber364.mathgame"
     },
+    "experiments": {
+      "typedRoutes": true
+    },
     "scheme": "myapp",
     "web": {
       "bundler": "metro"
