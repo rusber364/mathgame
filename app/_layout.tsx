@@ -12,7 +12,7 @@ export default function Layout() {
       <SafeAreaProvider>
         <AuthProvider>
           <GameProvider>
-            <Stack initialRouteName="home" />
+            <Stack />
           </GameProvider>
         </AuthProvider>
       </SafeAreaProvider>
