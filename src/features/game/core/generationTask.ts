@@ -11,7 +11,7 @@ export type TTask = ReturnType<typeof generationTask>
 export function generationTask(template?: string) {
   if (template) {
     const expression = replacingLettersWithRandom(template)
-    const result = +Number(evaluate(expression)).toPrecision(3)
+    const result = evaluate(expression) as number
     const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
     return { answers, expression, result }
@@ -26,7 +26,7 @@ export function generationTask(template?: string) {
   operation.push(operandLeft, operator, operandRight)
   const operationToString = operation.join('')
 
-  const result = +Number(evaluate(operationToString)).toPrecision(3)
+  const result = evaluate(operationToString) as number
   const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
   return { answers, expression, result }
