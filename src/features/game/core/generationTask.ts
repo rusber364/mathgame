@@ -1,4 +1,4 @@
-import { evaluate } from 'mathjs'
+import { evaluate, round } from 'mathjs'
 import { maxRandomNumbersMap, operators } from './operators'
 import { getRandomOperator } from '../utils/getRandomOperator'
 import { getRandomNumber } from '../utils/getRandomNumber'
@@ -11,7 +11,7 @@ export type TTask = ReturnType<typeof generationTask>
 export function generationTask(template?: string) {
   if (template) {
     const expression = replacingLettersWithRandom(template)
-    const result = evaluate(expression) as number
+    const result = round(evaluate(expression), 2) as number
     const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
     return { answers, expression, result }
@@ -26,7 +26,7 @@ export function generationTask(template?: string) {
   operation.push(operandLeft, operator, operandRight)
   const operationToString = operation.join('')
 
-  const result = evaluate(operationToString) as number
+  const result = round(evaluate(operationToString), 2) as number
   const answers = mixingArray(antiRandomDoubleAnswer(result, 4))
 
   return { answers, expression, result }
