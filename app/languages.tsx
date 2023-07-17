@@ -13,7 +13,7 @@ export default function LanguagesScreen() {
   const handleChangeLang = useCallback(
     (lang: string) => () => {
       i18n.changeLanguage(lang)
-      router.push('home')
+      router.push('/')
     },
     [i18n, router],
   )

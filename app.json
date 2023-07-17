@@ -3,16 +3,13 @@
     "name": "mathgame",
     "slug": "mathgame",
     "version": "0.2.0",
-    "sdkVersion": "48.0.0",
+    "sdkVersion": "49.0.0",
     "platforms": ["ios", "android", "web"],
     "android": {
       "package": "rusber364.mathgame"
     },
     "ios": {
       "bundleIdentifier": "rusber364.mathgame"
-    },
-    "experiments": {
-      "typedRoutes": true
     },
     "scheme": "myapp",
     "web": {
