@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 import { Button } from '~/components/common/Button'
 
-export function NavigationMainMenu() {
+export function MainMenuNavigation() {
   const { t } = useTranslation()
   const router = useRouter()
 

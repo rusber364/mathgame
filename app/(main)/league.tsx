@@ -1,4 +1,4 @@
-import { NavigationLeague } from '~/components/navigation/NavigationLeague'
+import { LeagueNavigation } from '~/components/navigation/LeagueNavigation'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 
@@ -6,7 +6,7 @@ export default function LeagueScreen() {
   return (
     <Background>
       <Paper>
-        <NavigationLeague />
+        <LeagueNavigation />
       </Paper>
     </Background>
   )

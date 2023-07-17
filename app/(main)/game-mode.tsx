@@ -1,4 +1,4 @@
-import { NavigationGameMode } from '~/components/navigation/NavigationGameMode'
+import { GameNavigation } from '~/components/navigation/GameNavigation'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 
@@ -6,7 +6,7 @@ export default function GameModeScreen() {
   return (
     <Background>
       <Paper>
-        <NavigationGameMode />
+        <GameNavigation />
       </Paper>
     </Background>
   )
