@@ -11264,6 +11264,7 @@ __metadata:
     jsdom: "npm:^22.1.0"
     mathjs: "npm:^11.8.2"
     nanoid: "npm:^4.0.2"
+    open: "npm:^9.1.0"
     prettier: "npm:^3.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"

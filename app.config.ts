@@ -19,6 +19,7 @@ const config: ExpoConfig = {
   experiments: {
     tsconfigPaths: true,
   },
+  jsEngine: 'hermes',
 }
 
 export default config

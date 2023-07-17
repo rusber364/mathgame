@@ -45,6 +45,7 @@
     "expo-status-bar": "~1.6.0",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
+    "open": "^9.1.0",
     "prettier": "^3.0.0",
     "react-native-flipper": "^0.206.0",
     "ts-node": "^10.9.1",
