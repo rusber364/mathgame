@@ -17,7 +17,8 @@
     "react-native-toast-message": "^2.1.6",
     "react-native-url-polyfill": "^2.0.0",
     "react-native-uuid": "^2.0.1",
-    "react-native-web": "~0.19.6"
+    "react-native-web": "~0.19.6",
+    "valtio": "^1.10.7"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -35,6 +36,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-valtio": "^0.6.2",
     "expo": "~49.0.3",
     "expo-asset": "~8.10.1",
     "expo-constants": "~14.4.2",
