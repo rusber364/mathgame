@@ -1,4 +1,6 @@
 import { getRandomNumber } from './getRandomNumber'
+import { maxRandomNumbersMap, TOperator } from '../core/operators'
+import * as math from 'mathjs'
 
 type Options = {
   max?: number
@@ -8,9 +10,17 @@ type Options = {
 
 export function replacingLettersWithRandom(operation: string, options: Options = {}) {
   const { letter = 'N', max, min } = options
-  while (operation.includes(letter)) {
-    operation = operation.replace(letter, String(getRandomNumber(max, min)))
-  }
 
-  return operation
+  const transformOperation = math.parse(operation).transform((node, _, parent) => {
+    if (node instanceof math.SymbolNode && node.name === letter && parent instanceof math.OperatorNode) {
+      const operator = parent.op as TOperator
+      const maxRandomNumber = maxRandomNumbersMap[operator]
+
+      return new math.ConstantNode(getRandomNumber(max ?? maxRandomNumber, min ?? -maxRandomNumber))
+    }
+
+    return node
+  })
+
+  return transformOperation.toString()
 }
