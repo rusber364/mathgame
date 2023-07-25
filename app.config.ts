@@ -7,19 +7,38 @@ const config: ExpoConfig = {
   sdkVersion: '49.0.0',
   platforms: ['ios', 'android', 'web'],
   android: {
-    package: 'rusber364.mathgame',
+    package: 'com.rusber364.mathgame',
+    adaptiveIcon: {
+      foregroundImage: './assets/adaptive-icon.png',
+      backgroundColor: '#ffffff',
+    },
   },
   ios: {
-    bundleIdentifier: 'rusber364.mathgame',
+    bundleIdentifier: 'com.rusber364.mathgame',
+    supportsTablet: true,
   },
-  scheme: 'myapp',
+  scheme: 'app',
   web: {
     bundler: 'metro',
+    favicon: './assets/favicon.png',
   },
   experiments: {
     tsconfigPaths: true,
   },
   jsEngine: 'hermes',
+  extra: {
+    eas: {
+      projectId: 'a1be118d-94ce-470c-bd53-ab75a92b0dd1',
+    },
+  },
+  icon: './assets/icon.png',
+  splash: {
+    image: './assets/splash.png',
+    resizeMode: 'contain',
+    backgroundColor: '#ffffff',
+  },
+  assetBundlePatterns: ['**/*'],
+  plugins: ['expo-router'],
 }
 
 export default config
