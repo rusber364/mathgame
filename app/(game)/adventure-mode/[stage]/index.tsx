@@ -2,22 +2,17 @@ import { useLocalSearchParams } from 'expo-router'
 
 import { Link, Stack } from 'expo-router'
 import { PropsWithChildren, useEffect } from 'react'
-import { Text, StyleSheet, Pressable, View, ScrollView } from 'react-native'
+import { Text, StyleSheet, Pressable, View, ScrollView, ActivityIndicator } from 'react-native'
 
 import { range } from '~/features/game/utils/range'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
 import { useGameSelector, useGameDispatch } from '~/store/redux'
-import { getCurrentTemplateList, registerStage } from '~/store/slices/task.slice'
+import { getCurrentTemplateList, getStageLoading, registerStage } from '~/store/slices/task.slice'
 
 function Stage({ stage }: PropsWithChildren<{ stage: string }>) {
   const levels = range(1, 18)
   const currentTemplateList = useGameSelector(getCurrentTemplateList)
-  const dispatch = useGameDispatch()
-
-  useEffect(() => {
-    dispatch(registerStage(Number(stage)))
-  }, [dispatch, stage])
 
   return (
     <ScrollView>
@@ -54,14 +49,18 @@ function Stage({ stage }: PropsWithChildren<{ stage: string }>) {
 
 export default function StageScreen() {
   const { stage = '1' } = useLocalSearchParams<{ stage: string }>()
+  const stageLoading = useGameSelector(getStageLoading)
+  const dispatch = useGameDispatch()
+
+  useEffect(() => {
+    dispatch(registerStage(Number(stage)))
+  }, [dispatch, stage])
 
   return (
     <>
       <Stack.Screen options={{ headerTitle: `Adventure: stage ${stage}` }} />
       <Background>
-        <Paper>
-          <Stage stage={stage} />
-        </Paper>
+        <Paper>{stageLoading ? <ActivityIndicator size="large" /> : <Stage stage={stage} />}</Paper>
       </Background>
     </>
   )
