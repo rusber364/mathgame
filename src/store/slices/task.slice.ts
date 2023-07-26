@@ -101,6 +101,7 @@ export function* registerTemplateSaga() {
     const currentTemplate: string = currentTemplateList[template]
     if (currentTemplate) {
       yield put(setCurrentTemplate(currentTemplate))
+      yield call(createTaskSaga)
     }
   })
 }
