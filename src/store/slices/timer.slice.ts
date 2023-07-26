@@ -22,8 +22,8 @@ export const timerSlice = createSlice({
       state.time = 60000
       state.isStarted = false
     },
-    update(state, action: PayloadAction<number>) {
-      state.time -= action.payload
+    update(state, { payload: delay }: PayloadAction<number>) {
+      state.time -= delay
     },
   },
 })

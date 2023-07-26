@@ -25,17 +25,17 @@ export const taskSlice = createSlice({
   name: 'task',
   initialState,
   reducers: {
-    create(state, action: PayloadAction<TTask>) {
-      state.currentTask = action.payload
+    create(state, { payload: currentTask }: PayloadAction<TTask>) {
+      state.currentTask = currentTask
     },
-    setCurrentTemplateList(state, action: PayloadAction<string[]>) {
-      state.currentTemplateList = action.payload
+    setCurrentTemplateList(state, { payload: currentTemplateList }: PayloadAction<string[]>) {
+      state.currentTemplateList = currentTemplateList
     },
-    setCurrentTemplate(state, action: PayloadAction<string>) {
-      state.template = action.payload
+    setCurrentTemplate(state, { payload: template }: PayloadAction<string>) {
+      state.template = template
     },
-    registerStageLoading(state, action: PayloadAction<boolean>) {
-      state.stageLoading = action.payload
+    registerStageLoading(state, { payload: stageLoading }: PayloadAction<boolean>) {
+      state.stageLoading = stageLoading
     },
   },
 })

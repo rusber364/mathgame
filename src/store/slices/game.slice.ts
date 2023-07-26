@@ -28,8 +28,8 @@ export const gameSlice = createSlice({
       state.isStarted = false
     },
 
-    addScore(state, action: PayloadAction<number>) {
-      state.score += action.payload
+    addScore(state, { payload: score }: PayloadAction<number>) {
+      state.score += score
 
       if (state.score > 10) {
         state.score = 0
@@ -37,13 +37,11 @@ export const gameSlice = createSlice({
       }
     },
 
-    addAttempts(state, action: PayloadAction<number | undefined>) {
-      const attempt = action.payload ?? 1
+    addAttempts(state, { payload: attempt = 1 }: PayloadAction<number | undefined>) {
       state.attempts += attempt
     },
 
-    removeAttempts(state, action: PayloadAction<number | undefined>) {
-      const attempt = action.payload ?? 1
+    removeAttempts(state, { payload: attempt = 1 }: PayloadAction<number | undefined>) {
       if (attempt > state.attempts) {
         state.attempts = 0
         return
