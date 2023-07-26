@@ -3,7 +3,9 @@
     "strict": true,
     "types": ["vitest/globals"],
     "baseUrl": "./",
-    "paths": { "~/*": ["src/*"] },
+    "paths": {
+      "~/*": ["src/*"]
+    },
     "forceConsistentCasingInFileNames": true
   },
   "extends": "expo/tsconfig.base",

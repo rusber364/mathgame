@@ -24,6 +24,8 @@ const config: ExpoConfig = {
   },
   experiments: {
     tsconfigPaths: true,
+    // TODO!: enable router types
+    // typedRoutes: true,
   },
   jsEngine: 'hermes',
   extra: {
