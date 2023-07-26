@@ -6,6 +6,7 @@ import { useRoute, RouteProp } from '@react-navigation/native'
 import type { RoutesList } from '~/types/RouteList'
 import bg from '~/assets/bg.png'
 
+// TODO?: Delete this component?
 export function Background({ children }: PropsWithChildren) {
   const insets = useSafeAreaInsets()
   const router = useRoute<RouteProp<RoutesList>>()
