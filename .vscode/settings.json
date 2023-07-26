@@ -15,6 +15,5 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "npm.packageManager": "yarn",
   "editor.formatOnSave": true,
-  "testing.automaticallyOpenPeekView": "never",
   "vitest.enable": true
 }
