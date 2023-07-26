@@ -3,7 +3,7 @@ import ToastMessage from 'react-native-toast-message'
 import { Provider } from 'react-redux'
 
 import { store } from '~/store/redux'
-import { AuthProvider } from '~/features/auth/context/AuthProvider'
+import { AuthProvider } from '~/features/auth/context/auth.context'
 import '~/langs/translation'
 
 export default function Layout() {

@@ -2,7 +2,7 @@ import { useRouter } from 'expo-router'
 import { Entypo, AntDesign } from '@expo/vector-icons'
 import { View, StyleSheet, Pressable } from 'react-native'
 
-import { useAuthContext } from '../context/AuthProvider'
+import { useAuthContext } from '../context/auth.context'
 
 export function Profile() {
   const { isAuth } = useAuthContext()
