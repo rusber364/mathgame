@@ -1,10 +1,10 @@
 import { Text, View, StyleSheet } from 'react-native'
-import { useGameContext } from '../context/GameProvider'
+import { useGameSelector } from '~/store/redux'
 import { formatTimer } from '../utils/formatTimer'
 import { FlasherView } from './FlasherView'
 
 export function Timer() {
-  const { time } = useGameContext()
+  const time = useGameSelector((state) => state.timer.time)
 
   if (time > 0 && time < 5999) {
     return (
@@ -20,6 +20,7 @@ export function Timer() {
     </View>
   )
 }
+
 const styles = StyleSheet.create({
   circle: {
     width: 100,

@@ -1,15 +1,17 @@
 import { Text, View, StyleSheet } from 'react-native'
-import { useGameContext } from '../context/GameProvider'
+import { useGameSelector } from '~/store/redux'
+import { getScore } from '~/store/slices/game.slice'
 
 export function Score() {
-  const { score } = useGameContext()
+  const score = useGameSelector(getScore)
 
   return (
     <View style={styles.circle}>
-      <Text style={styles.text}> {score} </Text>
+      <Text style={styles.text}>{score}</Text>
     </View>
   )
 }
+
 const styles = StyleSheet.create({
   circle: {
     width: 100,

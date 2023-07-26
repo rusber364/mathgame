@@ -1,18 +1,19 @@
 import { Stack } from 'expo-router'
 import ToastMessage from 'react-native-toast-message'
+import { Provider } from 'react-redux'
 
-import { GameProvider } from '~/features/game/context/GameProvider'
+import { store } from '~/store/redux'
 import { AuthProvider } from '~/features/auth/context/AuthProvider'
 import '~/langs/translation'
 
 export default function Layout() {
   return (
     <>
-      <AuthProvider>
-        <GameProvider>
+      <Provider store={store}>
+        <AuthProvider>
           <Stack />
-        </GameProvider>
-      </AuthProvider>
+        </AuthProvider>
+      </Provider>
       <ToastMessage />
     </>
   )

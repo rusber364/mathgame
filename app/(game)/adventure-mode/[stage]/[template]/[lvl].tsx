@@ -1,4 +1,5 @@
 import { useLocalSearchParams, Stack } from 'expo-router'
+import { useEffect } from 'react'
 import { View } from 'react-native'
 
 import { Score } from '~/features/game/components/Score'
@@ -6,14 +7,22 @@ import { Task } from '~/features/game/components/Task'
 import { Timer } from '~/features/game/components/Timer'
 import { Background } from '~/layout/Background'
 import { Paper } from '~/layout/Paper'
+import { useGameDispatch } from '~/store/redux'
+import { registerTemplate } from '~/store/slices/task.slice'
 
-export default function AdventureLevelModeScreen() {
-  const { game = [] } = useLocalSearchParams<{ game: string[] }>()
-  const [stageId, template, lvlId] = game
+export default function GameScreen() {
+  const { stage, lvl, template } = useLocalSearchParams<{ stage: string; lvl: string; template: string }>()
+  const dispatch = useGameDispatch()
+
+  useEffect(() => {
+    if (template) {
+      dispatch(registerTemplate(Number(template)))
+    }
+  }, [dispatch, template])
 
   return (
     <>
-      <Stack.Screen options={{ headerTitle: `${template}: ${stageId}stage/${lvlId}lvl` }} />
+      <Stack.Screen options={{ headerTitle: `Adventure: ${stage}stage/${lvl}lvl` }} />
       <Background>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Score />
@@ -21,7 +30,7 @@ export default function AdventureLevelModeScreen() {
         </View>
         <Paper>
           <View>
-            <Task template={template} />
+            <Task />
           </View>
         </Paper>
       </Background>
