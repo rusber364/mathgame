@@ -2,8 +2,6 @@ import { Link, Stack } from 'expo-router'
 import { Text, StyleSheet, Pressable, View } from 'react-native'
 
 import { range } from '~/features/game/utils/range'
-import { Background } from '~/layout/Background'
-import { Paper } from '~/layout/Paper'
 
 function StageList() {
   const stages = range(1, 2)
@@ -32,11 +30,7 @@ export default function StagesScreen() {
   return (
     <>
       <Stack.Screen options={{ headerTitle: 'Adventure: stage list' }} />
-      <Background>
-        <Paper>
-          <StageList />
-        </Paper>
-      </Background>
+      <StageList />
     </>
   )
 }

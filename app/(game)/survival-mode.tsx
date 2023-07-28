@@ -3,21 +3,18 @@ import { View } from 'react-native'
 import { Task } from '~/features/game/components/Task'
 import { Score } from '~/features/game/components/Score'
 import { Timer } from '~/features/game/components/Timer'
-import { Background } from '~/layout/Background'
-import { Paper } from '~/layout/Paper'
 
 export default function SurvivalModeScreen() {
   return (
-    <Background>
+    <View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         <Score />
         <Timer />
       </View>
-      <Paper>
-        <View>
-          <Task />
-        </View>
-      </Paper>
-    </Background>
+
+      <View>
+        <Task />
+      </View>
+    </View>
   )
 }

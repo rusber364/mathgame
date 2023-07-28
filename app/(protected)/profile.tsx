@@ -1,7 +1,5 @@
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
 
-import { Background } from '~/layout/Background'
-import { Paper } from '~/layout/Paper'
 import { supabase } from '~/database/supabase'
 import { Button } from '~/components/common/Button'
 
@@ -11,11 +9,9 @@ export default function ProfileScreen() {
   }
 
   return (
-    <Background>
-      <Paper>
-        <Text>Profile</Text>
-        <Button onPress={logOut}>Logout</Button>
-      </Paper>
-    </Background>
+    <View>
+      <Text>Profile</Text>
+      <Button onPress={logOut}>Logout</Button>
+    </View>
   )
 }

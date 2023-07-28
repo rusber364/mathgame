@@ -4,8 +4,7 @@ import { useState } from 'react'
 import Toast from 'react-native-toast-message'
 
 import { supabase } from '~/database/supabase'
-import { Paper } from '~/layout/Paper'
-import { Background } from '~/layout/Background'
+
 import { Button } from '~/components/common/Button'
 import { AuthTitle } from '~/features/auth/components/AuthTitle'
 import { AuthField } from '~/features/auth/components/AuthField'
@@ -35,31 +34,27 @@ export default function SignInScreen() {
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
-      <Background>
-        <Paper>
-          <AuthTitle>Login</AuthTitle>
-          <View style={{ marginVertical: 20 }}>
-            <AuthField
-              labelText="Email"
-              value={email}
-              onChangeText={setEmail}
-              placeholder="Enter your email"
-              keyboardType="email-address"
-            />
-            <AuthField
-              labelText="Password"
-              value={password}
-              onChangeText={setPassword}
-              placeholder="Enter your password"
-              secureTextEntry={true}
-            />
-          </View>
-          <Button onPress={handleLogin} isLoading={isLoading}>
-            Login
-          </Button>
-          <Button onPress={() => router.push('sign-up')}>Registration</Button>
-        </Paper>
-      </Background>
+      <AuthTitle>Login</AuthTitle>
+      <View style={{ marginVertical: 20 }}>
+        <AuthField
+          labelText="Email"
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Enter your email"
+          keyboardType="email-address"
+        />
+        <AuthField
+          labelText="Password"
+          value={password}
+          onChangeText={setPassword}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+        />
+      </View>
+      <Button onPress={handleLogin} isLoading={isLoading}>
+        Login
+      </Button>
+      <Button onPress={() => router.push('sign-up')}>Registration</Button>
     </KeyboardAvoidingView>
   )
 }

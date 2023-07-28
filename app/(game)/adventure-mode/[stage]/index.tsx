@@ -1,12 +1,8 @@
-import { useLocalSearchParams } from 'expo-router'
-
-import { Link, Stack } from 'expo-router'
+import { useLocalSearchParams, Link, Stack } from 'expo-router'
 import { PropsWithChildren, useEffect } from 'react'
 import { Text, StyleSheet, Pressable, View, ScrollView, ActivityIndicator } from 'react-native'
 
 import { range } from '~/features/game/utils/range'
-import { Background } from '~/layout/Background'
-import { Paper } from '~/layout/Paper'
 import { useGameSelector, useGameDispatch } from '~/store/redux'
 import { getCurrentTemplateList, getStageLoading, registerStage } from '~/store/slices/task.slice'
 
@@ -59,9 +55,7 @@ export default function StageScreen() {
   return (
     <>
       <Stack.Screen options={{ headerTitle: `Adventure: stage ${stage}` }} />
-      <Background>
-        <Paper>{stageLoading ? <ActivityIndicator size="large" /> : <Stage stage={stage} />}</Paper>
-      </Background>
+      <View>{stageLoading ? <ActivityIndicator size="large" /> : <Stage stage={stage} />}</View>
     </>
   )
 }
