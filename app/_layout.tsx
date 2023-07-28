@@ -22,7 +22,6 @@ export default function Layout() {
 
 const styles = StyleSheet.create({
   stack: {
-    flexDirection: 'column',
     justifyContent: 'center',
     padding: 10,
   },
