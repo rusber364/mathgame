@@ -1,15 +1,14 @@
 import type { PropsWithChildren } from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { ImageBackground, StyleSheet, View } from 'react-native'
-import { useRoute, RouteProp } from '@react-navigation/native'
+import { useRoute } from '@react-navigation/native'
 
-import type { RoutesList } from '~/types/RouteList'
 import bg from '~/assets/bg.png'
 
 // TODO?: Delete this component?
 export function Background({ children }: PropsWithChildren) {
   const insets = useSafeAreaInsets()
-  const router = useRoute<RouteProp<RoutesList>>()
+  const router = useRoute()
   const isHomeScreen = router.name === 'home'
 
   return (
