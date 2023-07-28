@@ -1,4 +1,5 @@
 import { Stack } from 'expo-router'
+import { StyleSheet } from 'react-native'
 import ToastMessage from 'react-native-toast-message'
 import { Provider } from 'react-redux'
 
@@ -11,10 +12,18 @@ export default function Layout() {
     <>
       <Provider store={store}>
         <AuthProvider>
-          <Stack />
+          <Stack screenOptions={{ contentStyle: styles.stack }} />
         </AuthProvider>
       </Provider>
       <ToastMessage />
     </>
   )
 }
+
+const styles = StyleSheet.create({
+  stack: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: 10,
+  },
+})

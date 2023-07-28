@@ -4,7 +4,6 @@ import { useRouter } from 'expo-router'
 import { useState } from 'react'
 
 import { supabase } from '~/database/supabase'
-
 import { Button } from '~/components/common/Button'
 import { AuthTitle } from '~/features/auth/components/AuthTitle'
 import { AuthField } from '~/features/auth/components/AuthField'
@@ -38,28 +37,30 @@ export default function SignUpScreen() {
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
-      <AuthTitle>Register</AuthTitle>
-      <View style={{ marginVertical: 20 }}>
-        <AuthField
-          labelText="Email"
-          value={email}
-          onChangeText={setEmail}
-          placeholder="Enter your email"
-          keyboardType="email-address"
-        />
-        <AuthField
-          labelText="Password"
-          value={password}
-          onChangeText={setPassword}
-          placeholder="Enter your password"
-          secureTextEntry={true}
-        />
-      </View>
+      <View style={{ justifyContent: 'center', flexGrow: 1 }}>
+        <AuthTitle>Register</AuthTitle>
+        <View style={{ marginVertical: 20 }}>
+          <AuthField
+            labelText="Email"
+            value={email}
+            onChangeText={setEmail}
+            placeholder="Enter your email"
+            keyboardType="email-address"
+          />
+          <AuthField
+            labelText="Password"
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Enter your password"
+            secureTextEntry={true}
+          />
+        </View>
 
-      <Button onPress={handleRegistration} isLoading={isLoading}>
-        Registration
-      </Button>
-      <Button onPress={() => router.push('sign-in')}>Login</Button>
+        <Button onPress={handleRegistration} isLoading={isLoading}>
+          Registration
+        </Button>
+        <Button onPress={() => router.push('sign-in')}>Login</Button>
+      </View>
     </KeyboardAvoidingView>
   )
 }

@@ -30,11 +30,15 @@ export function Profile() {
 
 const styles = StyleSheet.create({
   root: {
-    marginTop: 10,
     flexDirection: 'row-reverse',
+    position: 'absolute',
+    top: 10,
+    right: 15,
   },
   icon: {
     borderWidth: 1,
-    padding: 10,
+    borderRadius: 50,
+    paddingHorizontal: 15,
+    paddingVertical: 10,
   },
 })

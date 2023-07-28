@@ -1,10 +1,8 @@
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { useEffect } from 'react'
-import { View } from 'react-native'
 
-import { Score } from '~/features/game/components/Score'
+import { InfoGame } from '~/features/game/components/InfoGame'
 import { Task } from '~/features/game/components/Task'
-import { Timer } from '~/features/game/components/Timer'
 import { useGameDispatch } from '~/store/redux'
 import { registerTemplate } from '~/store/slices/task.slice'
 
@@ -21,15 +19,8 @@ export default function GameScreen() {
   return (
     <>
       <Stack.Screen options={{ headerTitle: `Adventure: ${stage}stage/${lvl}lvl` }} />
-
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        <Score />
-        <Timer />
-      </View>
-
-      <View>
-        <Task />
-      </View>
+      <InfoGame />
+      <Task />
     </>
   )
 }
