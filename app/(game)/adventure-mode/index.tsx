@@ -13,7 +13,7 @@ function StageList() {
           key={stage}
           asChild
           href={{
-            pathname: `/(game)/adventure-mode/[stage]`,
+            pathname: `/(game)/adventure-mode/[stage]/`,
             params: { stage },
           }}
         >
