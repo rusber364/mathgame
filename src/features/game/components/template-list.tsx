@@ -25,7 +25,7 @@ export function TemplateList({ stage }: PropsWithChildren<{ stage: string }>) {
                     key={level}
                     asChild
                     href={{
-                      pathname: `/adventure-mode/[stage]/[template]/[lvl]`,
+                      pathname: `/(game)/adventure-mode/[stage]/[template]/[lvl]`,
                       params: { lvl: level, stage, template: idx },
                     }}
                   >

@@ -9,11 +9,11 @@ export function Profile() {
   const router = useRouter()
 
   const handleProfile = () => {
-    router.push(isAuth ? 'profile' : 'sign-up')
+    router.push(isAuth ? '/profile' : '/sign-up')
   }
 
   const handleLanguages = () => {
-    router.push('languages')
+    router.push('/languages')
   }
 
   return (

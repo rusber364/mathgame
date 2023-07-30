@@ -8,10 +8,10 @@ export function LeagueNavigation() {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const navigateToSingleTournament = () => router.push('single-tournament')
-  const navigateToTeamTournament = () => router.push('team-tournament')
-  const navigateToTopSinglePlayer = () => router.push('top-single-player')
-  const navigateToTopTeam = () => router.push('top-team')
+  const navigateToSingleTournament = () => router.push('/(league)/single-tournament')
+  const navigateToTeamTournament = () => router.push('/(league)/team-tournament')
+  const navigateToTopSinglePlayer = () => router.push('/(league)/top-single-player')
+  const navigateToTopTeam = () => router.push('/(league)/top-team')
 
   return (
     <View>

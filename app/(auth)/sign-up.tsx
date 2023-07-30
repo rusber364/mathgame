@@ -59,7 +59,7 @@ export default function SignUpScreen() {
         <Button onPress={handleRegistration} isLoading={isLoading}>
           Registration
         </Button>
-        <Button onPress={() => router.push('sign-in')}>Login</Button>
+        <Button onPress={() => router.push('/sign-in')}>Login</Button>
       </View>
     </KeyboardAvoidingView>
   )

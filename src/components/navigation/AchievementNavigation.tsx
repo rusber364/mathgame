@@ -8,9 +8,9 @@ export function AchievementNavigation() {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const navigateToAchievementSingleScreen = () => router.push('achievements-single')
-  const navigateToAchievementTeamScreen = () => router.push('achievements-team')
-  const navigateToBonusScreen = () => router.push('bonus')
+  const navigateToAchievementSingleScreen = () => router.push('/(achievements)/achievements-single')
+  const navigateToAchievementTeamScreen = () => router.push('/(achievements)/achievements-team')
+  const navigateToBonusScreen = () => router.push('/(achievements)/bonus')
 
   return (
     <View>

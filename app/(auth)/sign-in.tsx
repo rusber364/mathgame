@@ -19,7 +19,7 @@ export default function SignInScreen() {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (!error) {
-      router.push('profile')
+      router.push('/profile')
     } else {
       Toast.show({
         type: 'error',
@@ -54,7 +54,7 @@ export default function SignInScreen() {
         <Button onPress={handleLogin} isLoading={isLoading}>
           Login
         </Button>
-        <Button onPress={() => router.push('sign-up')}>Registration</Button>
+        <Button onPress={() => router.push('/sign-up')}>Registration</Button>
       </View>
     </KeyboardAvoidingView>
   )

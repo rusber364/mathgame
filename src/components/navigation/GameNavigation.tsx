@@ -8,9 +8,9 @@ export function GameNavigation() {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const navigationToStoreMode = () => router.push('adventure-mode')
-  const navigationToSurvivalMode = () => router.push('survival-mode')
-  const navigationToKnowledge = () => router.push('knowledge')
+  const navigationToStoreMode = () => router.push('/(game)/adventure-mode')
+  const navigationToSurvivalMode = () => router.push('/(game)/survival-mode')
+  const navigationToKnowledge = () => router.push('/(game)/knowledge')
 
   return (
     <View>

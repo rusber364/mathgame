@@ -8,12 +8,12 @@ export function MainMenuNavigation() {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const navigateToGameMode = () => router.push('game-mode')
-  const navigateToTeam = () => router.push('team')
-  const navigateToAchievement = () => router.push('achievement')
-  const navigateToLeague = () => router.push('league')
-  const navigateToOption = () => router.push('option')
-  const navigateToPurchase = () => router.push('purchase')
+  const navigateToGameMode = () => router.push('/(main)/game-mode')
+  const navigateToTeam = () => router.push('/(main)/team')
+  const navigateToAchievement = () => router.push('/(main)/achievement')
+  const navigateToLeague = () => router.push('/(main)/league')
+  const navigateToOption = () => router.push('/(main)/option')
+  const navigateToPurchase = () => router.push('/(main)/purchase')
 
   return (
     <View>
