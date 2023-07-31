@@ -23,6 +23,6 @@ export default function Layout() {
 const styles = StyleSheet.create({
   stack: {
     justifyContent: 'center',
-    padding: 10,
+    paddingHorizontal: 10,
   },
 })
