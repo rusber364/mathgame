@@ -15,7 +15,7 @@ export function Score() {
 const styles = StyleSheet.create({
   circle: {
     width: 100,
-    height: 100,
+    height: 50,
     borderRadius: 50,
     backgroundColor: 'lightblue',
     justifyContent: 'center',
