@@ -2,9 +2,10 @@ import { Text, View, StyleSheet } from 'react-native'
 import { useGameSelector } from '~/store/redux'
 import { formatTimer } from '../utils/formatTimer'
 import { FlasherView } from './FlasherView'
+import { getTime } from '~/store/slices/timer.slice'
 
 export function Timer() {
-  const time = useGameSelector((state) => state.timer.time)
+  const time = useGameSelector(getTime)
 
   if (time > 0 && time < 5999) {
     return (

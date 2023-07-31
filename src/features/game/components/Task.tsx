@@ -5,12 +5,16 @@ import { useGameSelector, useGameDispatch } from '~/store/redux'
 import reload from '~/assets/reload.png'
 import pause from '~/assets/pause.png'
 import play from '~/assets/play.png'
-import { checkAnswer } from '~/store/slices/task.slice'
-import { timerReset, timerStart, timerStop } from '~/store/slices/timer.slice'
+import { checkAnswer, getCurrentTask } from '~/store/slices/task.slice'
+import { getStarted, timerReset, timerStart, timerStop } from '~/store/slices/timer.slice'
+import { getGameIsOver } from '~/store/slices/game.slice'
 
 export function Task() {
-  const { game, task, timer } = useGameSelector((state) => state)
   const dispatch = useGameDispatch()
+
+  const timerIsStarted = useGameSelector(getStarted)
+  const gameIsOver = useGameSelector(getGameIsOver)
+  const currentTask = useGameSelector(getCurrentTask)
 
   const handleStart = () => dispatch(timerStart())
   const handlePause = () => dispatch(timerStop())
@@ -18,13 +22,13 @@ export function Task() {
 
   const buttons = (
     <View>
-      {game.isOver ? (
+      {gameIsOver ? (
         <Button disabled onPress={handleReset} style={style.button}>
           <Image source={reload} style={{ width: 15, height: 15 }} />
         </Button>
       ) : (
-        <Button onPress={timer.isStarted ? handlePause : handleStart} style={style.button}>
-          {timer.isStarted ? (
+        <Button onPress={timerIsStarted ? handlePause : handleStart} style={style.button}>
+          {timerIsStarted ? (
             <Image source={pause} style={{ width: 15, height: 15 }} />
           ) : (
             <Image source={play} style={{ width: 15, height: 15 }} />
@@ -37,10 +41,10 @@ export function Task() {
     </View>
   )
 
-  if (!timer.isStarted) {
+  if (!timerIsStarted) {
     return (
       <View>
-        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{game.isOver ? '😞' : '🙂'}</Text>
+        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{gameIsOver ? '😞' : '🙂'}</Text>
         {buttons}
       </View>
     )
@@ -48,10 +52,10 @@ export function Task() {
 
   return (
     <View>
-      <Text style={style.operation}>{task.currentTask?.expression} = ?</Text>
+      <Text style={style.operation}>{currentTask?.expression} = ?</Text>
 
       <View style={style.answersContainer}>
-        {task.currentTask?.answers.map((variant, idx) => (
+        {currentTask?.answers.map((variant, idx) => (
           <Text style={style.answer} key={idx} onPress={() => dispatch(checkAnswer(variant))}>
             {variant}
           </Text>

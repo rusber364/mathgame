@@ -61,5 +61,6 @@ export const {
 } = gameSlice.actions
 
 export const getScore = (state: RootState) => state.game.score
+export const getGameIsOver = (state: RootState) => state.game.isOver
 
 export default gameSlice.reducer
