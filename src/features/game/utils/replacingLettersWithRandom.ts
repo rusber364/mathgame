@@ -16,7 +16,13 @@ export function replacingLettersWithRandom(operation: string, options: Options =
       const operator = parent.op as TOperator
       const maxRandomNumber = maxRandomNumbersMap[operator]
 
-      return new math.ConstantNode(getRandomNumber(max ?? maxRandomNumber, min ?? -maxRandomNumber))
+      let randomNumber
+
+      while (randomNumber === Infinity || randomNumber === -Infinity || !randomNumber) {
+        randomNumber = getRandomNumber(max ?? maxRandomNumber, min ?? -maxRandomNumber)
+      }
+
+      return new math.ConstantNode(randomNumber)
     }
 
     return node

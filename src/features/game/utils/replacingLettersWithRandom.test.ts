@@ -52,3 +52,19 @@ test('replace letter for "N / N" -> "60 / 10"', () => {
   expect(operation).toStrictEqual('60 / 10')
   expect(evaluate(operation)).toBe(6)
 })
+
+test('replace letter for "N / N" -> "10 / -0"', () => {
+  instance = fakeGetRandomNumber([10, -0, -2])
+  const operation = replacingLettersWithRandom('N / N')
+  expect(operation).toStrictEqual('10 / -2')
+  expect(evaluate(operation)).not.toBe(-Infinity)
+  expect(evaluate(operation)).toBe(-5)
+})
+
+test('replace letter for "N / N" -> "10 / 0"', () => {
+  instance = fakeGetRandomNumber([10, 0, 2])
+  const operation = replacingLettersWithRandom('N / N')
+  expect(operation).toStrictEqual('10 / 2')
+  expect(evaluate(operation)).not.toBe(Infinity)
+  expect(evaluate(operation)).toBe(5)
+})
