@@ -1,45 +1,44 @@
 import { Link } from 'expo-router'
 import { PropsWithChildren } from 'react'
-import { Text, StyleSheet, Pressable, View, ScrollView } from 'react-native'
-
-import { range } from '~/features/game/utils/range'
+import { Text, StyleSheet, Pressable, View, FlatList } from 'react-native'
 import { useGameSelector } from '~/store/redux'
 import { getCurrentTemplateList } from '~/store/slices/task.slice'
 
-export function TemplateList({ stage }: PropsWithChildren<{ stage: string }>) {
-  const levels = range(1, 18)
+type Props = {
+  levels: number[]
+  stage: string
+}
+
+export function TemplateList({ stage, levels }: PropsWithChildren<Props>) {
   const currentTemplateList = useGameSelector(getCurrentTemplateList)
 
   return (
-    <ScrollView>
-      {currentTemplateList.map((template, idx) => {
-        return (
-          <View key={template}>
-            <View>
-              <Text style={styles.template}>Template: {template}</Text>
-            </View>
-            <View>
-              {levels.map((level) => {
-                return (
-                  <Link
-                    key={level}
-                    asChild
-                    href={{
-                      pathname: `/(game)/adventure-mode/[stage]/[template]/[lvl]`,
-                      params: { lvl: level, stage, template: idx },
-                    }}
-                  >
-                    <Pressable style={styles.button}>
-                      <Text style={styles.text}>{level}</Text>
-                    </Pressable>
-                  </Link>
-                )
-              })}
-            </View>
+    <FlatList
+      data={currentTemplateList}
+      renderItem={(template) => (
+        <View key={template.item}>
+          <View>
+            <Text style={styles.template}>Template: {template.item}</Text>
           </View>
-        )
-      })}
-    </ScrollView>
+          <View>
+            {levels.map((level) => (
+              <Link
+                key={level}
+                asChild
+                href={{
+                  pathname: `/(game)/adventure-mode/[stage]/[template]/[lvl]`,
+                  params: { lvl: level, stage, template: template.index },
+                }}
+              >
+                <Pressable style={styles.button}>
+                  <Text style={styles.text}>{level}</Text>
+                </Pressable>
+              </Link>
+            ))}
+          </View>
+        </View>
+      )}
+    />
   )
 }
 

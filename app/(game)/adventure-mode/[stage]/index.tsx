@@ -1,14 +1,16 @@
 import { useLocalSearchParams, Stack } from 'expo-router'
-import { useEffect } from 'react'
-import { ScrollView, ActivityIndicator } from 'react-native'
+import { useEffect, useMemo } from 'react'
+import { ActivityIndicator } from 'react-native'
 
 import { useGameSelector, useGameDispatch } from '~/store/redux'
 import { getStageLoading, registerStage } from '~/store/slices/task.slice'
 import { TemplateList } from '~/features/game/components/template-list'
+import { range } from '~/features/game/utils/range'
 
 export default function StageScreen() {
   const { stage = '1' } = useLocalSearchParams<{ stage: string }>()
   const stageLoading = useGameSelector(getStageLoading)
+  const levels = useMemo(() => range(1, 18), [])
   const dispatch = useGameDispatch()
 
   useEffect(() => {
@@ -18,15 +20,7 @@ export default function StageScreen() {
   return (
     <>
       <Stack.Screen options={{ headerTitle: `Adventure: stage ${stage}` }} />
-      <>
-        {stageLoading ? (
-          <ActivityIndicator size="large" />
-        ) : (
-          <ScrollView>
-            <TemplateList stage={stage} />
-          </ScrollView>
-        )}
-      </>
+      {stageLoading ? <ActivityIndicator size="large" /> : <TemplateList stage={stage} levels={levels} />}
     </>
   )
 }
