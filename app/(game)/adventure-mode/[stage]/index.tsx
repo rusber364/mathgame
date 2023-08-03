@@ -6,6 +6,8 @@ import { useGameSelector, useGameDispatch } from '~/store/redux'
 import { getStageLoading, registerStage } from '~/store/slices/task.slice'
 import { TemplateList } from '~/features/game/components/template-list'
 import { range } from '~/features/game/utils/range'
+import { HeaderRightContent } from '~/components/common/temp/HeaderRightContent'
+import { NavigationBack } from '~/components/common/NavigationBack'
 
 export default function StageScreen() {
   const { stage = '1' } = useLocalSearchParams<{ stage: string }>()
@@ -19,7 +21,14 @@ export default function StageScreen() {
 
   return (
     <>
-      <Stack.Screen options={{ headerTitle: `Adventure: stage ${stage}` }} />
+      <Stack.Screen
+        options={{
+          title: '',
+          headerLeft: NavigationBack,
+          headerRight: HeaderRightContent,
+        }}
+      />
+
       {stageLoading ? <ActivityIndicator size="large" /> : <TemplateList stage={stage} levels={levels} />}
     </>
   )

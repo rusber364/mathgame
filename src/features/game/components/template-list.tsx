@@ -18,9 +18,11 @@ export function TemplateList({ stage, levels }: PropsWithChildren<Props>) {
       renderItem={(template) => (
         <View key={template.item}>
           <View>
-            <Text style={styles.template}>Template: {template.item}</Text>
+            <Text style={styles.template}>
+              Stage {stage}: {template.item}
+            </Text>
           </View>
-          <View>
+          <View style={styles.container}>
             {levels.map((level) => (
               <Link
                 key={level}
@@ -43,20 +45,30 @@ export function TemplateList({ stage, levels }: PropsWithChildren<Props>) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    paddingVertical: 5,
+  },
   button: {
+    flexBasis: '30%',
     margin: 2,
     padding: 10,
     flexGrow: 1,
     borderWidth: 1,
     borderRadius: 50,
-    backgroundColor: 'white',
+    backgroundColor: '#9f6',
   },
   text: {
+    fontSize: 16,
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   template: {
     textAlign: 'center',
     fontSize: 20,
-    padding: 20,
+    padding: 10,
+    backgroundColor: '#f99',
   },
 })
