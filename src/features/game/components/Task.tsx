@@ -1,13 +1,12 @@
-import { Text, View, StyleSheet, Image } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 
 import { Button } from '~/components/common/Button'
 import { useGameSelector, useGameDispatch } from '~/store/redux'
-import reload from '~/assets/reload.png'
-import pause from '~/assets/pause.png'
-import play from '~/assets/play.png'
+
 import { checkAnswer, getCurrentTask } from '~/store/slices/task.slice'
 import { getStarted, timerReset, timerStart, timerStop } from '~/store/slices/timer.slice'
 import { getGameIsOver } from '~/store/slices/game.slice'
+import { AntDesign } from '@expo/vector-icons'
 
 export function Task() {
   const dispatch = useGameDispatch()
@@ -23,29 +22,28 @@ export function Task() {
   const buttons = (
     <View>
       {gameIsOver ? (
-        <Button disabled onPress={handleReset} style={style.button}>
-          <Image source={reload} style={{ width: 15, height: 15 }} />
-        </Button>
+        <></>
       ) : (
         <Button onPress={timerIsStarted ? handlePause : handleStart} style={style.button}>
           {timerIsStarted ? (
-            <Image source={pause} style={{ width: 15, height: 15 }} />
+            <AntDesign name="pausecircleo" size={43} color="black" style={style.icons} />
           ) : (
-            <Image source={play} style={{ width: 15, height: 15 }} />
+            <AntDesign name="playcircleo" size={24} color="black" />
           )}
         </Button>
       )}
-      <Button onPress={handleReset} style={style.button}>
-        <Image source={reload} style={{ width: 15, height: 15 }} />
-      </Button>
     </View>
   )
 
   if (!timerIsStarted) {
     return (
       <View>
-        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{gameIsOver ? '😞' : '🙂'}</Text>
-        {buttons}
+        <Button onPress={handleStart}>
+          <AntDesign name="playcircleo" size={43} color="black" style={style.icons} />
+        </Button>
+        <Button onPress={handleReset}>
+          <AntDesign name="reload1" size={43} color="black" style={style.icons} />
+        </Button>
       </View>
     )
   }
@@ -76,9 +74,8 @@ const style = StyleSheet.create({
     flexWrap: 'wrap',
     marginVertical: 20,
   },
-  button: {
-    backgroundColor: '#f5deb3',
-  },
+  icons: { justifyContent: 'center' },
+  button: {},
   answer: {
     flexGrow: 1,
     flexBasis: '24%',
