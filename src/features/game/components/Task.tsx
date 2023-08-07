@@ -1,49 +1,29 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Pressable } from 'react-native'
+import { AntDesign } from '@expo/vector-icons'
 
-import { Button } from '~/components/common/Button'
 import { useGameSelector, useGameDispatch } from '~/store/redux'
-
 import { checkAnswer, getCurrentTask } from '~/store/slices/task.slice'
 import { getStarted, timerReset, timerStart, timerStop } from '~/store/slices/timer.slice'
-import { getGameIsOver } from '~/store/slices/game.slice'
-import { AntDesign } from '@expo/vector-icons'
 
 export function Task() {
   const dispatch = useGameDispatch()
 
   const timerIsStarted = useGameSelector(getStarted)
-  const gameIsOver = useGameSelector(getGameIsOver)
   const currentTask = useGameSelector(getCurrentTask)
 
   const handleStart = () => dispatch(timerStart())
   const handlePause = () => dispatch(timerStop())
   const handleReset = () => dispatch(timerReset())
 
-  const buttons = (
-    <View>
-      {gameIsOver ? (
-        <></>
-      ) : (
-        <Button onPress={timerIsStarted ? handlePause : handleStart} style={style.button}>
-          {timerIsStarted ? (
-            <AntDesign name="pausecircleo" size={43} color="black" style={style.icons} />
-          ) : (
-            <AntDesign name="playcircleo" size={24} color="black" />
-          )}
-        </Button>
-      )}
-    </View>
-  )
-
   if (!timerIsStarted) {
     return (
       <View>
-        <Button onPress={handleStart}>
+        <Pressable onPress={handleStart} style={style.button}>
           <AntDesign name="playcircleo" size={43} color="black" style={style.icons} />
-        </Button>
-        <Button onPress={handleReset}>
+        </Pressable>
+        <Pressable onPress={handleReset} style={style.button}>
           <AntDesign name="reload1" size={43} color="black" style={style.icons} />
-        </Button>
+        </Pressable>
       </View>
     )
   }
@@ -59,7 +39,9 @@ export function Task() {
           </Text>
         ))}
       </View>
-      {buttons}
+      <Pressable onPress={timerIsStarted ? handlePause : handleStart} style={style.button}>
+        <AntDesign name={timerIsStarted ? 'pausecircleo' : 'playcircleo'} size={43} color="black" style={style.icons} />
+      </Pressable>
     </View>
   )
 }
@@ -74,8 +56,15 @@ const style = StyleSheet.create({
     flexWrap: 'wrap',
     marginVertical: 20,
   },
-  icons: { justifyContent: 'center' },
-  button: {},
+  icons: {
+    textAlign: 'center',
+  },
+  button: {
+    borderWidth: 1,
+    borderRadius: 50,
+    marginVertical: 3,
+    paddingVertical: 6,
+  },
   answer: {
     flexGrow: 1,
     flexBasis: '24%',
