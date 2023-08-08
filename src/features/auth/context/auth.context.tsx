@@ -16,7 +16,8 @@ const AuthContext = createContext<TAuthContext>({ isAuth: false, session: null }
 export function AuthProvider({ children }: PropsWithChildren) {
   const [isAuth, setAuth] = useState(false)
   const [session, setSession] = useState<TSession>(null)
-  const [protectedRoutes] = useSegments()
+  const segments: unknown[] = useSegments()
+  const isProtectedRoutes = segments.includes('(protected)')
   const router = useRouter()
 
   useEffect(() => {
@@ -40,10 +41,10 @@ export function AuthProvider({ children }: PropsWithChildren) {
   }, [])
 
   useEffect(() => {
-    if (protectedRoutes === '(protected)' && !isAuth) {
+    if (isProtectedRoutes && !isAuth) {
       router.replace('/sign-in')
     }
-  }, [isAuth, protectedRoutes, router])
+  })
 
   return <AuthContext.Provider value={{ isAuth, session }}>{children}</AuthContext.Provider>
 }
