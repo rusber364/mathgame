@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f33',
   },
   headerLeftImage: {
-    fontWeight: 'bold',
     width: 54,
     height: 54,
   },
