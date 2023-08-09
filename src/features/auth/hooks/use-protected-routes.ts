@@ -18,7 +18,7 @@ export function useProtectedRoutes(isAuth = false) {
     if (isAuth && protectedPathname.current) {
       clearTimeout(idTimer)
       if (protectedPathname.current) {
-        router.push({
+        router.replace({
           pathname: protectedPathname.current,
           params: protectedParams.current,
         })
