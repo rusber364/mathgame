@@ -1,51 +1,29 @@
-import { Text, View, StyleSheet, Image } from 'react-native'
+import { Text, View, StyleSheet, Pressable } from 'react-native'
+import { AntDesign } from '@expo/vector-icons'
 
-import { Button } from '~/components/common/Button'
 import { useGameSelector, useGameDispatch } from '~/store/redux'
-import reload from '~/assets/reload.png'
-import pause from '~/assets/pause.png'
-import play from '~/assets/play.png'
 import { checkAnswer, getCurrentTask } from '~/store/slices/task.slice'
 import { getStarted, timerReset, timerStart, timerStop } from '~/store/slices/timer.slice'
-import { getGameIsOver } from '~/store/slices/game.slice'
 
 export function Task() {
   const dispatch = useGameDispatch()
 
   const timerIsStarted = useGameSelector(getStarted)
-  const gameIsOver = useGameSelector(getGameIsOver)
   const currentTask = useGameSelector(getCurrentTask)
 
   const handleStart = () => dispatch(timerStart())
   const handlePause = () => dispatch(timerStop())
   const handleReset = () => dispatch(timerReset())
 
-  const buttons = (
-    <View>
-      {gameIsOver ? (
-        <Button disabled onPress={handleReset} style={style.button}>
-          <Image source={reload} style={{ width: 15, height: 15 }} />
-        </Button>
-      ) : (
-        <Button onPress={timerIsStarted ? handlePause : handleStart} style={style.button}>
-          {timerIsStarted ? (
-            <Image source={pause} style={{ width: 15, height: 15 }} />
-          ) : (
-            <Image source={play} style={{ width: 15, height: 15 }} />
-          )}
-        </Button>
-      )}
-      <Button onPress={handleReset} style={style.button}>
-        <Image source={reload} style={{ width: 15, height: 15 }} />
-      </Button>
-    </View>
-  )
-
   if (!timerIsStarted) {
     return (
       <View>
-        <Text style={{ fontSize: 50, alignSelf: 'center' }}>{gameIsOver ? '😞' : '🙂'}</Text>
-        {buttons}
+        <Pressable onPress={handleStart} style={style.button}>
+          <AntDesign name="playcircleo" size={43} color="black" style={style.icons} />
+        </Pressable>
+        <Pressable onPress={handleReset} style={style.button}>
+          <AntDesign name="reload1" size={43} color="black" style={style.icons} />
+        </Pressable>
       </View>
     )
   }
@@ -61,7 +39,9 @@ export function Task() {
           </Text>
         ))}
       </View>
-      {buttons}
+      <Pressable onPress={timerIsStarted ? handlePause : handleStart} style={style.button}>
+        <AntDesign name={timerIsStarted ? 'pausecircleo' : 'playcircleo'} size={43} color="black" style={style.icons} />
+      </Pressable>
     </View>
   )
 }
@@ -76,8 +56,14 @@ const style = StyleSheet.create({
     flexWrap: 'wrap',
     marginVertical: 20,
   },
+  icons: {
+    textAlign: 'center',
+  },
   button: {
-    backgroundColor: '#f5deb3',
+    borderWidth: 1,
+    borderRadius: 50,
+    marginVertical: 3,
+    paddingVertical: 6,
   },
   answer: {
     flexGrow: 1,
