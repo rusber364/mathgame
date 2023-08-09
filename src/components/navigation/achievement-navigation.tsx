@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from '~/components/common/Button'
+import { Button } from '~/components/common/button'
 
 export function AchievementNavigation() {
   const { t } = useTranslation()

@@ -1,4 +1,4 @@
-import { addBeforeZero } from './addBeforeZero'
+import { addBeforeZero } from './add-before-zero'
 
 export function formatTimer(time: number) {
   const seconds = (time / 1000) % 60

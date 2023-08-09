@@ -1,7 +1,7 @@
 import { Text, View } from 'react-native'
 
 import { supabase } from '~/database/supabase'
-import { Button } from '~/components/common/Button'
+import { Button } from '~/components/common/button'
 
 export default function ProfileScreen() {
   function logOut() {

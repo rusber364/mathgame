@@ -1,8 +1,8 @@
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { useEffect } from 'react'
 
-import { InfoGame } from '~/features/game/components/InfoGame'
-import { Task } from '~/features/game/components/Task'
+import { InfoGame } from '~/features/game/components/info-game'
+import { Task } from '~/features/game/components/task'
 import { useGameDispatch } from '~/store/redux'
 import { registerTemplate } from '~/store/slices/task.slice'
 

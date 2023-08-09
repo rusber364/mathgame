@@ -1,4 +1,4 @@
-import { getRandomNumber } from './getRandomNumber'
+import { getRandomNumber } from './get-random-number'
 
 export function mixingArray<T>(values: T[]): T[] {
   const copyValues = values.slice()

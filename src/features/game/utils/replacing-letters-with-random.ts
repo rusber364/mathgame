@@ -1,4 +1,4 @@
-import { getRandomNumber } from './getRandomNumber'
+import { getRandomNumber } from './get-random-number'
 import { maxRandomNumbersMap, TOperator } from '../core/operators'
 import * as math from 'mathjs'
 

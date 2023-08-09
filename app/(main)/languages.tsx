@@ -3,7 +3,7 @@ import { StyleSheet, FlatList } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'expo-router'
 
-import { Button } from '~/components/common/Button'
+import { Button } from '~/components/common/button'
 import { languageKeys } from '~/langs/translation'
 
 export default function LanguagesScreen() {

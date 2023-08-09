@@ -1,5 +1,5 @@
-import { MainMenuNavigation } from '~/components/navigation/MainMenuNavigation'
-import { Profile } from '~/features/auth/components/Profile'
+import { MainMenuNavigation } from '~/components/navigation/main-menu-navigation'
+import { Profile } from '~/features/auth/components/profile'
 
 export default function HomeScreen() {
   return (

@@ -1,5 +1,5 @@
-import { InfoGame } from '~/features/game/components/InfoGame'
-import { Task } from '~/features/game/components/Task'
+import { InfoGame } from '~/features/game/components/info-game'
+import { Task } from '~/features/game/components/task'
 
 export default function SurvivalModeScreen() {
   return (

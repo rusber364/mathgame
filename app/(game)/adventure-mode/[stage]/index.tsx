@@ -6,8 +6,8 @@ import { useGameSelector, useGameDispatch } from '~/store/redux'
 import { getStageLoading, registerStage } from '~/store/slices/task.slice'
 import { TemplateList } from '~/features/game/components/template-list'
 import { range } from '~/features/game/utils/range'
-import { HeaderRightContent } from '~/components/common/temp/HeaderRightContent'
-import { NavigationBack } from '~/components/common/NavigationBack'
+import { HeaderRightContent } from '~/components/common/temp/header-right-content'
+import { NavigationBack } from '~/components/common/navigation-back'
 
 export default function StageScreen() {
   const { stage = '1' } = useLocalSearchParams<{ stage: string }>()

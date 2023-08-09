@@ -1,4 +1,4 @@
-import { getRandomNumber } from './getRandomNumber'
+import { getRandomNumber } from './get-random-number'
 
 function loopGetRandomNumber(result: number, iter = 100) {
   let _random!: number

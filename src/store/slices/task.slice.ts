@@ -1,6 +1,6 @@
 import { createSlice, createAction, PayloadAction } from '@reduxjs/toolkit'
 import templateList from '../templateList.json'
-import { generationTask, type TTask } from '~/features/game/core/generationTask'
+import { generationTask, type TTask } from '~/features/game/core/generation-task'
 import { takeLatest, call, select, put, delay } from 'redux-saga/effects'
 import { timerStart } from './timer.slice'
 import { addScore, gameStart } from './game.slice'
