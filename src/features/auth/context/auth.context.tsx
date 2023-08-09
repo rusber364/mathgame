@@ -1,8 +1,7 @@
-import type { PropsWithChildren } from 'react'
-import { useRouter, useSegments } from 'expo-router'
-import { createContext, useContext, useEffect } from 'react'
+import { createContext, useContext, type PropsWithChildren } from 'react'
 
 import { useSupabaseSession, type TSession } from '../hooks/use-supabase-session'
+import { useProtectedRoutes } from '../hooks/use-protected-routes'
 
 type TAuthContext = {
   isAuth: boolean
@@ -14,15 +13,7 @@ const AuthContext = createContext<TAuthContext>({ isAuth: false, session: null }
 export function AuthProvider({ children }: PropsWithChildren) {
   const { isAuth, session } = useSupabaseSession()
 
-  const segments: unknown[] = useSegments()
-  const isProtectedRoutes = segments.includes('(protected)')
-  const router = useRouter()
-
-  useEffect(() => {
-    if (isProtectedRoutes && !isAuth) {
-      router.replace('/sign-in')
-    }
-  })
+  useProtectedRoutes(isAuth)
 
   return <AuthContext.Provider value={{ isAuth, session }}>{children}</AuthContext.Provider>
 }
