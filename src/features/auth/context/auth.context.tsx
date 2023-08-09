@@ -1,44 +1,22 @@
-import type { Session } from '@supabase/supabase-js'
 import type { PropsWithChildren } from 'react'
 import { useRouter, useSegments } from 'expo-router'
-import { createContext, useContext, useState, useEffect } from 'react'
-import { supabase } from '~/database/supabase'
+import { createContext, useContext, useEffect } from 'react'
+
+import { useSupabaseSession, type TSession } from '../hooks/use-supabase-session'
 
 type TAuthContext = {
   isAuth: boolean
   session: TSession
 }
 
-type TSession = Session | null
-
 const AuthContext = createContext<TAuthContext>({ isAuth: false, session: null })
 
 export function AuthProvider({ children }: PropsWithChildren) {
-  const [isAuth, setAuth] = useState(false)
-  const [session, setSession] = useState<TSession>(null)
+  const { isAuth, session } = useSupabaseSession()
+
   const segments: unknown[] = useSegments()
   const isProtectedRoutes = segments.includes('(protected)')
   const router = useRouter()
-
-  useEffect(() => {
-    async function getAuthSession() {
-      const { data } = await supabase.auth.getSession()
-      if (data.session) {
-        setSession(data.session)
-      }
-      setAuth(data.session ? true : false)
-    }
-
-    const { data: authListener } = supabase.auth.onAuthStateChange(async (event, session) => {
-      console.log(`Supabase auth event: ${event}`)
-      setSession(session)
-      setAuth(session ? true : false)
-    })
-
-    getAuthSession()
-
-    return () => authListener.subscription.unsubscribe()
-  }, [])
 
   useEffect(() => {
     if (isProtectedRoutes && !isAuth) {
