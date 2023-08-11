@@ -39,7 +39,17 @@ const config: ExpoConfig = {
     backgroundColor: '#ffffff',
   },
   assetBundlePatterns: ['**/*'],
-  plugins: ['expo-router'],
+  plugins: [
+    [
+      'expo-router',
+      {
+        asyncRoutes: {
+          android: false,
+          default: 'development',
+        },
+      },
+    ],
+  ],
 }
 
 export default config
