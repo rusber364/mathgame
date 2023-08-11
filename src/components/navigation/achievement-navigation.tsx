@@ -1,8 +1,8 @@
-import { View } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from '~/components/common/button'
+import { NavigateContainer } from '../common/navigate-container'
 
 export function AchievementNavigation() {
   const { t } = useTranslation()
@@ -13,10 +13,10 @@ export function AchievementNavigation() {
   const navigateToBonusScreen = () => router.push('/(achievements)/bonus')
 
   return (
-    <View>
+    <NavigateContainer>
       <Button onPress={navigateToAchievementSingleScreen}>{t('screens.achievements.singleAchievements')}</Button>
       <Button onPress={navigateToAchievementTeamScreen}>{t('screens.achievements.teamAchievements')}</Button>
       <Button onPress={navigateToBonusScreen}>{t('screens.achievements.bonuses')}</Button>
-    </View>
+    </NavigateContainer>
   )
 }

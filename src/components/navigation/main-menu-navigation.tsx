@@ -1,8 +1,8 @@
-import { View } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from '~/components/common/button'
+import { NavigateContainer } from '../common/navigate-container'
 
 export function MainMenuNavigation() {
   const { t } = useTranslation()
@@ -16,13 +16,13 @@ export function MainMenuNavigation() {
   const navigateToPurchase = () => router.push('/(main)/purchase')
 
   return (
-    <View>
+    <NavigateContainer>
       <Button onPress={navigateToGameMode}>{t('screens.main.game')}</Button>
       <Button onPress={navigateToTeam}>{t('screens.main.team')}</Button>
       <Button onPress={navigateToAchievement}>{t('screens.main.achievements')}</Button>
       <Button onPress={navigateToLeague}>{t('screens.main.league')}</Button>
       <Button onPress={navigateToOption}>Option</Button>
       <Button onPress={navigateToPurchase}>Purchase</Button>
-    </View>
+    </NavigateContainer>
   )
 }
