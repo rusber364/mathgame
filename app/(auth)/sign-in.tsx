@@ -19,7 +19,7 @@ export default function SignInScreen() {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (!error) {
-      router.push('/profile')
+      router.push('/index/profile')
     } else {
       Toast.show({
         type: 'error',

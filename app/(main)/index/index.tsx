@@ -1,11 +1,10 @@
+import { DrawerContainer } from '~/components/common/drawer-container'
 import { MainMenuNavigation } from '~/components/navigation/main-menu-navigation'
-import { Profile } from '~/features/auth/components/profile'
 
 export default function HomeScreen() {
   return (
-    <>
-      <Profile />
+    <DrawerContainer>
       <MainMenuNavigation />
-    </>
+    </DrawerContainer>
   )
 }

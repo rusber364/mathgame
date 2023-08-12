@@ -1,7 +1,6 @@
-import { Text, View } from 'react-native'
-
 import { supabase } from '~/database/supabase'
 import { Button } from '~/components/common/button'
+import { DrawerContainer } from '~/components/common/drawer-container'
 
 export default function ProfileScreen() {
   function logOut() {
@@ -9,9 +8,8 @@ export default function ProfileScreen() {
   }
 
   return (
-    <View>
-      <Text>Profile</Text>
+    <DrawerContainer>
       <Button onPress={logOut}>Logout</Button>
-    </View>
+    </DrawerContainer>
   )
 }

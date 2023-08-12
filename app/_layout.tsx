@@ -12,7 +12,9 @@ export default function Layout() {
     <>
       <Provider store={store}>
         <AuthProvider>
-          <Stack screenOptions={{ contentStyle: styles.stack }} />
+          <Stack screenOptions={{ contentStyle: styles.stack }}>
+            <Stack.Screen name="(main)/index" options={{ headerShown: false }} />
+          </Stack>
         </AuthProvider>
       </Provider>
       <ToastMessage />
