@@ -1,6 +1,13 @@
-export const countries = {
-  ru: 'Русский',
+const mainCountries = {
   en: 'English',
+  ukr: 'Українська',
+  de: 'Deutsch',
+  fra: 'Français',
+  pol: 'Polski',
+  ru: 'Русский',
+}
+
+const otherCountries = {
   amh: 'አማርኛ ቋንቋ',
   ara: 'عربي',
   asm: 'অসমীয়া ভাষা',
@@ -10,8 +17,6 @@ export const countries = {
   blr: 'Беларуская мова',
   ces: 'čeština',
   chan: '中国人',
-  de: 'Deutsch',
-  fra: 'Français',
   grk: 'Ελληνικά',
   guj: 'ગુજરાતી ભાષા',
   hau: 'Harshen Hausa',
@@ -36,7 +41,6 @@ export const countries = {
   ori: 'ଓଡିଆ ଭାଷା',
   orm: 'Afaan Oromoo',
   pan: 'ਪੰਜਾਬੀ ਭਾਸ਼ਾ',
-  pol: 'Polski',
   por: 'Português',
   prs: 'زبان فارسی ',
   pus: 'پښتو ژبه',
@@ -52,9 +56,13 @@ export const countries = {
   tel: 'తెలుగు భాష',
   tha: 'ไทย',
   tur: 'Türk',
-  ukr: 'Українська',
   urd: 'اردو زبان',
   uzb: "O'zbek tili",
   vie: 'ngôn ngữ tiếng Việt',
   yur: 'Èdè Yorùbá',
+}
+
+export const countriesNames = {
+  ...mainCountries,
+  ...otherCountries,
 }

@@ -5,6 +5,7 @@ import { useRouter } from 'expo-router'
 
 import { Button } from '~/components/common/button'
 import { languageKeys } from '~/langs/translation'
+import { countriesNames } from '~/langs/countries'
 
 export default function LanguagesScreen() {
   const { i18n } = useTranslation()
@@ -13,7 +14,7 @@ export default function LanguagesScreen() {
   const handleChangeLang = useCallback(
     (lang: string) => () => {
       i18n.changeLanguage(lang)
-      router.push('/')
+      router.back()
     },
     [i18n, router],
   )
@@ -22,7 +23,7 @@ export default function LanguagesScreen() {
     <FlatList
       style={styles.listLang}
       data={languageKeys}
-      renderItem={(lang) => <Button onPress={handleChangeLang(lang.item)}>{lang.item}</Button>}
+      renderItem={(lang) => <Button onPress={handleChangeLang(lang.item)}>{countriesNames[lang.item]}</Button>}
     />
   )
 }

@@ -3,7 +3,11 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import * as resources from './data'
 
-export const languageKeys = Object.keys(resources)
+const { en, ukr, de, fra, pol, ru, ...other } = resources
+
+type LanguageKeys = (keyof typeof resources)[]
+
+export const languageKeys = Object.keys({ en, ukr, de, fra, pol, ru, ...other }) as LanguageKeys
 
 i18n
   .use(initReactI18next)
