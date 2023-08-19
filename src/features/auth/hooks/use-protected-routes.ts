@@ -1,4 +1,4 @@
-import { useRouter, useSegments, usePathname, useGlobalSearchParams, Href } from 'expo-router'
+import { Href, useGlobalSearchParams, usePathname, useRouter, useSegments } from 'expo-router'
 import { useEffect, useRef } from 'react'
 
 type TSearchParams = ReturnType<typeof useGlobalSearchParams>

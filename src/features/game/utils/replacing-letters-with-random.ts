@@ -1,6 +1,7 @@
-import { getRandomNumber } from './get-random-number'
-import { maxRandomNumbersMap, TOperator } from '../core/operators'
 import * as math from 'mathjs'
+
+import { maxRandomNumbersMap, TOperator } from '../core/operators'
+import { getRandomNumber } from './get-random-number'
 
 type Options = {
   max?: number

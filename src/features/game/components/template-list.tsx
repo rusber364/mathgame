@@ -1,6 +1,7 @@
 import { Link } from 'expo-router'
 import { PropsWithChildren } from 'react'
-import { Text, StyleSheet, Pressable, View, FlatList } from 'react-native'
+import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
+
 import { useGameSelector } from '~/store/redux'
 import { getCurrentTemplateList } from '~/store/slices/task.slice'
 

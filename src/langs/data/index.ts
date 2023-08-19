@@ -1,10 +1,10 @@
 // mainCountriesKeys
-export { default as en } from './en.json'
-export { default as ukr } from './ukr.json'
 export { default as de } from './de.json'
+export { default as en } from './en.json'
 export { default as fra } from './fra.json'
 export { default as pol } from './pol.json'
 export { default as ru } from './ru.json'
+export { default as ukr } from './ukr.json'
 
 // otherCountriesKeys
 export { default as amh } from './amh.json'
@@ -45,8 +45,8 @@ export { default as prs } from './prs.json'
 export { default as pus } from './pus.json'
 export { default as rum } from './rum.json'
 export { default as sin } from './sin.json'
-export { default as sna } from './spa.json'
 export { default as sndh } from './sndh.json'
+export { default as sna } from './spa.json'
 export { default as spa } from './spa.json'
 export { default as srik } from './srik.json'
 export { default as srp } from './srp.json'

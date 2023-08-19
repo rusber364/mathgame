@@ -1,5 +1,6 @@
 import { evaluate } from 'mathjs'
 import { vi } from 'vitest'
+
 import { replacingLettersWithRandom } from './replacing-letters-with-random'
 
 let instance: Generator

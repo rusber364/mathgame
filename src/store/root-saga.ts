@@ -1,6 +1,7 @@
 import { fork } from 'redux-saga/effects'
+
+import { checkAnswerSaga, registerStageSaga, registerTemplateSaga, taskSaga } from './slices/task.slice'
 import { timerSaga } from './slices/timer.slice'
-import { checkAnswerSaga, registerStageSaga, taskSaga, registerTemplateSaga } from './slices/task.slice'
 
 export function* rootSaga() {
   yield fork(taskSaga)

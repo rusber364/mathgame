@@ -1,5 +1,5 @@
 import type { TextInputProps } from 'react-native'
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { StyleSheet, Text, TextInput, View } from 'react-native'
 
 type Props = TextInputProps & {
   labelText?: string

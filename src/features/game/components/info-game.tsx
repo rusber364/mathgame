@@ -1,7 +1,7 @@
-import { View, StyleSheet } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
-import { Score } from '~/features/game/components/score'
-import { Timer } from '~/features/game/components/timer'
+import { Score } from '~/features/game/components/score.view'
+import { Timer } from '~/features/game/components/timer.view'
 
 export function InfoGame() {
   return (

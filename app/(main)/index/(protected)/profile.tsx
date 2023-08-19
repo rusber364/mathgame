@@ -1,5 +1,5 @@
 import { supabase } from '~/database/supabase'
-import { Button } from '~/components/common/button'
+import { Button } from '~/components/common/button.comp'
 import { DrawerContainer } from '~/components/common/drawer-container'
 
 export default function ProfileScreen() {

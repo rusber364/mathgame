@@ -1,7 +1,7 @@
-import { createContext, useContext, type PropsWithChildren } from 'react'
+import { createContext, type PropsWithChildren, useContext } from 'react'
 
-import { useSupabaseSession, type TSession } from '../hooks/use-supabase-session'
 import { useProtectedRoutes } from '../hooks/use-protected-routes'
+import { type TSession, useSupabaseSession } from '../hooks/use-supabase-session'
 
 type TAuthContext = {
   isAuth: boolean

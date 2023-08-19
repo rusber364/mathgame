@@ -1,12 +1,12 @@
+import { configureStore } from '@reduxjs/toolkit'
 import type { TypedUseSelectorHook } from 'react-redux'
 import { useDispatch, useSelector } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
-import { configureStore } from '@reduxjs/toolkit'
 
-import timerReducer from './slices/timer.slice'
-import taskReducer from './slices/task.slice'
-import gameReducer from './slices/game.slice'
 import { rootSaga } from './root-saga'
+import gameReducer from './slices/game.slice'
+import taskReducer from './slices/task.slice'
+import timerReducer from './slices/timer.slice'
 
 const sagaMiddleware = createSagaMiddleware()
 

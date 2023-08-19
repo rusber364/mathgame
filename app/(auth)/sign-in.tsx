@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Toast from 'react-native-toast-message'
 
 import { supabase } from '~/database/supabase'
-import { Button } from '~/components/common/button'
+import { Button } from '~/components/common/button.comp'
 import { AuthTitle } from '~/features/auth/components/auth-title'
 import { AuthField } from '~/features/auth/components/auth-field'
 

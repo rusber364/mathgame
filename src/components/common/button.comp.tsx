@@ -1,5 +1,5 @@
 import type { PressableProps, StyleProp, ViewStyle } from 'react-native'
-import { View, Text, StyleSheet, Pressable, ActivityIndicator } from 'react-native'
+import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native'
 
 type NativeProps<T> = PressableProps & React.RefAttributes<View> & React.PropsWithChildren<T>
 type Props = {

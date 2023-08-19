@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react'
-import { Text, StyleSheet } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 
 export function AuthTitle({ children }: PropsWithChildren) {
   return <Text style={styles.root}>{children}</Text>

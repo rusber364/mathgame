@@ -1,7 +1,7 @@
-import { Text, View, StyleSheet, Pressable } from 'react-native'
 import { AntDesign } from '@expo/vector-icons'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 
-import { useGameSelector, useGameDispatch } from '~/store/redux'
+import { useGameDispatch, useGameSelector } from '~/store/redux'
 import { checkAnswer, getCurrentTask } from '~/store/slices/task.slice'
 import { getStarted, timerReset, timerStart, timerStop } from '~/store/slices/timer.slice'
 

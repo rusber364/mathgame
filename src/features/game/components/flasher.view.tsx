@@ -1,4 +1,4 @@
-import { useEffect, useRef, type PropsWithChildren } from 'react'
+import { type PropsWithChildren, useEffect, useRef } from 'react'
 import { Animated, Easing, StyleProp, TextStyle } from 'react-native'
 
 type Props = {

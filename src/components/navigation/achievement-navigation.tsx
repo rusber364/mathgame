@@ -1,7 +1,8 @@
 import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from '~/components/common/button'
+import { Button } from '~/components/common/button.comp'
+
 import { NavigateContainer } from '../common/navigate-container'
 
 export function AchievementNavigation() {

@@ -1,9 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
-import { delay, select, takeLatest, put, fork, take, cancel } from 'redux-saga/effects'
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import { Task } from 'redux-saga'
+import { cancel, delay, fork, put, select, take, takeLatest } from 'redux-saga/effects'
+
 import { RootState } from '../redux'
 import { gameOver, gameStart } from './game.slice'
-import { Task } from 'redux-saga'
 
 export const timerSlice = createSlice({
   name: 'timer',

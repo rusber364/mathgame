@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+
 import { useGameSelector } from '~/store/redux'
 import { getScore } from '~/store/slices/game.slice'
 

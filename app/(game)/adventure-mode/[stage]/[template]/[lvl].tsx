@@ -2,7 +2,7 @@ import { useLocalSearchParams, Stack } from 'expo-router'
 import { useEffect } from 'react'
 
 import { InfoGame } from '~/features/game/components/info-game'
-import { Task } from '~/features/game/components/task'
+import { Task } from '~/features/game/components/task.view'
 import { useGameDispatch } from '~/store/redux'
 import { registerTemplate } from '~/store/slices/task.slice'
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Entypo, AntDesign } from '@expo/vector-icons'
+import { AntDesign, Entypo } from '@expo/vector-icons'
 import { type DrawerNavigationOptions } from '@react-navigation/drawer'
 
 type Props = {

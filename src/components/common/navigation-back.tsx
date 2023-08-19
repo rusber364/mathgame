@@ -1,5 +1,5 @@
 import { useRouter } from 'expo-router'
-import { TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { Image, StyleSheet, TouchableOpacity } from 'react-native'
 
 import arrow from '~/assets/arrow.png'
 

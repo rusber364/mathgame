@@ -1,10 +1,11 @@
 import { evaluate, round } from 'mathjs'
-import { maxRandomNumbersMap, operators } from './operators'
-import { getRandomOperator } from '../utils/get-random-operator'
+
 import { getRandomNumber } from '../utils/get-random-number'
+import { getRandomOperator } from '../utils/get-random-operator'
 import { mixingArray } from '../utils/mixing-array'
-import { antiRandomDoubleAnswer } from './anti-random-double-answer'
 import { replacingLettersWithRandom } from '../utils/replacing-letters-with-random'
+import { antiRandomDoubleAnswer } from './anti-random-double-answer'
+import { maxRandomNumbersMap, operators } from './operators'
 
 export type TTask = ReturnType<typeof generationTask>
 

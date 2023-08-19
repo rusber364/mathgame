@@ -1,8 +1,10 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+
 import { useGameSelector } from '~/store/redux'
-import { formatTimer } from '../utils/format-timer'
-import { FlasherView } from './flasher-view'
 import { getTime } from '~/store/slices/timer.slice'
+
+import { formatTimer } from '../utils/format-timer'
+import { FlasherView } from './flasher.view'
 
 export function Timer() {
   const time = useGameSelector(getTime)

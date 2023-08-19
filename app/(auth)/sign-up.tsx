@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router'
 import { useState } from 'react'
 
 import { supabase } from '~/database/supabase'
-import { Button } from '~/components/common/button'
+import { Button } from '~/components/common/button.comp'
 import { AuthTitle } from '~/features/auth/components/auth-title'
 import { AuthField } from '~/features/auth/components/auth-field'
 
