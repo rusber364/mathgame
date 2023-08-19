@@ -34,8 +34,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'simple-import-sort'],
   rules: {
     'prefer-const': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
 }

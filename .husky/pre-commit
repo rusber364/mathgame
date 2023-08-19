@@ -3,3 +3,4 @@
 
 yarn test run
 yarn types
+yarn lint
