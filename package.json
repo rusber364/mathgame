@@ -71,7 +71,7 @@
     "upgrade": "yarn upgrade-interactive",
     "sdks": "yarn dlx @yarnpkg/sdks vscode",
     "format": "prettier --write ./src",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src --color --fix",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src app --color --fix",
     "types": "tsc --noEmit",
     "test": "vitest",
     "test:ui": "vitest --ui",
