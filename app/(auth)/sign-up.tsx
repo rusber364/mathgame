@@ -1,12 +1,12 @@
-import Toast from 'react-native-toast-message'
-import { View, KeyboardAvoidingView, Platform } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
+import { KeyboardAvoidingView, Platform, View } from 'react-native'
+import Toast from 'react-native-toast-message'
 
-import { supabase } from '~/database/supabase'
 import { Button } from '~/components/common/button.comp'
-import { AuthTitle } from '~/features/auth/components/auth-title'
+import { supabase } from '~/database/supabase'
 import { AuthField } from '~/features/auth/components/auth-field'
+import { AuthTitle } from '~/features/auth/components/auth-title'
 
 export default function SignUpScreen() {
   const [email, setEmail] = useState('')

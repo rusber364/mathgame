@@ -1,5 +1,5 @@
 import { Link, Stack } from 'expo-router'
-import { Text, StyleSheet, Pressable, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 
 import { range } from '~/features/game/utils/range'
 

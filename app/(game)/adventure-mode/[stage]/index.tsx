@@ -1,13 +1,13 @@
-import { useLocalSearchParams, Stack } from 'expo-router'
+import { Stack, useLocalSearchParams } from 'expo-router'
 import { useEffect, useMemo } from 'react'
 import { ActivityIndicator } from 'react-native'
 
-import { useGameSelector, useGameDispatch } from '~/store/redux'
-import { getStageLoading, registerStage } from '~/store/slices/task.slice'
+import { NavigationBack } from '~/components/common/navigation-back'
+import { HeaderRightContent } from '~/components/common/temp/header-right-content'
 import { TemplateList } from '~/features/game/components/template-list'
 import { range } from '~/features/game/utils/range'
-import { HeaderRightContent } from '~/components/common/temp/header-right-content'
-import { NavigationBack } from '~/components/common/navigation-back'
+import { useGameDispatch, useGameSelector } from '~/store/redux'
+import { getStageLoading, registerStage } from '~/store/slices/task.slice'
 
 export default function StageScreen() {
   const { stage = '1' } = useLocalSearchParams<{ stage: string }>()

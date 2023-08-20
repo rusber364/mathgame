@@ -1,4 +1,5 @@
 import { Drawer } from 'expo-router/drawer'
+
 import { configDrawerScreens } from '~/components/common/icons/drawer-icon'
 
 export default function IndexLayout() {

@@ -1,11 +1,11 @@
-import { useCallback } from 'react'
-import { StyleSheet, FlatList } from 'react-native'
-import { useTranslation } from 'react-i18next'
 import { useRouter } from 'expo-router'
+import { useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
+import { FlatList, StyleSheet } from 'react-native'
 
 import { Button } from '~/components/common/button.comp'
-import { languageKeys } from '~/langs/translation'
 import { countriesNames } from '~/langs/countries'
+import { languageKeys } from '~/langs/translation'
 
 export default function LanguagesScreen() {
   const { i18n } = useTranslation()

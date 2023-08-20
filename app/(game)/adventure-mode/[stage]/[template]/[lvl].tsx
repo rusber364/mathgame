@@ -1,4 +1,4 @@
-import { useLocalSearchParams, Stack } from 'expo-router'
+import { Stack, useLocalSearchParams } from 'expo-router'
 import { useEffect } from 'react'
 
 import { InfoGame } from '~/features/game/components/info-game'
