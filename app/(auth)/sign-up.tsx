@@ -1,17 +1,18 @@
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
 import { KeyboardAvoidingView, Platform, View } from 'react-native'
+import { TextInput } from 'react-native-paper'
 import Toast from 'react-native-toast-message'
 
 import { Button } from '~/components/common/button.comp'
 import { supabase } from '~/database/supabase'
-import { AuthField } from '~/features/auth/components/auth-field'
 import { AuthTitle } from '~/features/auth/components/auth-title'
 
 export default function SignUpScreen() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setLoading] = useState(false)
+  const [isShowPassword, setShowPassword] = useState(true)
   const router = useRouter()
 
   async function handleRegistration() {
@@ -40,19 +41,20 @@ export default function SignUpScreen() {
       <View style={{ justifyContent: 'center', flexGrow: 1 }}>
         <AuthTitle>Register</AuthTitle>
         <View style={{ marginVertical: 20 }}>
-          <AuthField
-            labelText="Email"
+          <TextInput
+            label="Email"
             value={email}
             onChangeText={setEmail}
             placeholder="Enter your email"
             keyboardType="email-address"
           />
-          <AuthField
-            labelText="Password"
+          <TextInput
+            right={<TextInput.Icon icon="eye" onPress={() => setShowPassword(!isShowPassword)} />}
+            label="Password"
             value={password}
             onChangeText={setPassword}
             placeholder="Enter your password"
-            secureTextEntry={true}
+            secureTextEntry={isShowPassword}
           />
         </View>
 
