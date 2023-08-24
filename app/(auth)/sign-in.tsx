@@ -51,7 +51,12 @@ export default function SignInScreen() {
         />
         <TextInput
           style={styles.textInput}
-          right={<TextInput.Icon icon="eye" onPress={() => setShowPassword(!isShowPassword)} />}
+          right={
+            <TextInput.Icon
+              icon={isShowPassword ? 'eye-off' : 'eye'}
+              onPress={() => setShowPassword(!isShowPassword)}
+            />
+          }
           label="Password"
           value={password}
           onChangeText={setPassword}
