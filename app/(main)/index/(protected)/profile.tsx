@@ -1,9 +1,28 @@
 import { useEffect, useState } from 'react'
 import { Button as BaseButton, Text, TextInput, View } from 'react-native'
+import { s } from 'vitest/dist/types-3c7dbfa5'
 
 import { Button } from '~/components/common/button.comp'
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
+
+// const currentUser = supabase.auth.user()
+// if  (currentUser){
+// const userId =currentUser.id
+// const newNickname='NewNickname'
+// supabase
+// .from('users')
+// .update({nickname:newNickname})
+// .eq('id',userId).then(({data, error})=>{
+//   if(error){
+//     console.error('error')
+//   }else{
+//     console.log('success')
+//   }
+
+// }
+// )
+// }
 
 export default function ProfileScreen() {
   const [nickname, setNickname] = useState('user-nick-name')
@@ -13,16 +32,32 @@ export default function ProfileScreen() {
     supabase?.auth.signOut()
   }
 
-  async function handleUpdateProfile() {
-    // TODO: update nickname to supabase
-    // await supabase...
+  async function handleUpdateProfile(newNickname) {
+    try {
+      const { error } = await supabase.from('users').update({ nickname: newNickname }).eq('id', supabase.auth.user.id)
+      if (error) {
+        throw error
+      }
+      console.log('success')
+      setNickname(newNickname)
+    } catch (error) {
+      console.error('error')
+    }
   }
 
   useEffect(() => {
     async function getNickname() {
-      // TODO: get nickname with supabase
-      // await supabase...
-      // setNickname('')
+      try {
+        const { error } = await supabase.from('users').update('nickname').eq('id', supabase.auth.user().id)
+        if (error) {
+          throw error
+        }
+        if (data.length > 0) {
+          setNickname(data[0].nickname)
+        }
+      } catch (error) {
+        console.error('error')
+      }
     }
 
     getNickname()
