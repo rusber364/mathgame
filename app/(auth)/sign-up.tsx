@@ -1,12 +1,13 @@
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
+import { StyleSheet, Text } from 'react-native'
 import { KeyboardAvoidingView, Platform, View } from 'react-native'
-import { TextInput } from 'react-native-paper'
+import { Button, TextInput } from 'react-native-paper'
 import Toast from 'react-native-toast-message'
 
-import { Button } from '~/components/common/button.comp'
 import { supabase } from '~/database/supabase'
 import { AuthTitle } from '~/features/auth/components/auth-title'
+import { delay } from '~/utils/delay'
 
 export default function SignUpScreen() {
   const [email, setEmail] = useState('')
@@ -18,6 +19,8 @@ export default function SignUpScreen() {
   async function handleRegistration() {
     setLoading(true)
     const { error } = await supabase.auth.signUp({ email, password })
+    // TODO: delete delay
+    await delay(1000)
 
     if (!error) {
       Toast.show({
@@ -37,32 +40,61 @@ export default function SignUpScreen() {
   }
 
   return (
-    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
-      <View style={{ justifyContent: 'center', flexGrow: 1 }}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={{ justifyContent: 'center', flex: 1 }}
+    >
+      <View style={styles.root}>
         <AuthTitle>Register</AuthTitle>
-        <View style={{ marginVertical: 20 }}>
-          <TextInput
-            label="Email"
-            value={email}
-            onChangeText={setEmail}
-            placeholder="Enter your email"
-            keyboardType="email-address"
-          />
-          <TextInput
-            right={<TextInput.Icon icon="eye" onPress={() => setShowPassword(!isShowPassword)} />}
-            label="Password"
-            value={password}
-            onChangeText={setPassword}
-            placeholder="Enter your password"
-            secureTextEntry={isShowPassword}
-          />
-        </View>
-
-        <Button onPress={handleRegistration} isLoading={isLoading}>
+        <TextInput
+          style={styles.textInput}
+          label="Email"
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Enter your email"
+          keyboardType="email-address"
+        />
+        <TextInput
+          style={styles.textInput}
+          right={
+            <TextInput.Icon
+              icon={isShowPassword ? 'eye-off' : 'eye'}
+              onPress={() => setShowPassword(!isShowPassword)}
+            />
+          }
+          label="Password"
+          value={password}
+          onChangeText={setPassword}
+          placeholder="Enter your password"
+          secureTextEntry={isShowPassword}
+        />
+        <Button loading={isLoading} mode="contained" onPress={handleRegistration}>
           Registration
         </Button>
-        <Button onPress={() => router.push('/sign-in')}>Login</Button>
+        <View style={styles.container}>
+          <Text>Already have an account?</Text>
+          <Button onPress={() => router.push('/sign-in')}>Login</Button>
+        </View>
       </View>
     </KeyboardAvoidingView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 30,
+    alignItems: 'center',
+  },
+  textInput: {
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
+  },
+  root: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    marginBottom: 10,
+    padding: 20,
+  },
+})
