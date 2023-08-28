@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Button as BaseButton, Text, TextInput, View } from 'react-native'
+import { Button as BaseButton, Text, View } from 'react-native'
+import { PaperProvider } from 'react-native-paper'
+import { TextInput, Button } from 'react-native-paper'
 
-import { Button } from '~/components/common/button.comp'
+// import { Button } from '~/components/common/button.comp'
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
 import { useAuthContext } from '~/features/auth/context/auth.context'
@@ -49,22 +51,30 @@ export default function ProfileScreen() {
 
   return (
     <DrawerContainer>
-      <View>
-        {isUpdatingProfile ? (
-          <>
-            <TextInput placeholder="name" value={nickname} onChangeText={setNickname} />
-            <BaseButton title="save nickname" onPress={() => setUpdatingProfile(!isUpdatingProfile)} />
-          </>
-        ) : (
-          <>
-            <Text>{nickname}</Text>
-            <BaseButton title="change nickname" onPress={() => setUpdatingProfile(!isUpdatingProfile)} />
-          </>
-        )}
-
-        <BaseButton title="update profile" onPress={handleUpdateProfile} />
-      </View>
-      <Button onPress={logOut}>Logout</Button>
+      <PaperProvider>
+        <View>
+          {isUpdatingProfile ? (
+            <>
+              <TextInput label="name" placeholder="name" value={nickname} onChangeText={(text) => setNickname(text)} />
+              <Button icon="account-arrow-down" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
+                Save nickname
+              </Button>
+            </>
+          ) : (
+            <>
+              <Text>{nickname}</Text>
+              <Button icon="account-arrow-left" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
+                Change nickname
+              </Button>
+            </>
+          )}
+          <Button icon="account-arrow-up" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
+            {' '}
+            Update profile
+          </Button>
+        </View>
+        <Button onPress={logOut}>Logout</Button>
+      </PaperProvider>
     </DrawerContainer>
   )
 }
