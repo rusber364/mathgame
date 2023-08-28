@@ -1,30 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Button as BaseButton, Text, TextInput, View } from 'react-native'
-import { s } from 'vitest/dist/types-3c7dbfa5'
 
 import { Button } from '~/components/common/button.comp'
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
-
-// const currentUser = supabase.auth.user()
-// if  (currentUser){
-// const userId =currentUser.id
-// const newNickname='NewNickname'
-// supabase
-// .from('users')
-// .update({nickname:newNickname})
-// .eq('id',userId).then(({data, error})=>{
-//   if(error){
-//     console.error('error')
-//   }else{
-//     console.log('success')
-//   }
-
-// }
-// )
-// }
+import { useAuthContext } from '~/features/auth/context/auth.context'
 
 export default function ProfileScreen() {
+  const { session } = useAuthContext()
+  const userId = session?.user.id
+  const [idNickName, setNickName] = useState<number>()
   const [nickname, setNickname] = useState('user-nick-name')
   const [isUpdatingProfile, setUpdatingProfile] = useState(false)
 
@@ -32,36 +17,35 @@ export default function ProfileScreen() {
     supabase?.auth.signOut()
   }
 
-  async function handleUpdateProfile(newNickname) {
+  async function handleUpdateProfile() {
     try {
-      const { error } = await supabase.from('users').update({ nickname: newNickname }).eq('id', supabase.auth.user.id)
-      if (error) {
-        throw error
+      if (userId && idNickName) {
+        await supabase
+          .from('game_users')
+          .upsert({ nick_name: nickname, user_id: userId, id: idNickName })
+          .eq('user_id', userId)
+          .select('nick_name')
       }
-      console.log('success')
-      setNickname(newNickname)
     } catch (error) {
-      console.error('error')
+      console.log(error)
     }
   }
 
   useEffect(() => {
     async function getNickname() {
       try {
-        const { error } = await supabase.from('users').update('nickname').eq('id', supabase.auth.user().id)
-        if (error) {
-          throw error
-        }
-        if (data.length > 0) {
-          setNickname(data[0].nickname)
+        const { data } = await supabase.from('game_users').select('id,nick_name').eq('user_id', userId)
+        if (data) {
+          setNickName(data[0].id)
+          setNickname(data[0].nick_name)
         }
       } catch (error) {
-        console.error('error')
+        console.error(error)
       }
     }
 
     getNickname()
-  }, [])
+  }, [userId])
 
   return (
     <DrawerContainer>
