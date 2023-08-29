@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Button as BaseButton, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { PaperProvider } from 'react-native-paper'
-import { TextInput, Button } from 'react-native-paper'
+import { Button, TextInput } from 'react-native-paper'
 
-// import { Button } from '~/components/common/button.comp'
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
 import { useAuthContext } from '~/features/auth/context/auth.context'
@@ -55,7 +54,7 @@ export default function ProfileScreen() {
         <View>
           {isUpdatingProfile ? (
             <>
-              <TextInput label="name" placeholder="name" value={nickname} onChangeText={(text) => setNickname(text)} />
+              <TextInput label="name" placeholder="name" value={nickname} onChangeText={setNickname} />
               <Button icon="account-arrow-down" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
                 Save nickname
               </Button>
@@ -68,8 +67,7 @@ export default function ProfileScreen() {
               </Button>
             </>
           )}
-          <Button icon="account-arrow-up" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
-            {' '}
+          <Button icon="account-arrow-up" onPress={handleUpdateProfile}>
             Update profile
           </Button>
         </View>
