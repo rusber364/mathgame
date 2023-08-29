@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 type TSearchParams = ReturnType<typeof useGlobalSearchParams>
 
-export function useProtectedRoutes(isAuth = false) {
+export function useProtectedRoutes(isAuth = false, isAuthSyncStorage = false) {
   const router = useRouter()
   const params = useGlobalSearchParams<TSearchParams>()
   const pathname = usePathname() as Href<string>
@@ -13,29 +13,21 @@ export function useProtectedRoutes(isAuth = false) {
   const protectedParams = useRef<TSearchParams>({})
 
   useEffect(() => {
-    let idTimer!: NodeJS.Timeout | number
-
-    if (isAuth && protectedPathname.current) {
-      clearTimeout(idTimer)
+    if (isProtectedRoutes && isAuth && !isAuthSyncStorage) {
       if (protectedPathname.current) {
         router.replace({
           pathname: protectedPathname.current,
           params: protectedParams.current,
         })
-
         protectedPathname.current = void 0
         protectedParams.current = {}
       }
     }
 
-    if (isProtectedRoutes && !isAuth) {
-      idTimer = setTimeout(() => {
-        protectedPathname.current = pathname
-        protectedParams.current = params
-        router.replace('/sign-in')
-      }, 100)
+    if (isProtectedRoutes && !isAuth && !isAuthSyncStorage) {
+      protectedPathname.current = pathname
+      protectedParams.current = params
+      router.replace('/sign-in')
     }
-
-    return () => clearTimeout(idTimer)
-  }, [isAuth, isProtectedRoutes, params, pathname, router])
+  }, [isAuth, isAuthSyncStorage, isProtectedRoutes, params, pathname, router])
 }
