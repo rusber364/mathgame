@@ -6,6 +6,7 @@ import { type TSession, useSupabaseSession } from '../hooks/use-supabase-session
 type TAuthContext = {
   isAuth: boolean
   session: TSession
+  protectedRoute?: ReturnType<typeof useProtectedRoutes>
 }
 
 const AuthContext = createContext<TAuthContext>({ isAuth: false, session: null })
@@ -13,9 +14,9 @@ const AuthContext = createContext<TAuthContext>({ isAuth: false, session: null }
 export function AuthProvider({ children }: PropsWithChildren) {
   const { isAuth, session, isStorageLoading } = useSupabaseSession()
 
-  useProtectedRoutes(isAuth, isStorageLoading)
+  const protectedRoute = useProtectedRoutes(isAuth, isStorageLoading)
 
-  return <AuthContext.Provider value={{ isAuth, session }}>{children}</AuthContext.Provider>
+  return <AuthContext.Provider value={{ isAuth, session, protectedRoute }}>{children}</AuthContext.Provider>
 }
 
 export function useAuthContext() {

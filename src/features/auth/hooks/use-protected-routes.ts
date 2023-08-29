@@ -15,12 +15,17 @@ export function useProtectedRoutes(isAuth = false, isAuthSyncStorage = false) {
   useEffect(() => {
     if (isProtectedRoutes && isAuth && !isAuthSyncStorage) {
       if (protectedPathname.current) {
-        router.replace({
-          pathname: protectedPathname.current,
-          params: protectedParams.current,
-        })
+        if (protectedParams.current) {
+          router.replace({
+            pathname: protectedPathname.current,
+            params: protectedParams.current,
+          })
+          protectedPathname.current = void 0
+          protectedParams.current = {}
+          return
+        }
+        router.replace(protectedPathname.current)
         protectedPathname.current = void 0
-        protectedParams.current = {}
       }
     }
 
@@ -30,4 +35,6 @@ export function useProtectedRoutes(isAuth = false, isAuthSyncStorage = false) {
       router.replace('/sign-in')
     }
   }, [isAuth, isAuthSyncStorage, isProtectedRoutes, params, pathname, router])
+
+  return { pathname: protectedPathname, params: protectedParams }
 }
