@@ -52,7 +52,7 @@
     "expo-asset": "~8.10.1",
     "expo-constants": "~14.4.2",
     "expo-linking": "~5.0.2",
-    "expo-router": "2.0.0",
+    "expo-router": "2.0.4",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "husky": "^8.0.3",
