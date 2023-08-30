@@ -9,7 +9,7 @@ import { delay } from '~/utils/delay'
 export function useSupabaseCallbacks() {
   const [isLoading, setLoading] = useState(false)
   const router = useRouter()
-  const { protectedRoute } = useAuthContext()
+  const { redirectAfterAuth } = useAuthContext()
 
   async function registration(email: string, password: string) {
     setLoading(true)
@@ -41,15 +41,10 @@ export function useSupabaseCallbacks() {
     await delay(1000)
 
     if (!error) {
-      if (protectedRoute?.pathname.current) {
-        const pathname = protectedRoute.pathname.current
-        const params = protectedRoute.params.current
-        router.push({ pathname, params })
+      if (redirectAfterAuth?.current?.pathname) {
+        router.push(redirectAfterAuth.current)
       } else {
-        // TODO: fix types route profile
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        router.push('/profile')
+        router.push('/index/profile')
       }
     } else {
       Toast.show({
