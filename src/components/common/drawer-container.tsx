@@ -1,8 +1,11 @@
-import type { PropsWithChildren } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, type ViewProps } from 'react-native'
 
-export function DrawerContainer({ children }: PropsWithChildren) {
-  return <View style={styles.container}>{children}</View>
+export function DrawerContainer({ children, style, ...props }: ViewProps) {
+  return (
+    <View style={[styles.container, style]} {...props}>
+      {children}
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
