@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { PaperProvider } from 'react-native-paper'
 import { Button, TextInput } from 'react-native-paper'
 
@@ -51,7 +51,7 @@ export default function ProfileScreen() {
   return (
     <DrawerContainer>
       <PaperProvider>
-        <View>
+        <View style={styles.container}>
           {isUpdatingProfile ? (
             <>
               <TextInput label="name" placeholder="name" value={nickname} onChangeText={setNickname} />
@@ -70,9 +70,16 @@ export default function ProfileScreen() {
           <Button icon="account-arrow-up" onPress={handleUpdateProfile}>
             Update profile
           </Button>
+          <Button onPress={logOut}>Logout</Button>
         </View>
-        <Button onPress={logOut}>Logout</Button>
       </PaperProvider>
     </DrawerContainer>
   )
 }
+const styles = StyleSheet.create({
+  container: {
+    textAlign: 'center',
+    marginTop: 'auto',
+    marginBottom: 'auto',
+  },
+})

@@ -15,5 +15,9 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "npm.packageManager": "yarn",
   "editor.formatOnSave": true,
-  "vitest.enable": true
+  "vitest.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  }
 }
