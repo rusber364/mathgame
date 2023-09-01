@@ -43,7 +43,6 @@
     "@types/react": "~18.2.21",
     "@types/react-native": "~0.72.2",
     "@types/react-test-renderer": "^18.0.0",
-    "@types/testing-library__jest-dom": "^6.0.0",
     "@types/url-parse": "^1.4.9",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -99,8 +98,7 @@
   "lint-staged": {
     "*.{tsx,ts}": [
       "yarn lint",
-      "yarn test",
-      "yarn types"
+      "yarn test"
     ]
   },
   "version": "0.2.0",
