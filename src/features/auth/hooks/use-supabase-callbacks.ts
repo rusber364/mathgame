@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
 import Toast from 'react-native-toast-message'
@@ -44,7 +45,8 @@ export function useSupabaseCallbacks() {
       if (redirectAfterAuth?.current?.pathname) {
         router.push(redirectAfterAuth.current)
       } else {
-        router.push('/index/profile')
+        // @ts-ignore
+        router.push('/profile')
       }
     } else {
       Toast.show({
