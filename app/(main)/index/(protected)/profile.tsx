@@ -54,7 +54,7 @@ export default function ProfileScreen() {
           disabled={isUpdatingProfile}
         />
         <Button
-          icon={isUpdatingProfile ? 'account-arrow-left' : 'account-arrow-down'}
+          icon={isUpdatingProfile ? 'account-edit' : 'account-edit-outline'}
           onPress={() => setUpdatingProfile(!isUpdatingProfile)}
         >
           {isUpdatingProfile ? 'Change nickname' : 'Save nickname'}
