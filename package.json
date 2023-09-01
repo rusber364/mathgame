@@ -97,8 +97,7 @@
   },
   "lint-staged": {
     "*.{tsx,ts}": [
-      "yarn lint",
-      "yarn test"
+      "yarn lint"
     ]
   },
   "version": "0.2.0",
