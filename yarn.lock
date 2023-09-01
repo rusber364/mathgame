@@ -2350,15 +2350,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/metro-runtime@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@expo/metro-runtime@npm:2.2.6"
+"@expo/metro-runtime@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@expo/metro-runtime@npm:2.2.7"
   dependencies:
     "@bacons/react-views": "npm:^1.1.3"
     qs: "npm:^6.10.3"
   peerDependencies:
     react-native: "*"
-  checksum: 48189caed7fee01624a6801153815420c70ca2f64e34181597501a839c70e24ae51cdb190067ae6d327dccfbc3af0198ab6954aed7bd28b0aeb8a436a3503c14
+  checksum: 16a8f447f5a67551a958b71dbf32f35fc8a553233acbc3af089a868d4d435fc6cf8f2b4372bb1eb693641a5339219a3e01d30a1374ebdd386a2bdaf269d4fe43
   languageName: node
   linkType: hard
 
@@ -8345,12 +8345,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-router@npm:2.0.4":
-  version: 2.0.4
-  resolution: "expo-router@npm:2.0.4"
+"expo-router@npm:2.0.5":
+  version: 2.0.5
+  resolution: "expo-router@npm:2.0.5"
   dependencies:
     "@bacons/react-views": "npm:^1.1.3"
-    "@expo/metro-runtime": "npm:2.2.6"
+    "@expo/metro-runtime": "npm:2.2.7"
     "@radix-ui/react-slot": "npm:1.0.1"
     "@react-navigation/bottom-tabs": "npm:~6.5.7"
     "@react-navigation/native": "npm:~6.1.6"
@@ -8379,7 +8379,7 @@ __metadata:
       optional: true
     react-native-reanimated:
       optional: true
-  checksum: df2d3899326889e4922dbbd18d338a51bbe2e6055fc64e834e68ceb116c96d79f95b32d4c9aad8680081529b71ecd3c67ab21c393c0d18b63f48d6cc9610de60
+  checksum: 0e32bb30a2fde67563600f5c57a6e2a25f873720eaa1d53a531a19f0371dde4d83faa0d51a130066a46fa495c7c80321fec5c7c40e4804dde6677dcdc638b9b9
   languageName: node
   linkType: hard
 
@@ -11830,7 +11830,7 @@ __metadata:
     expo-asset: "npm:~8.10.1"
     expo-constants: "npm:~14.4.2"
     expo-linking: "npm:~5.0.2"
-    expo-router: "npm:2.0.4"
+    expo-router: "npm:2.0.5"
     expo-splash-screen: "npm:~0.20.5"
     expo-status-bar: "npm:~1.6.0"
     happy-dom: "npm:^10.11.2"
