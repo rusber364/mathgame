@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { PaperProvider } from 'react-native-paper'
+import { StyleSheet, View } from 'react-native'
 import { Button, TextInput } from 'react-native-paper'
 
 import { DrawerContainer } from '~/components/common/drawer-container'
@@ -46,35 +45,27 @@ export default function ProfileScreen() {
 
   return (
     <DrawerContainer>
-      <PaperProvider>
-        <View style={styles.container}>
-          {isUpdatingProfile ? (
-            <>
-              <TextInput label="name" placeholder="name" value={nickname} onChangeText={setNickname} />
-              <Button icon="account-arrow-down" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
-                Save nickname
-              </Button>
-            </>
-          ) : (
-            <>
-              <Text>{nickname}</Text>
-              <Button icon="account-arrow-left" onPress={() => setUpdatingProfile(!isUpdatingProfile)}>
-                Change nickname
-              </Button>
-            </>
-          )}
-          <Button icon="account-arrow-up" onPress={handleUpdateProfile}>
-            Update profile
-          </Button>
-        </View>
-      </PaperProvider>
+      <View style={styles.container}>
+        <TextInput
+          label="nickname"
+          placeholder="your nickname..."
+          value={nickname}
+          onChangeText={setNickname}
+          disabled={isUpdatingProfile}
+        />
+        <Button
+          icon={isUpdatingProfile ? 'account-arrow-left' : 'account-arrow-down'}
+          onPress={() => setUpdatingProfile(!isUpdatingProfile)}
+        >
+          {isUpdatingProfile ? 'Change nickname' : 'Save nickname'}
+        </Button>
+        <Button icon="update" onPress={handleUpdateProfile} disabled={!isUpdatingProfile}>
+          Update profile
+        </Button>
+      </View>
     </DrawerContainer>
   )
 }
 const styles = StyleSheet.create({
-  container: {
-    textAlign: 'center',
-    marginTop: 'auto',
-    marginBottom: 'auto',
-  },
+  container: {},
 })
