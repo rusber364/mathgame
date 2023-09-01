@@ -25,6 +25,10 @@ export function HomeIcon(props: Props) {
   return <AntDesign name="home" size={24} color="black" />
 }
 
+export function LogoutIcon(props: Props) {
+  return <Entypo name="log-out" size={24} color="black" />
+}
+
 export const configDrawerScreens: ConfigDrawerScreens = [
   {
     name: 'index',
@@ -48,6 +52,19 @@ export const configDrawerScreens: ConfigDrawerScreens = [
       headerTitle: 'Languages',
       drawerIcon: LanguagesIcon,
       drawerLabel: 'Languages',
+    },
+  },
+  {
+    name: 'logout',
+    options: {
+      headerTitle: 'Logout',
+      drawerIcon: LogoutIcon,
+      drawerLabel: 'Logout',
+      drawerItemStyle: {
+        marginTop: 'auto',
+        backgroundColor: '#C2C2C2',
+        marginBottom: 20,
+      },
     },
   },
 ]
