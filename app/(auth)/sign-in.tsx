@@ -1,42 +1,20 @@
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
-import { KeyboardAvoidingView, Platform, View } from 'react-native'
-import { StyleSheet, Text } from 'react-native'
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, View } from 'react-native'
 import { Button, TextInput } from 'react-native-paper'
-import Toast from 'react-native-toast-message'
 
-import { supabase } from '~/database/supabase'
 import { AuthTitle } from '~/features/auth/components/auth-title'
-import { delay } from '~/utils/delay'
+import { useSupabaseCallbacks } from '~/features/auth/hooks/use-supabase-callbacks'
 
 export default function SignInScreen() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [isLoading, setLoading] = useState(false)
   const [isShowPassword, setShowPassword] = useState(true)
-
+  const { isLoading, login } = useSupabaseCallbacks()
   const router = useRouter()
 
-  async function handleLogin() {
-    setLoading(true)
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
-    // TODO: delete delay
-    await delay(1000)
+  const handleLogin = () => login(email, password)
 
-    if (!error) {
-      // TODO: fix types route profile
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      router.push('/profile')
-    } else {
-      Toast.show({
-        type: 'error',
-        text1: error.name,
-        text2: error.message,
-      })
-    }
-    setLoading(false)
-  }
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
       <View style={styles.root}>

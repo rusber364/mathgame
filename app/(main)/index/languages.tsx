@@ -21,6 +21,7 @@ export default function LanguagesScreen() {
 
   return (
     <FlatList
+      testID="languages-screen-flat-list"
       style={styles.listLang}
       data={languageKeys}
       renderItem={(lang) => <Button onPress={handleChangeLang(lang.item)}>{countriesNames[lang.item]}</Button>}
