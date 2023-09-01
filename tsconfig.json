@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "jest", "@testing-library/jest-native"],
     "baseUrl": "./",
     "paths": {
       "~/*": ["src/*"]
