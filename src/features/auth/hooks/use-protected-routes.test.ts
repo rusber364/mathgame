@@ -1,24 +1,23 @@
 import { renderHook } from '@testing-library/react'
 import { useGlobalSearchParams, usePathname, useRouter, useSegments } from 'expo-router'
-import { type Mock, vi } from 'vitest'
 
 import { useProtectedRoutes } from './use-protected-routes'
 
-vi.mock('expo-router', () => ({
-  useGlobalSearchParams: vi.fn(),
-  usePathname: vi.fn(),
-  useRouter: vi.fn(),
-  useSegments: vi.fn(),
+jest.mock('expo-router', () => ({
+  useGlobalSearchParams: jest.fn(),
+  usePathname: jest.fn(),
+  useRouter: jest.fn(),
+  useSegments: jest.fn(),
 }))
 
-const useGlobalSearchParamsMock = useGlobalSearchParams as Mock
-const usePathnameMock = usePathname as Mock
-const useRouterMock = useRouter as Mock
-const useSegmentsMock = useSegments as Mock
+const useGlobalSearchParamsMock = useGlobalSearchParams as jest.Mock
+const usePathnameMock = usePathname as jest.Mock
+const useRouterMock = useRouter as jest.Mock
+const useSegmentsMock = useSegments as jest.Mock
 
 describe('render hook - useProtectedRoutes', () => {
   it('should not redirect when user is not authenticated to navigate not protected route', () => {
-    const routerReplaceMock = vi.fn()
+    const routerReplaceMock = jest.fn()
     const isAuth = false
     const isAuthSyncStorage = false
 
@@ -31,7 +30,7 @@ describe('render hook - useProtectedRoutes', () => {
   })
 
   it('should redirect to sign-in when user is not authenticated to navigate protected route', () => {
-    const routerReplaceMock = vi.fn()
+    const routerReplaceMock = jest.fn()
     const pathname = '/profile'
     const params = { userId: 1 }
     const segments = ['(protected)', pathname]
