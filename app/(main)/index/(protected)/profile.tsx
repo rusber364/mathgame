@@ -14,10 +14,6 @@ export default function ProfileScreen() {
   const [nickname, setNickname] = useState('user-nick-name')
   const [isUpdatingProfile, setUpdatingProfile] = useState(false)
 
-  function logOut() {
-    supabase?.auth.signOut()
-  }
-
   async function handleUpdateProfile() {
     try {
       if (userId && idNickName) {
@@ -70,7 +66,6 @@ export default function ProfileScreen() {
           <Button icon="account-arrow-up" onPress={handleUpdateProfile}>
             Update profile
           </Button>
-          <Button onPress={logOut}>Logout</Button>
         </View>
       </PaperProvider>
     </DrawerContainer>
