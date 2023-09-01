@@ -3120,14 +3120,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-async-storage/async-storage@npm:1.18.2":
-  version: 1.18.2
-  resolution: "@react-native-async-storage/async-storage@npm:1.18.2"
+"@react-native-async-storage/async-storage@npm:1.19.3":
+  version: 1.19.3
+  resolution: "@react-native-async-storage/async-storage@npm:1.19.3"
   dependencies:
     merge-options: "npm:^3.0.4"
   peerDependencies:
     react-native: ^0.0.0-0 || 0.60 - 0.72 || 1000.0.0
-  checksum: 3830828c608c9bdc36e147f7b8ff8632368eb8c97ee6f8dc30629a6ba802b99e5307202d86fe5ec37affcef225f82e331be6723921b91d500b935006da2e25ac
+  checksum: 4eb279f4c6e407f7df030b5e85bfd9cb9b3f094fc974ad8619fa20eb92f8e6f0bf4a90206f13a403bffed17238ec52f4adac1be20bc404c88f28073c0428e9af
   languageName: node
   linkType: hard
 
@@ -8929,10 +8929,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "fraction.js@npm:4.2.0"
-  checksum: 8f8e3c02a4d10cd03bae5c036c02ef0bd1a50be69ac56e5b9b25025ff07466c1d2288f383fb613ecec583e77bcfd586dee2d932f40e588c910bf55c5103014ab
+"fraction.js@npm:^4.3.4":
+  version: 4.3.6
+  resolution: "fraction.js@npm:4.3.6"
+  checksum: e018e613f1373965960bc00d1043205895b9a38c0bf1306a822bada90b48180fc1c6ace3ec84f1f6b36eeff935210dde5ec24e163aa82e7ae441e4b190f80707
   languageName: node
   linkType: hard
 
@@ -11976,7 +11976,7 @@ __metadata:
     "@babel/plugin-proposal-nullish-coalescing-operator": "npm:^7.18.6"
     "@babel/plugin-proposal-optional-chaining": "npm:^7.21.0"
     "@expo/webpack-config": "npm:19.0.0"
-    "@react-native-async-storage/async-storage": "npm:1.18.2"
+    "@react-native-async-storage/async-storage": "npm:1.19.3"
     "@react-navigation/devtools": "npm:^6.0.19"
     "@react-navigation/drawer": "npm:^6.6.3"
     "@react-navigation/native": "npm:^6.1.7"
@@ -12021,7 +12021,7 @@ __metadata:
     jest-expo: "npm:^49.0.0"
     jsdom: "npm:^22.1.0"
     lint-staged: "npm:^14.0.1"
-    mathjs: "npm:^11.10.0"
+    mathjs: "npm:^11.10.1"
     nanoid: "npm:^4.0.2"
     open: "npm:^9.1.0"
     prettier: "npm:^3.0.3"
@@ -12031,10 +12031,10 @@ __metadata:
     react-native: "npm:0.72.4"
     react-native-gesture-handler: "npm:~2.12.1"
     react-native-paper: "npm:^5.10.3"
-    react-native-reanimated: "npm:~3.3.0"
-    react-native-safe-area-context: "npm:4.6.3"
-    react-native-screens: "npm:~3.22.0"
-    react-native-svg: "npm:13.9.0"
+    react-native-reanimated: "npm:~3.4.2"
+    react-native-safe-area-context: "npm:4.7.2"
+    react-native-screens: "npm:~3.25.0"
+    react-native-svg: "npm:13.13.0"
     react-native-toast-message: "npm:^2.1.6"
     react-native-url-polyfill: "npm:^2.0.0"
     react-native-uuid: "npm:^2.0.1"
@@ -12051,22 +12051,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"mathjs@npm:^11.10.0":
-  version: 11.10.0
-  resolution: "mathjs@npm:11.10.0"
+"mathjs@npm:^11.10.1":
+  version: 11.10.1
+  resolution: "mathjs@npm:11.10.1"
   dependencies:
     "@babel/runtime": "npm:^7.22.6"
     complex.js: "npm:^2.1.1"
     decimal.js: "npm:^10.4.3"
     escape-latex: "npm:^1.2.0"
-    fraction.js: "npm:^4.2.0"
+    fraction.js: "npm:^4.3.4"
     javascript-natural-sort: "npm:^0.7.1"
     seedrandom: "npm:^3.0.5"
     tiny-emitter: "npm:^2.1.0"
     typed-function: "npm:^4.1.0"
   bin:
     mathjs: bin/cli.js
-  checksum: 2a018c57ebf4eaf608a7cf1eb59e42f1e08f1608d88887921348784c7201c3904d26dea0ca03c342f05dd6d447f7e7d81a7c5febe2ea1a632dba065c8a2e6eb1
+  checksum: 733fe9c453ed0a27179b7f56417f411edceb3c9b8fb90540c5065f07ea9134adcba0819f2f4e426369d137ab37c737efa4af1104036a079e9fdc68a9845c32b2
   languageName: node
   linkType: hard
 
@@ -14688,9 +14688,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:~3.3.0":
-  version: 3.3.0
-  resolution: "react-native-reanimated@npm:3.3.0"
+"react-native-reanimated@npm:~3.4.2":
+  version: 3.4.2
+  resolution: "react-native-reanimated@npm:3.4.2"
   dependencies:
     "@babel/plugin-transform-object-assign": "npm:^7.16.7"
     "@babel/preset-typescript": "npm:^7.16.7"
@@ -14705,43 +14705,43 @@ __metadata:
     "@babel/plugin-transform-template-literals": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 44496b834461dc6968f9add6a318d4ebc40c0989021fd4fab78832cef9507873cb7b9737ad2f7d9c8ac072b84870bfbddd2c27b94de4024d9103017388d7e3ed
+  checksum: 85e8f5068c3b58374eebbd99184b0f4ddaa0ae462a3394691ebda8b29aeb148abb03774d4a523617faeef72be31d27e70687d81424862124b9b477f1af2a8fdf
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:4.6.3":
-  version: 4.6.3
-  resolution: "react-native-safe-area-context@npm:4.6.3"
+"react-native-safe-area-context@npm:4.7.2":
+  version: 4.7.2
+  resolution: "react-native-safe-area-context@npm:4.7.2"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: a37d169e5ebee93c67a42a10580ca1180a6fea6c5705be82bc1d5af22eec086245a19f417e86b46e1daf5950ef5779e7daa8b3ca106d441f11d60cf5142b3ab2
+  checksum: b1e5b20ea3ea0da010af67b33187ef559d76c8b39c0f20030e434d409affa8b1ddae44337cfb6d256cb3dc602f7c76e620cea45d3a9b4eb2c6d4db1fc542e451
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:~3.22.0":
-  version: 3.22.1
-  resolution: "react-native-screens@npm:3.22.1"
+"react-native-screens@npm:~3.25.0":
+  version: 3.25.0
+  resolution: "react-native-screens@npm:3.25.0"
   dependencies:
     react-freeze: "npm:^1.0.0"
     warn-once: "npm:^0.1.0"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 5f9d5ffb46c59189e6a466df2c036144b7e84ca37f10908dd54dcffe8a5d4124699758d3a65d49fa498fb65e9ddfcc016919f1152fd056d629f89a3cdbc30af9
+  checksum: bace3f77954b22af52927e62038ca44713baa60de410d500d5ee78e747bf9ebf665b62bec23d89386b6462a004363bedbeb324a4a3f3927c3d6149a31c8a163d
   languageName: node
   linkType: hard
 
-"react-native-svg@npm:13.9.0":
-  version: 13.9.0
-  resolution: "react-native-svg@npm:13.9.0"
+"react-native-svg@npm:13.13.0":
+  version: 13.13.0
+  resolution: "react-native-svg@npm:13.13.0"
   dependencies:
     css-select: "npm:^5.1.0"
     css-tree: "npm:^1.1.3"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 8227f76deb9008f70a942b3712a5358149b1e46da9dd3e43fb79edac1b27d40c4908ab763b2f9b7417e3ca72b3e3b8358f2bebe78bea63a91390e8d61f1dd049
+  checksum: 067c36c54bad504c21b8d9343356f246a2e5c9da0e9419839ba33cacf81a7c0b95b57a39623c2600b2e986a966d4585a4608246dc0671c76fa7efe63b7e6550c
   languageName: node
   linkType: hard
 
