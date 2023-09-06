@@ -1,6 +1,6 @@
 import { Button } from 'react-native-paper'
 
-import { useAuthFieldsContext } from '~/features/auth/components/auth-fields'
+import { useAuthFieldsContext } from '~/features/auth/context/auth-fields.context'
 import { useSupabaseCallbacks } from '~/features/auth/hooks/use-supabase-callbacks'
 
 export default function AuthButtonLogin() {

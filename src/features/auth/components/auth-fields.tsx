@@ -1,15 +1,13 @@
-import { createContext, type PropsWithChildren, useContext, useState } from 'react'
+import { type PropsWithChildren, useState } from 'react'
 import { KeyboardAvoidingView, Platform, StyleSheet, View } from 'react-native'
 import { TextInput } from 'react-native-paper'
 
 import { AuthTitle } from '~/features/auth/components/auth-title'
+import { AuthFieldsContext } from '~/features/auth/context/auth-fields.context'
 
 type Props = {
   title: string
 }
-
-const AuthFieldsContext = createContext({ email: '', password: '' })
-export const useAuthFieldsContext = () => useContext(AuthFieldsContext)
 
 export function AuthFields(props: PropsWithChildren<Props>) {
   const { title, children } = props
