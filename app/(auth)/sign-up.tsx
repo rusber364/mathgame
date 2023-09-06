@@ -1,7 +1,6 @@
+import AuthButtonRegistration from '~/features/auth/components/auth-button-registration'
 import { AuthFields } from '~/features/auth/components/auth-fields'
-
-import AuthButtonRegistration from './components/auth-button-registration'
-import AuthSubButton from './components/auth-sub-button'
+import AuthSubButton from '~/features/auth/components/auth-sub-button'
 
 export default function SingIndScreen() {
   return (
