@@ -6,7 +6,7 @@ export default function SingIndScreen() {
   return (
     <AuthFields title="login">
       <AuthButton type="login">Login</AuthButton>
-      <AuthSubButton label="Registration" textCaption="Not a memeber?" href="/sign-up"></AuthSubButton>
+      <AuthSubButton label="Registration" textCaption="Not a member?" href="/sign-up"></AuthSubButton>
     </AuthFields>
   )
 }
