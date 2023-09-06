@@ -1,10 +1,10 @@
-import { useAuthFieldContext } from 'context/auth-context'
+import { useAuthFieldsContext } from 'context/auth-context'
 import { Button } from 'react-native-paper'
 
 import { useSupabaseCallbacks } from '~/features/auth/hooks/use-supabase-callbacks'
 
 export default function AuthButtonRegistration() {
-  const { email, password } = useAuthFieldContext()
+  const { email, password } = useAuthFieldsContext()
   const { isLoading, registration } = useSupabaseCallbacks()
 
   const handleRegistration = () => registration(email, password)

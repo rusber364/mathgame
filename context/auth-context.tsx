@@ -7,17 +7,19 @@ import { AuthTitle } from '~/features/auth/components/auth-title'
 type Props = {
   title: string
 }
+
 const AuthFieldsContext = createContext({ email: '', password: '' })
-export const useAuthFieldContext = () => useContext(AuthFieldsContext)
+export const useAuthFieldsContext = () => useContext(AuthFieldsContext)
 
 export function AuthFields(props: PropsWithChildren<Props>) {
   const { title, children } = props
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isShowPassword, setShowPassword] = useState(true)
+  const behavior = Platform.OS === 'ios' ? 'padding' : 'height'
 
   return (
-    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
+    <KeyboardAvoidingView behavior={behavior} style={styles.keyboard}>
       <View style={styles.root}>
         <AuthTitle>{title}</AuthTitle>
         <TextInput
@@ -47,6 +49,7 @@ export function AuthFields(props: PropsWithChildren<Props>) {
     </KeyboardAvoidingView>
   )
 }
+
 const styles = StyleSheet.create({
   textInput: {
     marginBottom: 10,
@@ -59,5 +62,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 10,
     padding: 20,
+  },
+  keyboard: {
+    flex: 1,
   },
 })
