@@ -1,4 +1,4 @@
-import { AuthFields } from 'context/auth-context'
+import { AuthFields } from '~/features/auth/components/auth-fields'
 
 import AuthButtonLogin from './components/auth-button-login'
 import AuthSubButton from './components/auth-sub-button'
