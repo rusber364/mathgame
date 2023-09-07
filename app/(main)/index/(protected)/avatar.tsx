@@ -11,7 +11,7 @@ interface Props {
 export default function Avatar({url, size=150, onUpload}:Props){
 const [uploading, setUploading]= useState(false)
 const [avatarUrl, setAvatarUrl]=useState<string|null>(null)
-const avatarSize={heigh:size, with:size}
+const avatarSize = {heigh:size, with:size}
 
 
 useEffect(()=>{
@@ -27,30 +27,34 @@ async function downloadImage(path:string) {
       }
     const fr = new FileReader()
     fr.readAsDataURL(data)
-    fr.onload   =()=>{
+    fr.onload = () => {
         setAvatarUrl(fr.result as string)
     }
     } catch(error){
         if (error instanceof Error) {
             console.log('Error downloading image:', error.message)
         }
-    }
+      }
     }
      async function uploadAvatar() {
         try{
-setUploading(true)
+
+    setUploading(true)
 const file = await DocumentPicker.pickSingle({
+
 presentationStyle:'fullScreen',
+
 copyTo:"cashesDirectory",
 type: types.images,
 mode:"open",
 })
 
-const photo ={
-    uri:file.fileCopyUri,
-    type:file.type,
-    name:file.name,
+const photo = {
+    uri: file.fileCopyUri,
+    type: file.type,
+    name: file.name,
 }
+
 const formData =new FormData()
 formData.append("file", photo)
 
@@ -74,7 +78,6 @@ onUpload(filePath)
             }else{
                 throw error
             }
-
         }finally{
             setUploading(false)
         }
@@ -85,14 +88,14 @@ return(
             <Image
             source={{uri:avatarUrl}}
             accessibilityLabel="Avatar"
-            style={}
+            style={[avatarSize, styles.avatar, styles.image]}
             />
         ):(
             <View style ={[avatarSize, styles.avatar, styles.noImage]}/>
         )}
         <View>
             <Button
-            title={uploading?"Uploading...":"upload"}
+            title={uploading ? "Uploading...":"Upload"}
         onPress={uploadAvatar}
         disabled={uploading}
         />
@@ -118,8 +121,8 @@ borderRadius:5,
       },
 })
 
+
+
 }
-
-
 
 
