@@ -90,6 +90,7 @@
     "format": "prettier --write ./src",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src app --color --fix",
     "types": "tsc --noEmit",
+    "check": "yarn lint & yarn types",
     "test": "jest",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
