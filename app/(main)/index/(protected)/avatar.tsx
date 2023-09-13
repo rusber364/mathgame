@@ -1,3 +1,4 @@
+import * as DocumentPicker from 'expo-document-picker'
 import { useEffect, useState } from 'react'
 import { Alert, Button, Image, StyleSheet, View } from 'react-native'
 
@@ -10,7 +11,7 @@ interface Props {
 }
 
 export default function Avatar({ url, size = 150, onUpload }: Props) {
-  const [uploading, setUploading] = useState(false)
+  const [isUploading, setUploading] = useState(false)
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null)
   const avatarSize = { heigh: size, with: size }
 
@@ -35,49 +36,46 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
       }
     }
   }
+  
   async function uploadAvatar() {
     try {
       setUploading(true)
-      const file = await DocumentPicker.pickSingle({
-        presentationStyle: 'fullScreen',
-
-        copyTo: 'cashesDirectory',
-        type: types.images,
-        mode: 'open',
+      const file = await DocumentPicker.getDocumentAsync({
+        type: ['images/*', 'string'],
       })
 
-      const photo = {
-        uri: file.fileCopyUri,
-        type: file.type,
-        name: file.name,
-      }
+    //   const photo = {
+    //     uri: file.uri,
+    //     type: file.type,
+    //     name: file.name,
+    //   }
 
-      const formData = new FormData()
-      formData.append('file', photo)
+    //   const formData = new FormData()
+    //   formData.append('file', photo)
 
-      const fileExt = file.name.split('.').pop()
-      const filePath = `${Math.random()}.${fileExt}`
+    //   const fileExt = file.name.split('.').pop()
+    //   const filePath = `${Math.random()}.${fileExt}`
 
-      let { error } = await supabase.storage.from('avatars').upload(filePath, formData)
+    //   let { error } = await supabase.storage.from('avatars').upload(filePath, formData)
 
-      if (error) {
-        throw error
-      }
+    //   if (error) {
+    //     throw error
+    //   }
 
-      onUpload(filePath)
-    } catch (error) {
-      if (isCancel(error)) {
-        console.warn('cancelled')
-      } else if (isInProgress(error)) {
-        console.warn('multiple pickers were opened, only the last will be considered')
-      } else if (error instanceof Error) {
-        Alert.alert(error.message)
-      } else {
-        throw error
-      }
-    } finally {
-      setUploading(false)
-    }
+    //   onUpload(filePath)
+    // } catch (error) {
+    //   if (isCancel(error)) {
+    //     console.warn('cancelled')
+    //   } else if (isInProgress(error)) {
+    //     console.warn('multiple pickers were opened, only the last will be considered')
+    //   } else if (error instanceof Error) {
+    //     Alert.alert(error.message)
+    //   } else {
+    //     throw error
+    //   }
+    // } finally {
+    //   setUploading(false)
+    // }
   }
   return (
     <View>
@@ -88,10 +86,10 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
           style={[avatarSize, styles.avatar, styles.image]}
         />
       ) : (
-        <View style={[avatarSize, styles.avatar, styles.noImage]} />
+        <View style={[styles.avatar, styles.noImage]} />
       )}
       <View>
-        <Button title={uploading ? 'Uploading...' : 'Upload'} onPress={uploadAvatar} disabled={uploading} />
+        <Button title={isUploading ? 'Uploading...' : 'Upload'} onPress={uploadAvatar} disabled={isUploading} />
       </View>
     </View>
   )
