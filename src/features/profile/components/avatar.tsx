@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import * as DocumentPicker from 'expo-document-picker'
 import { useEffect, useState } from 'react'
-import { Alert, Button, Image, ImageStyle, StyleSheet, View } from 'react-native'
+import { Alert, Button, StyleSheet, View } from 'react-native'
 import { Avatar as AvatarPaper } from 'react-native-paper'
-import { AvatarImageSource } from 'react-native-paper/lib/typescript/components/Avatar/AvatarImage'
 
 import defaultAvatar from '~/assets/default_avatar.png'
 import { supabase } from '~/database/supabase'
@@ -63,15 +62,9 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
 
       // onUpload(filePath)
     } catch (error) {
-      // if (isCancel(error)) {
-      //   console.warn('cancelled')
-      // } else if (isInProgress(error)) {
-      //   console.warn('multiple pickers were opened, only the last will be considered')
-      // } else if (error instanceof Error) {
-      //   Alert.alert(error.message)
-      // } else {
-      //   throw error
-      // }
+      if (error instanceof Error) {
+        Alert.alert(error.message)
+      }
     } finally {
       setUploading(false)
     }
