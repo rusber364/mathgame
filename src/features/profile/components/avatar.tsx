@@ -36,7 +36,7 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
       }
     }
   }
-  
+
   async function uploadAvatar() {
     try {
       setUploading(true)
