@@ -5,6 +5,7 @@ import { Button, TextInput } from 'react-native-paper'
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
 import { useAuthContext } from '~/features/auth/context/auth.context'
+import Avatar from '~/features/profile/components/avatar'
 
 export default function ProfileScreen() {
   const { session } = useAuthContext()
@@ -45,6 +46,7 @@ export default function ProfileScreen() {
 
   return (
     <DrawerContainer>
+      <Avatar size={200} />
       <View style={styles.container}>
         <TextInput
           label="nickname"

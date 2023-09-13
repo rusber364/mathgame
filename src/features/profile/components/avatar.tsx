@@ -1,92 +1,88 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as DocumentPicker from 'expo-document-picker'
 import { useEffect, useState } from 'react'
-import { Alert, Button, Image, StyleSheet, View } from 'react-native'
+import { Alert, Button, Image, ImageStyle, StyleSheet, View } from 'react-native'
+import { Avatar as AvatarPaper } from 'react-native-paper'
+import { AvatarImageSource } from 'react-native-paper/lib/typescript/components/Avatar/AvatarImage'
 
+import defaultAvatar from '~/assets/default_avatar.png'
 import { supabase } from '~/database/supabase'
 
 interface Props {
   size: number
-  url: string | null
-  onUpload: (filePath: string) => void
+  url?: string
+  onUpload?: (filePath: string) => void
 }
 
 export default function Avatar({ url, size = 150, onUpload }: Props) {
   const [isUploading, setUploading] = useState(false)
-  const [avatarUrl, setAvatarUrl] = useState<string | null>(null)
-  const avatarSize = { heigh: size, with: size }
+  const [avatarUrl, setAvatarUrl] = useState<string>()
 
-  useEffect(() => {
-    if (url) downloadImage(url), [url]
-  })
+  // useEffect(() => {
+  //   if (url) downloadImage(url), [url]
+  // })
 
-  async function downloadImage(path: string) {
-    try {
-      const { data, error } = await supabase.storage.from('avatar').download(path)
-      if (error) {
-        throw error
-      }
-      const fr = new FileReader()
-      fr.readAsDataURL(data)
-      fr.onload = () => {
-        setAvatarUrl(fr.result as string)
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        console.log('Error downloading image:', error.message)
-      }
-    }
-  }
+  // async function downloadImage(path: string) {
+  //   try {
+  //     const { data, error } = await supabase.storage.from('avatar').download(path)
+  //     if (error) {
+  //       throw error
+  //     }
+  //     const fr = new FileReader()
+  //     fr.readAsDataURL(data)
+  //     fr.onload = () => {
+  //       setAvatarUrl(fr.result as string)
+  //     }
+  //   } catch (error) {
+  //     if (error instanceof Error) {
+  //       console.log('Error downloading image:', error.message)
+  //     }
+  //   }
+  // }
 
   async function uploadAvatar() {
     try {
       setUploading(true)
-      const file = await DocumentPicker.getDocumentAsync({
-        type: ['images/*', 'string'],
-      })
+      const file = await DocumentPicker.getDocumentAsync({ type: 'images/*' })
 
-    //   const photo = {
-    //     uri: file.uri,
-    //     type: file.type,
-    //     name: file.name,
-    //   }
+      if (file.assets) {
+        setAvatarUrl(file.assets?.[0].uri)
+      }
 
-    //   const formData = new FormData()
-    //   formData.append('file', photo)
+      // const formData = new FormData()
+      // formData.append('file', file)
 
-    //   const fileExt = file.name.split('.').pop()
-    //   const filePath = `${Math.random()}.${fileExt}`
+      // const fileExt = file.name.split('.').pop()
+      // const filePath = `${Math.random()}.${fileExt}`
 
-    //   let { error } = await supabase.storage.from('avatars').upload(filePath, formData)
+      // let { error } = await supabase.storage.from('avatars').upload(filePath, formData)
 
-    //   if (error) {
-    //     throw error
-    //   }
+      // if (error) {
+      //   throw error
+      // }
 
-    //   onUpload(filePath)
-    // } catch (error) {
-    //   if (isCancel(error)) {
-    //     console.warn('cancelled')
-    //   } else if (isInProgress(error)) {
-    //     console.warn('multiple pickers were opened, only the last will be considered')
-    //   } else if (error instanceof Error) {
-    //     Alert.alert(error.message)
-    //   } else {
-    //     throw error
-    //   }
-    // } finally {
-    //   setUploading(false)
-    // }
+      // onUpload(filePath)
+    } catch (error) {
+      // if (isCancel(error)) {
+      //   console.warn('cancelled')
+      // } else if (isInProgress(error)) {
+      //   console.warn('multiple pickers were opened, only the last will be considered')
+      // } else if (error instanceof Error) {
+      //   Alert.alert(error.message)
+      // } else {
+      //   throw error
+      // }
+    } finally {
+      setUploading(false)
+    }
   }
+
   return (
     <View>
       {avatarUrl ? (
-        <Image
-          source={{ uri: avatarUrl }}
-          accessibilityLabel="Avatar"
-          style={[avatarSize, styles.avatar, styles.image]}
-        />
+        <AvatarPaper.Image size={size} source={{ uri: avatarUrl }} />
       ) : (
-        <View style={[styles.avatar, styles.noImage]} />
+        <AvatarPaper.Image size={size} source={defaultAvatar} />
       )}
       <View>
         <Button title={isUploading ? 'Uploading...' : 'Upload'} onPress={uploadAvatar} disabled={isUploading} />
