@@ -9,6 +9,7 @@
     "i18next-browser-languagedetector": "^7.1.0",
     "mathjs": "^11.10.1",
     "nanoid": "^4.0.2",
+    "npm-check-updates": "^16.14.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^13.2.1",
@@ -85,8 +86,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "upgrade": "yarn upgrade-interactive",
-    "sdks": "yarn dlx @yarnpkg/sdks vscode",
+    "update:i": "ncu -i",
     "format": "prettier --write ./src",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src app --color --fix",
     "types": "tsc --noEmit",
@@ -97,7 +97,7 @@
   },
   "lint-staged": {
     "*.{tsx,ts}": [
-      "yarn lint"
+      "bun lint"
     ]
   },
   "version": "0.3.0",
