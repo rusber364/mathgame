@@ -100,9 +100,8 @@
       "yarn lint"
     ]
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "expo-router/entry",
   "private": true,
-  "name": "mathgame",
-  "packageManager": "yarn@4.0.0-rc.50"
+  "name": "mathgame"
 }
