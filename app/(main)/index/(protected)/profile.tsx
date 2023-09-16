@@ -46,8 +46,10 @@ export default function ProfileScreen() {
 
   return (
     <DrawerContainer>
-      <Avatar size={200} />
-      <View style={styles.container}>
+      <View style={styles.center}>
+        <Avatar size={200} />
+      </View>
+      <View>
         <TextInput
           label="nickname"
           placeholder="your nickname..."
@@ -69,5 +71,12 @@ export default function ProfileScreen() {
   )
 }
 const styles = StyleSheet.create({
-  container: {},
+  center: {
+    textAlign: 'center',
+    alignItems: 'center',
+    width: '50%',
+    height: '50%',
+    marginLeft: '25%',
+    marginRight: '25%',
+  },
 })

@@ -11,6 +11,9 @@ export function DrawerContainer({ children, style, ...props }: ViewProps) {
 const styles = StyleSheet.create({
   container: {
     height: '100%',
+    width: '100%',
     justifyContent: 'center',
+    textAlign: 'center',
+    position: 'relative',
   },
 })
