@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { Button, IconButton, TextInput, MD3Colors } from 'react-native-paper'
+import { Button, IconButton, MD3Colors, TextInput } from 'react-native-paper'
 
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
@@ -63,7 +63,7 @@ export default function ProfileScreen() {
           size={30}
           iconColor={MD3Colors.error50}
           onPress={() => setUpdatingProfile(!isUpdatingProfile)}
-          mode='contained-tonal'
+          mode="contained-tonal"
         />
       </View>
       <View style={styles.updateProfile}>
@@ -83,17 +83,17 @@ const styles = StyleSheet.create({
     top: 70,
     left: 0,
     right: 0,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   inputContainer: {
     flexDirection: 'row',
     marginVertical: 'auto',
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   input: {
-    flexGrow: 2
+    flexGrow: 2,
   },
   updateProfile: {
-    margin: 20
-  }
+    margin: 20,
+  },
 })

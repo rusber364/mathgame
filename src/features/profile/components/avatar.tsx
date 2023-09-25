@@ -87,5 +87,4 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
   )
 }
 
-const styles = StyleSheet.create({
-})
+const styles = StyleSheet.create({})
