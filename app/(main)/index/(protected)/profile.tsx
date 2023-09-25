@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { Button, IconButton, TextInput } from 'react-native-paper'
+import { Button, IconButton, TextInput, MD3Colors } from 'react-native-paper'
 
 import { DrawerContainer } from '~/components/common/drawer-container'
 import { supabase } from '~/database/supabase'
@@ -46,31 +46,25 @@ export default function ProfileScreen() {
 
   return (
     <DrawerContainer>
-      <View style={styles.avatar}>
-        <Avatar size={300} />
+      <View style={styles.avatarContainer}>
+        <Avatar size={200} />
       </View>
-      <View style={styles.container}>
-        <View style={styles.object1}>
-          <TextInput
-            label="nickname"
-            placeholder="your nickname..."
-            value={nickname}
-            onChangeText={setNickname}
-            disabled={isUpdatingProfile}
-          />
-        </View>
-        <View style={styles.object2}>
-          <IconButton
-            icon={isUpdatingProfile ? 'account-edit' : 'account-edit-outline'}
-            size={50}
-            iconColor="red"
-            onPress={() => setUpdatingProfile(!isUpdatingProfile)}
-          >
-            {' '}
-            {isUpdatingProfile ? isUpdatingProfile : !isUpdatingProfile}
-          </IconButton>
-          {/* <Button></Button> */}
-        </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          label="nickname"
+          placeholder="your nickname..."
+          value={nickname}
+          onChangeText={setNickname}
+          disabled={isUpdatingProfile}
+          style={styles.input}
+        />
+        <IconButton
+          icon={isUpdatingProfile ? 'account-edit' : 'account-edit-outline'}
+          size={30}
+          iconColor={MD3Colors.error50}
+          onPress={() => setUpdatingProfile(!isUpdatingProfile)}
+          mode='contained-tonal'
+        />
       </View>
       <View style={styles.updateProfile}>
         <Button icon="update" onPress={handleUpdateProfile} disabled={!isUpdatingProfile}>
@@ -80,36 +74,26 @@ export default function ProfileScreen() {
     </DrawerContainer>
   )
 }
+
 const styles = StyleSheet.create({
-  container: {
+  avatarContainer: {
+    justifyContent: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    position: 'absolute',
+    top: 70,
+    left: 0,
+    right: 0,
+    cursor: 'pointer'
   },
-  avatar: {
-    width: 'auto',
-    height: '50%',
-    margin: '5%',
-    padding: '1%',
-    textAlign: 'center',
-    alignItems: 'center',
+  inputContainer: {
+    flexDirection: 'row',
+    marginVertical: 'auto',
+    marginHorizontal: 10
   },
-  input: {},
+  input: {
+    flexGrow: 2
+  },
   updateProfile: {
-    height: '20%',
-    alignItems: 'center',
-  },
-  object1: {
-    width: '95%',
-    height: '15%',
-  },
-  object2: {
-    width: '5%',
-    height: '10%',
-    alignItems: 'center',
-    textAlign: 'center',
-    margin: -10,
-    padding: 0,
-    position: 'relative',
-    top: 'auto',
-  },
+    margin: 20
+  }
 })
