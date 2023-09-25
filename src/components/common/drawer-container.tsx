@@ -15,5 +15,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     position: 'relative',
+    top: 'auto',
+    bottom: 'auto',
   },
 })
