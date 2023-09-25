@@ -72,6 +72,7 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
 
   return (
     <View
+      onPointerDown={uploadAvatar}
       accessible={true}
       accessibilityRole="button"
       accessibilityActions={[{ name: 'activate' }]}
@@ -82,28 +83,9 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
       ) : (
         <AvatarPaper.Image size={size} source={defaultAvatar} />
       )}
-
-      {/* <View>
-        <Button title={isUploading ? 'Uploading...' : 'Upload'} onPress={uploadAvatar} disabled={isUploading} />
-      </View> */}
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  avatar: {
-    textAlign: 'center',
-    borderRadius: 5,
-    overflow: 'hidden',
-    maxWidth: '100%',
-  },
-  image: {
-    objectFit: 'cover',
-    paddingTop: 0,
-  },
-  noImage: {
-    backgroundColor: '#333',
-    border: '1px solid rgb(200, 200, 200)',
-    borderRadius: 5,
-  },
 })
