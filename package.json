@@ -99,7 +99,7 @@
   },
   "lint-staged": {
     "*.{tsx,ts}": [
-      "bun lint"
+      "yarn lint"
     ]
   },
   "version": "0.3.0",
