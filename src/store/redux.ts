@@ -17,7 +17,7 @@ export const store = configureStore({
     game: gameReducer,
   },
   middleware(getDefaultMiddleware) {
-    return getDefaultMiddleware().concat([sagaMiddleware])
+    return getDefaultMiddleware().prepend(sagaMiddleware)
   },
 })
 
