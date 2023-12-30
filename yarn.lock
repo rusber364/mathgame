@@ -1716,6 +1716,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.6":
+  version: 7.23.7
+  resolution: "@babel/runtime@npm:7.23.7"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 3e304133ee55b0750e03e53cb4efb47fb2bdcdb5795f85bbffa10595196c34b9be60eb65bd6d833c87f49fc827f0365f86f95f51d85b188004d3128bb5129c93
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.0.0, @babel/template@npm:^7.22.15, @babel/template@npm:^7.3.3":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -10820,7 +10829,7 @@ __metadata:
     jest-expo: "npm:~50.0.1"
     jsdom: "npm:^23.0.1"
     lint-staged: "npm:^15.2.0"
-    mathjs: "npm:^11.10.1"
+    mathjs: "npm:^12.2.1"
     nanoid: "npm:^4.0.2"
     npm-check-updates: "npm:^16.14.12"
     open: "npm:^10.0.2"
@@ -10849,11 +10858,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"mathjs@npm:^11.10.1":
-  version: 11.12.0
-  resolution: "mathjs@npm:11.12.0"
+"mathjs@npm:^12.2.1":
+  version: 12.2.1
+  resolution: "mathjs@npm:12.2.1"
   dependencies:
-    "@babel/runtime": "npm:^7.23.2"
+    "@babel/runtime": "npm:^7.23.6"
     complex.js: "npm:^2.1.1"
     decimal.js: "npm:^10.4.3"
     escape-latex: "npm:^1.2.0"
@@ -10864,7 +10873,7 @@ __metadata:
     typed-function: "npm:^4.1.1"
   bin:
     mathjs: bin/cli.js
-  checksum: 4ddd38e2e7441e524b9e50c572582d0c1a4502a42a27c8ba1b4931c710f3f446560c95e6539f29c07d835db3fe663add7907c883871e7a28c572f5eb958280eb
+  checksum: 4d5dd5a4073d29276abd39964ff421cd7c058f56d8d726596f979e4b3d91810e76e2cf7c244412ade72c899ad557b4edfece4edc1aaef0f90c565c69647d657a
   languageName: node
   linkType: hard
 
