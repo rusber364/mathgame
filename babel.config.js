@@ -7,20 +7,6 @@ module.exports = function (api) {
       },
     },
     presets: ['babel-preset-expo'],
-    plugins: [
-      [
-        'module-resolver',
-        {
-          alias: {
-            '~': './src',
-            '@': './app',
-          },
-        },
-      ],
-      'expo-router/babel',
-      '@babel/plugin-transform-optional-chaining',
-      '@babel/plugin-proposal-nullish-coalescing-operator',
-      'react-native-reanimated/plugin',
-    ],
+    plugins: ['react-native-reanimated/plugin'],
   }
 }

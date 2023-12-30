@@ -4,7 +4,7 @@ const config: ExpoConfig = {
   name: 'mathgame',
   slug: 'mathgame',
   version: '0.2.0',
-  sdkVersion: '49.0.0',
+  sdkVersion: '50.0.0',
   platforms: ['ios', 'android', 'web'],
   android: {
     package: 'com.rusber364.mathgame',
