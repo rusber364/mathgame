@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
     top: 70,
     left: 0,
     right: 0,
-    cursor: 'pointer',
   },
   inputContainer: {
     flexDirection: 'row',
