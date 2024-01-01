@@ -1,11 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as DocumentPicker from 'expo-document-picker'
 import { useEffect, useState } from 'react'
-import { Alert, Button, StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import { Avatar as AvatarPaper } from 'react-native-paper'
+import Toast from 'react-native-toast-message'
 
-import defaultAvatar from '~/assets/default_avatar.png'
 import { supabase } from '~/database/supabase'
+import { useAuthContext } from '~/features/auth/context/auth.context'
 
 interface Props {
   size: number
@@ -13,60 +13,58 @@ interface Props {
   onUpload?: (filePath: string) => void
 }
 
-export default function Avatar({ url, size = 150, onUpload }: Props) {
-  const [isUploading, setUploading] = useState(false)
+export default function Avatar({ size = 150 }: Props) {
   const [avatarUrl, setAvatarUrl] = useState<string>()
+  const { session } = useAuthContext()
+  const userId = session?.user.id
 
-  // useEffect(() => {
-  //   if (url) downloadImage(url), [url]
-  // })
+  useEffect(() => {
+    async function downloadImage() {
+      try {
+        const { data, error } = await supabase.storage.from('avatars').download(`${userId}.avatar`)
+        if (error) {
+          throw error
+        }
 
-  // async function downloadImage(path: string) {
-  //   try {
-  //     const { data, error } = await supabase.storage.from('avatar').download(path)
-  //     if (error) {
-  //       throw error
-  //     }
-  //     const fr = new FileReader()
-  //     fr.readAsDataURL(data)
-  //     fr.onload = () => {
-  //       setAvatarUrl(fr.result as string)
-  //     }
-  //   } catch (error) {
-  //     if (error instanceof Error) {
-  //       console.log('Error downloading image:', error.message)
-  //     }
-  //   }
-  // }
+        const reader = new FileReader()
+        reader.readAsDataURL(data)
+        reader.addEventListener('load', ({ target }) => {
+          if (typeof target?.result === 'string') {
+            setAvatarUrl(target.result)
+          }
+        })
+      } catch (error) {
+        if (error instanceof Error) {
+          console.log('Error downloading image:', error.message)
+        }
+      }
+    }
+
+    downloadImage()
+  }, [userId])
 
   async function uploadAvatar() {
     try {
-      setUploading(true)
       const file = await DocumentPicker.getDocumentAsync({ type: 'images/*' })
-
-      if (file.assets) {
-        setAvatarUrl(file.assets?.[0].uri)
+      if (file.assets && file.assets.length) {
+        const uri = file.assets[0].uri
+        setAvatarUrl(uri)
+        const avatar = file.output?.item(0)
+        if (avatar) {
+          const { error } = await supabase.storage.from('avatars').update(`${userId}.avatar`, avatar)
+          if (error) {
+            await supabase.storage.from('avatars').upload(`${userId}.avatar`, avatar)
+          }
+        }
       }
-
-      // const formData = new FormData()
-      // formData.append('file', file)
-
-      // const fileExt = file.name.split('.').pop()
-      // const filePath = `${Math.random()}.${fileExt}`
-
-      // let { error } = await supabase.storage.from('avatars').upload(filePath, formData)
-
-      // if (error) {
-      //   throw error
-      // }
-
-      // onUpload(filePath)
     } catch (error) {
       if (error instanceof Error) {
-        Alert.alert(error.message)
+        Toast.show({
+          type: 'error',
+          text1: error.name,
+          text2: error.message,
+        })
       }
-    } finally {
-      setUploading(false)
     }
   }
 
@@ -81,10 +79,8 @@ export default function Avatar({ url, size = 150, onUpload }: Props) {
       {avatarUrl ? (
         <AvatarPaper.Image size={size} source={{ uri: avatarUrl }} />
       ) : (
-        <AvatarPaper.Image size={size} source={defaultAvatar} />
+        <AvatarPaper.Icon size={size} icon="account" />
       )}
     </View>
   )
 }
-
-const styles = StyleSheet.create({})
