@@ -9,15 +9,30 @@ export default function IndexLayout() {
 
   return (
     <Drawer screenOptions={styles}>
-      <Drawer.Screen name="index" options={{ headerTitle: '', drawerIcon: HomeIcon, drawerLabel: 'Home' }} />
+      <Drawer.Screen
+        name="index"
+        options={{
+          headerTitle: '',
+          drawerIcon: HomeIcon,
+          drawerLabel: 'Home',
+        }}
+      />
       <Drawer.Screen
         name="(protected)/profile"
-        options={{ headerTitle: 'Profile', drawerIcon: ProfileIcon, drawerLabel: 'Profile' }}
+        options={{
+          headerTitle: 'Profile',
+          drawerIcon: ProfileIcon,
+          drawerLabel: 'Profile',
+        }}
         redirect={!isAuth}
       />
       <Drawer.Screen
         name="languages"
-        options={{ headerTitle: 'Languages', drawerIcon: LanguagesIcon, drawerLabel: 'Languages' }}
+        options={{
+          headerTitle: 'Languages',
+          drawerIcon: LanguagesIcon,
+          drawerLabel: 'Languages',
+        }}
       />
       <Drawer.Screen
         name="login"
