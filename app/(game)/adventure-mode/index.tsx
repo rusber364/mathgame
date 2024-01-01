@@ -1,30 +1,6 @@
-import { Link, Stack } from 'expo-router'
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Stack } from 'expo-router'
 
-import { range } from '~/features/game/utils/range'
-
-function StageList() {
-  const stages = range(1, 2)
-
-  return (
-    <View style={styles.container}>
-      {stages.map((stage) => (
-        <Link
-          key={stage}
-          asChild
-          href={{
-            pathname: `/(game)/adventure-mode/[stage]/`,
-            params: { stage },
-          }}
-        >
-          <Pressable style={styles.button}>
-            <Text style={styles.text}>{stage}</Text>
-          </Pressable>
-        </Link>
-      ))}
-    </View>
-  )
-}
+import { StageList } from '~/features/game/components/stage-list'
 
 export default function StagesScreen() {
   return (
@@ -34,20 +10,3 @@ export default function StagesScreen() {
     </>
   )
 }
-
-const styles = StyleSheet.create({
-  button: {
-    margin: 2,
-    padding: 10,
-    borderWidth: 1,
-    backgroundColor: 'white',
-    flexGrow: 1,
-  },
-  text: {
-    textAlign: 'center',
-  },
-  container: {
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-  },
-})
