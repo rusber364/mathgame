@@ -10,18 +10,14 @@ import Avatar from '~/features/profile/components/avatar'
 export default function ProfileScreen() {
   const { session } = useAuthContext()
   const userId = session?.user.id
-  const [idNickName, setNickName] = useState<number>()
+  const [idNickname, setIdNickname] = useState<number>()
   const [nickname, setNickname] = useState('user-nick-name')
   const [isUpdatingProfile, setUpdatingProfile] = useState(false)
 
   async function handleUpdateProfile() {
     try {
-      if (userId && idNickName) {
-        await supabase
-          .from('game_users')
-          .upsert({ nick_name: nickname, user_id: userId, id: idNickName })
-          .eq('user_id', userId)
-          .select('nick_name')
+      if (userId && idNickname) {
+        await supabase.from('game_users').upsert({ nick_name: nickname, id: idNickname })
       }
     } catch (error) {
       console.log(error)
@@ -32,9 +28,10 @@ export default function ProfileScreen() {
     async function getNickname() {
       try {
         const { data } = await supabase.from('game_users').select('id,nick_name').eq('user_id', userId)
-        if (data) {
-          setNickName(data[0].id)
-          setNickname(data[0].nick_name)
+        if (data && data.length) {
+          const { id, nick_name } = data[0]
+          setIdNickname(id)
+          setNickname(nick_name)
         }
       } catch (error) {
         console.error(error)
@@ -55,7 +52,7 @@ export default function ProfileScreen() {
           placeholder="your nickname..."
           value={nickname}
           onChangeText={setNickname}
-          disabled={isUpdatingProfile}
+          disabled={!isUpdatingProfile}
           style={styles.input}
         />
         <IconButton
