@@ -1,5 +1,6 @@
 import { Stack, useLocalSearchParams } from 'expo-router'
 import { useEffect } from 'react'
+import { View } from 'react-native'
 
 import { InfoGame } from '~/features/game/components/info-game'
 import { Task } from '~/features/game/components/task.view'
@@ -19,8 +20,10 @@ export default function GameScreen() {
   return (
     <>
       <Stack.Screen options={{ headerTitle: `Adventure: ${stage}stage/${lvl}lvl` }} />
-      <InfoGame />
-      <Task />
+      <View style={{ flex: 1 }}>
+        <InfoGame />
+        <Task />
+      </View>
     </>
   )
 }

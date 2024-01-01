@@ -17,19 +17,19 @@ export function Task() {
 
   if (!timerIsStarted) {
     return (
-      <View>
+      <View style={{ margin: 'auto', flexDirection: 'row' }}>
         <Pressable onPress={handleStart} style={style.button}>
-          <AntDesign name="playcircleo" size={43} color="black" style={style.icons} />
+          <AntDesign name="playcircleo" size={35} color="black" style={style.icons} />
         </Pressable>
         <Pressable onPress={handleReset} style={style.button}>
-          <AntDesign name="reload1" size={43} color="black" style={style.icons} />
+          <AntDesign name="reload1" size={35} color="black" style={style.icons} />
         </Pressable>
       </View>
     )
   }
 
   return (
-    <View>
+    <View style={{ marginVertical: 'auto' }}>
       <Text style={style.operation}>{currentTask?.expression} = ?</Text>
 
       <View style={style.answersContainer}>
@@ -62,8 +62,9 @@ const style = StyleSheet.create({
   button: {
     borderWidth: 1,
     borderRadius: 50,
-    marginVertical: 3,
-    paddingVertical: 6,
+    margin: 3,
+    paddingVertical: 4,
+    paddingHorizontal: 6,
   },
   answer: {
     flexGrow: 1,
