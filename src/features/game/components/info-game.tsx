@@ -6,26 +6,16 @@ import { Timer } from '~/features/game/components/timer.view'
 export function InfoGame() {
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
-        <Score />
-        <Timer />
-      </View>
+      <Score />
+      <Timer />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    padding: 15,
-  },
-  content: {
+    padding: 5,
     justifyContent: 'space-between',
-    width: '100%',
     flexDirection: 'row',
   },
 })
