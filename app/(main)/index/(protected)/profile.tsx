@@ -44,7 +44,7 @@ export default function ProfileScreen() {
   return (
     <DrawerContainer>
       <View style={styles.avatarContainer}>
-        <Avatar size={200} />
+        <Avatar size={100} />
       </View>
       <View style={styles.inputContainer}>
         <TextInput
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     position: 'absolute',
-    top: 70,
+    top: 40,
     left: 0,
     right: 0,
   },

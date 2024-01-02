@@ -1,6 +1,6 @@
 import * as DocumentPicker from 'expo-document-picker'
 import { useEffect, useState } from 'react'
-import { View } from 'react-native'
+import { Platform, StyleSheet, View } from 'react-native'
 import { Avatar as AvatarPaper } from 'react-native-paper'
 import Toast from 'react-native-toast-message'
 
@@ -41,9 +41,9 @@ export default function Avatar({ size = 150 }: Props) {
 
   async function uploadAvatar() {
     try {
-      const files = await DocumentPicker.getDocumentAsync({ type: 'images/*' })
-      if (files.assets && files.assets.length) {
-        const avatar = files.assets[0]
+      const images = await DocumentPicker.getDocumentAsync({ type: 'images/*' })
+      if (images.assets?.length) {
+        const avatar = images.assets[0]
         const avatarFile = avatar.file
         if (avatarFile) {
           const storage = supabase.storage.from('avatars')
@@ -72,6 +72,7 @@ export default function Avatar({ size = 150 }: Props) {
       accessibilityRole="button"
       accessibilityActions={[{ name: 'activate' }]}
       onAccessibilityAction={uploadAvatar}
+      style={styles.avatar}
     >
       {avatarUrl ? (
         <AvatarPaper.Image size={size} source={{ uri: avatarUrl }} />
@@ -81,3 +82,14 @@ export default function Avatar({ size = 150 }: Props) {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  avatar: {
+    display: 'flex',
+    ...Platform.select({
+      web: {
+        cursor: 'pointer',
+      },
+    }),
+  },
+})
