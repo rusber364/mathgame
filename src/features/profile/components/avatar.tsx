@@ -45,11 +45,12 @@ export default function Avatar({ size = 150 }: Props) {
       if (file.assets && file.assets.length) {
         const uri = file.assets[0].uri
         setAvatarUrl(uri)
-        const avatar = file.output?.item(0)
-        if (avatar) {
-          const { error } = await supabase.storage.from('avatars').update(`${userId}.avatar`, avatar)
+        const avatarFile = file.output?.item(0)
+        if (avatarFile) {
+          const storage = supabase.storage.from('avatars')
+          const { error } = await storage.update(`${userId}.avatar`, avatarFile)
           if (error) {
-            await supabase.storage.from('avatars').upload(`${userId}.avatar`, avatar)
+            await storage.upload(`${userId}.avatar`, avatarFile)
           }
         }
       }
