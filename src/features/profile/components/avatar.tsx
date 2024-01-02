@@ -48,9 +48,9 @@ export default function Avatar({ size = 150 }: Props) {
         const avatarFile = file.output?.item(0)
         if (avatarFile) {
           const storage = supabase.storage.from('avatars')
-          const { error } = await storage.update(`${userId}.avatar`, avatarFile)
+          const { error } = await storage.upload(`${userId}.avatar`, avatarFile, { upsert: true })
           if (error) {
-            await storage.upload(`${userId}.avatar`, avatarFile)
+            throw error
           }
         }
       }
