@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message'
 
 import { supabase } from '~/database/supabase'
 import { useAuthContext } from '~/features/auth/context/auth.context'
+import { blobToBase64 } from '~/utils/blobToBase64'
 
 interface Props {
   size: number
@@ -26,13 +27,8 @@ export default function Avatar({ size = 150 }: Props) {
           throw error
         }
 
-        const reader = new FileReader()
-        reader.readAsDataURL(data)
-        reader.addEventListener('load', ({ target }) => {
-          if (typeof target?.result === 'string') {
-            setAvatarUrl(target.result)
-          }
-        })
+        const avatar = await blobToBase64(data)
+        setAvatarUrl(avatar)
       } catch (error) {
         if (error instanceof Error) {
           console.log('Error downloading image:', error.message)
