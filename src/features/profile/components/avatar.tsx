@@ -41,17 +41,17 @@ export default function Avatar({ size = 150 }: Props) {
 
   async function uploadAvatar() {
     try {
-      const file = await DocumentPicker.getDocumentAsync({ type: 'images/*' })
-      if (file.assets && file.assets.length) {
-        const uri = file.assets[0].uri
-        setAvatarUrl(uri)
-        const avatarFile = file.output?.item(0)
+      const files = await DocumentPicker.getDocumentAsync({ type: 'images/*' })
+      if (files.assets && files.assets.length) {
+        const avatar = files.assets[0]
+        const avatarFile = avatar.file
         if (avatarFile) {
           const storage = supabase.storage.from('avatars')
           const { error } = await storage.upload(`${userId}.avatar`, avatarFile, { upsert: true })
           if (error) {
             throw error
           }
+          setAvatarUrl(avatar.uri)
         }
       }
     } catch (error) {
