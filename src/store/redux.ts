@@ -3,6 +3,8 @@ import type { TypedUseSelectorHook } from 'react-redux'
 import { useDispatch, useSelector } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
 
+import { supabaseApi } from '~/features/auth/store/auth.slice'
+
 import { rootSaga } from './root-saga'
 import gameReducer from './slices/game.slice'
 import taskReducer from './slices/task.slice'
@@ -15,9 +17,10 @@ export const store = configureStore({
     timer: timerReducer,
     task: taskReducer,
     game: gameReducer,
+    [supabaseApi.reducerPath]: supabaseApi.reducer,
   },
   middleware(getDefaultMiddleware) {
-    return getDefaultMiddleware().prepend(sagaMiddleware)
+    return getDefaultMiddleware().prepend(sagaMiddleware).concat(supabaseApi.middleware)
   },
 })
 
