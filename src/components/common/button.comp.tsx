@@ -1,8 +1,8 @@
 import type { PressableProps, StyleProp, ViewStyle } from 'react-native'
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native'
 
-type NativeProps<T> = PressableProps & React.RefAttributes<View> & React.PropsWithChildren<T>
-type Props = {
+export type NativeProps<T> = PressableProps & React.RefAttributes<View> & React.PropsWithChildren<T>
+export type Props = {
   isLoading?: boolean
   style?: StyleProp<ViewStyle>
 }
@@ -20,7 +20,7 @@ export function Button(props: NativeProps<Props>) {
   )
 }
 
-const style = StyleSheet.create({
+export const style = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',

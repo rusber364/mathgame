@@ -1,23 +1,16 @@
-import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from '~/components/common/button.comp'
-
-import { NavigateContainer } from '../common/navigate-container'
+import { Link } from '~/components/common/link'
+import { NavigateContainer } from '~/components/common/navigate-container'
 
 export function AchievementNavigation() {
   const { t } = useTranslation()
-  const router = useRouter()
-
-  const navigateToAchievementSingleScreen = () => router.push('/(achievements)/achievements-single')
-  const navigateToAchievementTeamScreen = () => router.push('/(achievements)/achievements-team')
-  const navigateToBonusScreen = () => router.push('/(achievements)/bonus')
 
   return (
     <NavigateContainer>
-      <Button onPress={navigateToAchievementSingleScreen}>{t('screens.achievements.singleAchievements')}</Button>
-      <Button onPress={navigateToAchievementTeamScreen}>{t('screens.achievements.teamAchievements')}</Button>
-      <Button onPress={navigateToBonusScreen}>{t('screens.achievements.bonuses')}</Button>
+      <Link href="/achievements-single">{t('screens.achievements.singleAchievements')}</Link>
+      <Link href="/achievements-team">{t('screens.achievements.teamAchievements')}</Link>
+      <Link href="/bonus">{t('screens.achievements.bonuses')}</Link>
     </NavigateContainer>
   )
 }
