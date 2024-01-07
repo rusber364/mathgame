@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 2,
     backgroundColor: 'white',
-    position: 'static',
     marginBottom: 'auto',
     height: 'auto',
   },
