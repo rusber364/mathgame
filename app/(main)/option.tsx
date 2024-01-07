@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 export default function OptionScreen() {
   return (
@@ -29,7 +29,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: 'rgba(0, 178, 0, 0.2)',
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 75% 50%, 25% 50%, 0% 100%)',
+    ...Platform.select({
+      web: {
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 75% 50%, 25% 50%, 0% 100%)',
+      },
+    }),
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -37,7 +41,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: 'rgba(0, 278, 0, 0.2)',
-    clipPath: 'polygon(25% 50%, 75% 50%, 100% 0, 100% 100%, 0 100%, 0 0)',
+    ...Platform.select({
+      web: {
+        clipPath: 'polygon(25% 50%, 75% 50%, 100% 0, 100% 100%, 0 100%, 0 0)',
+      },
+    }),
     justifyContent: 'space-around',
     alignItems: 'center',
   },
@@ -45,7 +53,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: 'rgba(100, 278, 0, 0.2)',
-    clipPath: 'polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)',
+    ...Platform.select({
+      web: {
+        clipPath: 'polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)',
+      },
+    }),
     justifyContent: 'center',
     alignItems: 'center',
   },

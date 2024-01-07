@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 export default function PurchaseScreen() {
   return (
@@ -60,7 +60,11 @@ const style = StyleSheet.create({
     width: '100%',
     height: '50%',
     backgroundColor: 'rgba(100, 278, 0, 0.2)',
-    clipPath: 'polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)',
+    ...Platform.select({
+      web: {
+        clipPath: 'polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)',
+      },
+    }),
     justifyContent: 'center',
     alignItems: 'center',
   },
