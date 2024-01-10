@@ -1,6 +1,7 @@
+import { Link } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import { Link } from '~/components/common/link'
+import { Button } from '~/components/common/button.comp'
 import { NavigateContainer } from '~/components/common/navigate-container'
 
 export function AchievementNavigation() {
@@ -8,9 +9,15 @@ export function AchievementNavigation() {
 
   return (
     <NavigateContainer>
-      <Link href="/achievements-single">{t('screens.achievements.singleAchievements')}</Link>
-      <Link href="/achievements-team">{t('screens.achievements.teamAchievements')}</Link>
-      <Link href="/bonus">{t('screens.achievements.bonuses')}</Link>
+      <Link asChild href="/achievements-single">
+        <Button>{t('screens.achievements.singleAchievements')}</Button>
+      </Link>
+      <Link asChild href="/achievements-team">
+        <Button>{t('screens.achievements.teamAchievements')}</Button>
+      </Link>
+      <Link asChild href="/bonus">
+        <Button>{t('screens.achievements.bonuses')}</Button>
+      </Link>
     </NavigateContainer>
   )
 }

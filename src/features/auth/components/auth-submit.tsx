@@ -7,7 +7,7 @@ type Props = {
   callback: (credentials: AuthCredentials) => void
 }
 
-export default function AuthButton({ callback, children, isLoading }: React.PropsWithChildren<Props>) {
+export function AuthSubmit({ callback, children, isLoading }: React.PropsWithChildren<Props>) {
   const credentials = useAuthFieldsContext()
   const handleCallback = () => callback(credentials)
 

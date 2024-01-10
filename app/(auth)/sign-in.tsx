@@ -1,9 +1,11 @@
+import { Link } from 'expo-router'
 import { useEffect } from 'react'
+import { Button } from 'react-native-paper'
 import Toast from 'react-native-toast-message'
 
-import AuthButton from '~/features/auth/components/auth-button'
 import { AuthFields } from '~/features/auth/components/auth-fields'
-import AuthSubButton from '~/features/auth/components/auth-sub-button'
+import { AuthSub } from '~/features/auth/components/auth-sub'
+import { AuthSubmit } from '~/features/auth/components/auth-submit'
 import { useLoginMutation } from '~/features/auth/store/auth.slice'
 import { getErrorMessage } from '~/utils/get-error-message'
 
@@ -18,10 +20,14 @@ export default function SingIndScreen() {
 
   return (
     <AuthFields title="login">
-      <AuthButton isLoading={isLoading} callback={login}>
+      <AuthSubmit isLoading={isLoading} callback={login}>
         Login
-      </AuthButton>
-      <AuthSubButton label="Registration" textCaption="Not a member?" href="/sign-up"></AuthSubButton>
+      </AuthSubmit>
+      <AuthSub textCaption="Not a member?">
+        <Link asChild href="/sign-up">
+          <Button>Registration</Button>
+        </Link>
+      </AuthSub>
     </AuthFields>
   )
 }

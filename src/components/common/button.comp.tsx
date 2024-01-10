@@ -1,3 +1,4 @@
+import { forwardRef, type Ref } from 'react'
 import type { PressableProps, StyleProp, ViewStyle } from 'react-native'
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native'
 
@@ -7,11 +8,11 @@ export type Props = {
   style?: StyleProp<ViewStyle>
 }
 
-export function Button(props: NativeProps<Props>) {
+function ButtonBase(props: NativeProps<Props>, ref: Ref<View>) {
   const { children, isLoading, style: outStyle, ...othersProps } = props
 
   return (
-    <Pressable {...othersProps} style={[style.button, outStyle]}>
+    <Pressable {...othersProps} style={[style.button, outStyle]} ref={ref}>
       <View style={{ flexDirection: 'row' }}>
         {isLoading && <ActivityIndicator style={style.indicator} color="#fff" />}
         <Text style={style.text}>{children}</Text>
@@ -19,6 +20,8 @@ export function Button(props: NativeProps<Props>) {
     </Pressable>
   )
 }
+
+export const Button = forwardRef<View, NativeProps<Props>>(ButtonBase)
 
 export const style = StyleSheet.create({
   button: {

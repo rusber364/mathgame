@@ -1,21 +1,16 @@
-import { Href, useRouter } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
-import { Button, Text } from 'react-native-paper'
+import { Text } from 'react-native-paper'
 
 type Props = {
-  href: Href<string>
-  label: string
   textCaption: string
 }
 
-export default function AuthSubButton({ label, textCaption, href }: Props) {
-  const router = useRouter()
-
+export function AuthSub({ textCaption, children }: React.PropsWithChildren<Props>) {
   return (
     <>
       <View style={styles.container}>
         <Text>{textCaption}</Text>
-        <Button onPress={() => router.push(href)}>{label}</Button>
+        {children}
       </View>
     </>
   )
