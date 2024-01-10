@@ -18,7 +18,7 @@ export function AuthSub({ textCaption, children }: React.PropsWithChildren<Props
 
 const styles = StyleSheet.create({
   container: {
-    padding: 30,
     alignItems: 'center',
+    padding: 30,
   },
 })

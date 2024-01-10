@@ -11,6 +11,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   overrides: [
     {
@@ -33,10 +34,18 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'simple-import-sort'],
+  plugins: ['@typescript-eslint', 'react', 'simple-import-sort', 'react-native'],
   rules: {
     'prefer-const': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'react-native/no-unused-styles': 'error',
+    'react-native/split-platform-components': 'error',
+    'react-native/no-single-element-style-arrays': 'error',
+    'react-native/sort-styles': 'error',
+    // TODO: update config linter
+    // 'react-native/no-inline-styles': 2,
+    // 'react-native/no-color-literals': 2,
+    // 'react-native/no-raw-text': 2,
   },
 }

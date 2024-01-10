@@ -8,7 +8,7 @@ export default function IndexLayout() {
   const { isAuth } = useAuthContext()
 
   return (
-    <Drawer screenOptions={styles}>
+    <Drawer screenOptions={{ drawerContentContainerStyle: styles.drawerContentContainerStyle }}>
       <Drawer.Screen
         name="index"
         options={{
@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   drawerItemStyleAuth: {
-    marginTop: 'auto',
     backgroundColor: '#C2C2C2',
     marginBottom: 20,
+    marginTop: 'auto',
   },
 })

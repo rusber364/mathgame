@@ -21,26 +21,25 @@ export default function SingleTournamenWithoutBetstScreen() {
 
 const styles = StyleSheet.create({
   container: {
+    alignContent: 'center',
     display: 'flex',
     flexDirection: 'column',
-    alignContent: 'center',
     justifyContent: 'center',
-    // height: 'auto',
     width: '100%',
   },
 
   row: {
-    margin: 50,
     alignContent: 'center',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
+    margin: 50,
   },
   text1: {
-    fontSize: 20,
-    borderWidth: 3,
-    borderStyle: 'dotted',
     borderColor: 'black',
-    padding: 10,
     borderRadius: 20,
+    borderStyle: 'dotted',
+    borderWidth: 3,
+    fontSize: 20,
+    padding: 10,
   },
 })

@@ -49,11 +49,8 @@ export function AuthFields(props: PropsWithChildren<Props>) {
 }
 
 const styles = StyleSheet.create({
-  textInput: {
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: 'gray',
-    borderRadius: 5,
+  keyboard: {
+    flex: 1,
   },
   root: {
     flexGrow: 1,
@@ -61,7 +58,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 20,
   },
-  keyboard: {
-    flex: 1,
+  textInput: {
+    borderColor: 'gray',
+    borderRadius: 5,
+    borderWidth: 1,
+    marginBottom: 10,
   },
 })

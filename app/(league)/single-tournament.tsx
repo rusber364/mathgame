@@ -33,23 +33,23 @@ export default function SingleTournamentScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'column',
-    alignItems: 'stretch',
-    alignSelf: 'center',
-    alignContent: 'stretch',
-    justifyContent: 'center',
-    position: 'relative',
-  },
   button: {
     margin: 50,
   },
+  container: {
+    alignContent: 'stretch',
+    alignItems: 'stretch',
+    alignSelf: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    position: 'relative',
+  },
   text: {
-    margin: 50,
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 50,
   },
 })

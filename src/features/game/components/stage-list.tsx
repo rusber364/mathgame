@@ -29,17 +29,17 @@ export function StageList() {
 
 const styles = StyleSheet.create({
   button: {
+    backgroundColor: 'white',
+    borderWidth: 1,
+    flexGrow: 1,
     margin: 2,
     padding: 10,
-    borderWidth: 1,
-    backgroundColor: 'white',
-    flexGrow: 1,
+  },
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   text: {
     textAlign: 'center',
-  },
-  container: {
-    flexWrap: 'wrap',
-    flexDirection: 'row',
   },
 })

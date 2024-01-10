@@ -74,20 +74,20 @@ export default function ProfileScreen() {
 
 const styles = StyleSheet.create({
   avatarContainer: {
+    flexDirection: 'row',
     justifyContent: 'center',
-    flexDirection: 'row',
-    position: 'absolute',
-    top: 40,
     left: 0,
+    position: 'absolute',
     right: 0,
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    marginVertical: 'auto',
-    marginHorizontal: 10,
+    top: 40,
   },
   input: {
     flexGrow: 2,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    marginHorizontal: 10,
+    marginVertical: 'auto',
   },
   updateProfile: {
     margin: 20,

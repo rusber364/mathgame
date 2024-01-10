@@ -21,10 +21,10 @@ export function Background({ children }: PropsWithChildren) {
 }
 
 const styles = StyleSheet.create({
-  root: {
+  background: {
     flex: 1,
   },
-  background: {
+  root: {
     flex: 1,
   },
 })

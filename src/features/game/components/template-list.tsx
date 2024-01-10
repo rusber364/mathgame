@@ -46,30 +46,30 @@ export function TemplateList({ stage, levels }: PropsWithChildren<Props>) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    paddingVertical: 5,
-  },
   button: {
+    backgroundColor: '#9f6',
+    borderRadius: 50,
+    borderWidth: 1,
     flexBasis: '30%',
+    flexGrow: 1,
     margin: 2,
     padding: 10,
-    flexGrow: 1,
-    borderWidth: 1,
-    borderRadius: 50,
-    backgroundColor: '#9f6',
+  },
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingVertical: 5,
+  },
+  template: {
+    backgroundColor: '#f99',
+    fontSize: 20,
+    padding: 10,
+    textAlign: 'center',
   },
   text: {
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-  },
-  template: {
-    textAlign: 'center',
-    fontSize: 20,
-    padding: 10,
-    backgroundColor: '#f99',
   },
 })

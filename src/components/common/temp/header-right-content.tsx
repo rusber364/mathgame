@@ -10,14 +10,14 @@ export function HeaderRightContent() {
 
 const styles = StyleSheet.create({
   headerRightContent: {
-    flexDirection: 'row',
     alignItems: 'center',
-    marginRight: 10,
     backgroundColor: '#ccc',
+    flexDirection: 'row',
+    marginRight: 10,
   },
   headerRightText: {
-    fontSize: 16,
     color: '#333',
+    fontSize: 16,
     marginRight: 5,
   },
 })

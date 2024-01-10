@@ -19,14 +19,14 @@ export function NavigationBack() {
 
 const styles = StyleSheet.create({
   headerLeftButton: {
-    borderRadius: 30,
-    paddingVertical: 1,
-    paddingHorizontal: 10,
-    marginHorizontal: 1,
     backgroundColor: '#f33',
+    borderRadius: 30,
+    marginHorizontal: 1,
+    paddingHorizontal: 10,
+    paddingVertical: 1,
   },
   headerLeftImage: {
-    width: 54,
     height: 54,
+    width: 54,
   },
 })

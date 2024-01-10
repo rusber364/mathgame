@@ -7,9 +7,9 @@ export function AuthTitle({ children }: PropsWithChildren) {
 
 const styles = StyleSheet.create({
   root: {
+    alignSelf: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    alignSelf: 'center',
     paddingVertical: 20,
   },
 })

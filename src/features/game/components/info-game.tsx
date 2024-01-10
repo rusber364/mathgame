@@ -14,8 +14,8 @@ export function InfoGame() {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
-    justifyContent: 'space-between',
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 5,
   },
 })

@@ -26,12 +26,12 @@ export function Timer() {
 
 const styles = StyleSheet.create({
   circle: {
-    width: 100,
-    height: 50,
-    borderRadius: 50,
-    backgroundColor: 'lightblue',
-    justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'lightblue',
+    borderRadius: 50,
+    height: 50,
+    justifyContent: 'center',
+    width: 100,
   },
   text: {
     fontSize: 20,

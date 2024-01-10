@@ -37,39 +37,35 @@ export default function TeamScreen() {
 }
 
 const styles = StyleSheet.create({
+  avatar: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  boxPlayer: {
+    flexDirection: 'row',
+    margin: 5,
+  },
+  buttons: {
+    backgroundColor: '#ccc3',
+    borderColor: 'black',
+    borderRadius: 20,
+    borderStyle: 'dashed',
+    borderWidth: 1,
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    paddingHorizontal: 5,
+  },
   containerTeam: {
     backgroundColor: 'grey',
     borderRadius: 20,
   },
   player: {
+    backgroundColor: '#ccc3',
     borderColor: 'black',
+    borderRadius: 15,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderRadius: 15,
     flexDirection: 'row',
-    backgroundColor: '#ccc3',
-  },
-  boxPlayer: {
-    margin: 5,
-    flexDirection: 'row',
-  },
-  buttons: {
-    backgroundColor: '#ccc3',
-    borderRadius: 20,
-    marginLeft: 'auto',
-    borderColor: 'black',
-    borderStyle: 'dashed',
-    borderWidth: 1,
-    paddingHorizontal: 5,
-    justifyContent: 'center',
-  },
-  buttonCr: {
-    margin: 0,
-    backgroundColor: 'grey',
-  },
-  avatar: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   score: {
     backgroundColor: 'grey',

@@ -47,33 +47,33 @@ export function Task() {
 }
 
 const style = StyleSheet.create({
-  operation: {
-    fontSize: 60,
-    alignSelf: 'center',
+  answer: {
+    borderRadius: 300,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    flexBasis: '24%',
+    flexGrow: 1,
+    margin: 1,
+    padding: 10,
+    textAlign: 'center',
   },
   answersContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginVertical: 20,
   },
+  button: {
+    borderRadius: 50,
+    borderWidth: 1,
+    margin: 3,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+  },
   icons: {
     textAlign: 'center',
   },
-  button: {
-    borderWidth: 1,
-    borderRadius: 50,
-    margin: 3,
-    paddingVertical: 4,
-    paddingHorizontal: 6,
-  },
-  answer: {
-    flexGrow: 1,
-    flexBasis: '24%',
-    margin: 1,
-    padding: 10,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderRadius: 300,
-    textAlign: 'center',
+  operation: {
+    alignSelf: 'center',
+    fontSize: 60,
   },
 })
