@@ -12,6 +12,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:@cspell/recommended',
   ],
   overrides: [
     {
@@ -47,5 +48,12 @@ module.exports = {
     // 'react-native/no-inline-styles': 2,
     // 'react-native/no-color-literals': 2,
     // 'react-native/no-raw-text': 2,
+    '@cspell/spellchecker': [
+      'warn',
+      {
+        autoFix: true,
+        customWordListFile: '.cspell/custom-dictionary-workspace.txt',
+      },
+    ],
   },
 }

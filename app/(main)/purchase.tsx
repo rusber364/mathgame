@@ -2,7 +2,7 @@ import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 
 export default function PurchaseScreen() {
   return (
-    <View style={style.conteiner}>
+    <View style={style.container}>
       <Text style={{ alignSelf: 'center' }}>Purchase/Subscription</Text>
 
       <View style={style.section}>
@@ -42,7 +42,7 @@ export default function PurchaseScreen() {
 }
 
 const style = StyleSheet.create({
-  conteiner: {
+  container: {
     backgroundColor: 'rgba(100, 178, 50, 0.2)',
     height: '100%',
     marginBottom: '5%',

@@ -2,3 +2,7 @@
 Entypo
 mathgame
 Pressable
+supabase
+upsert
+pausecircleo
+playcircleo

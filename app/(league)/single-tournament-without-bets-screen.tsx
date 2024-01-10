@@ -1,6 +1,6 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 
-export default function SingleTournamenWithoutBetstScreen() {
+export default function SingleTournamentWithoutBetsScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.row}>

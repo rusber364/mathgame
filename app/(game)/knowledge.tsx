@@ -1,7 +1,7 @@
 import { SectionList, StyleSheet, Text, View } from 'react-native'
 
 export default function KnowledgeScreen() {
-  const Knowledges = [
+  const Knowledge = [
     {
       title: 'Addition',
       data: [
@@ -71,7 +71,7 @@ Performing addition is one of the simplest numerical tasks to do.Addition of ver
     <>
       <View style={styles.container0}>
         <SectionList
-          sections={Knowledges}
+          sections={Knowledge}
           keyExtractor={(item) => item.id.toString()}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.container1}>

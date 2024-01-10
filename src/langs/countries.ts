@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 const mainCountries = {
   en: 'English',
   ukr: 'Українська',
