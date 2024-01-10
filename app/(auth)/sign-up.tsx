@@ -1,33 +1,43 @@
+import { Link } from 'expo-router'
 import { useEffect } from 'react'
+import { Button } from 'react-native-paper'
 import Toast from 'react-native-toast-message'
 
-import AuthButton from '~/features/auth/components/auth-button'
 import { AuthFields } from '~/features/auth/components/auth-fields'
-import AuthSubButton from '~/features/auth/components/auth-sub-button'
+import { AuthSub } from '~/features/auth/components/auth-sub'
+import { AuthSubmit } from '~/features/auth/components/auth-submit'
 import { useRegistrationMutation } from '~/features/auth/store/auth.slice'
 import { getErrorMessage } from '~/utils/get-error-message'
 
 export default function SingUpScreen() {
-  const [registration, { isLoading, error: errorRegistration, isError }] = useRegistrationMutation()
+  const [registration, { isLoading, error: errorRegistration, isError, isSuccess }] = useRegistrationMutation()
 
   useEffect(() => {
-    if (!isError) {
+    if (isSuccess) {
       Toast.show({
         type: 'info',
         text1: 'confirm your email',
         text2: `send to email`,
       })
-    } else {
+    }
+  }, [errorRegistration, isSuccess])
+
+  useEffect(() => {
+    if (isError) {
       Toast.show({ type: 'error', ...getErrorMessage(errorRegistration) })
     }
   }, [errorRegistration, isError])
 
   return (
     <AuthFields title="Registration">
-      <AuthButton isLoading={isLoading} callback={registration}>
+      <AuthSubmit isLoading={isLoading} callback={registration}>
         Registration
-      </AuthButton>
-      <AuthSubButton label="Login" textCaption="Already have an account?" href="/sign-in"></AuthSubButton>
+      </AuthSubmit>
+      <AuthSub textCaption="Already have an account?">
+        <Link asChild href="/sign-in">
+          <Button>Login</Button>
+        </Link>
+      </AuthSub>
     </AuthFields>
   )
 }
