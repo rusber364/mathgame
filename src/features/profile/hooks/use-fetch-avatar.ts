@@ -12,7 +12,7 @@ export function useFetchAvatar() {
   const userId = session?.user.id
 
   useEffect(() => {
-    async function downloadAvatar() {
+    async function downloadAvatar(userId: string) {
       try {
         const { data, error } = await supabase.storage.from('avatars').download(`${userId}.avatar`)
         if (error) {
@@ -28,7 +28,7 @@ export function useFetchAvatar() {
       }
     }
 
-    downloadAvatar()
+    if (userId) downloadAvatar(userId)
   }, [userId])
 
   async function uploadAvatar() {
