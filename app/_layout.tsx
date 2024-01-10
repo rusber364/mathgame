@@ -26,5 +26,7 @@ export default function Layout() {
 }
 
 const styles = StyleSheet.create({
-  stack: {},
+  stack: {
+    justifyContent: 'center',
+  },
 })
