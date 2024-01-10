@@ -20,9 +20,9 @@ export default function Tournament() {
       </View>
 
       <View style={styles.container1}>
-        {rewards.map((reward) => (
-          <>
-            <View key={reward.digits} style={styles.container2}>
+        {rewards.map((reward, idx) => (
+          <View key={idx}>
+            <View style={styles.container2}>
               <View style={styles.firstColum}>
                 <Text style={styles.text2}>{reward.digits}</Text>
               </View>
@@ -36,7 +36,7 @@ export default function Tournament() {
                 </View>
               </TouchableOpacity>
             </View>
-          </>
+          </View>
         ))}
       </View>
     </View>

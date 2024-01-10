@@ -33,14 +33,15 @@ const bonuses = [
 
 export default function BonusScreen() {
   const [bonus] = useState(bonuses)
+
   return (
     <View style={styles.container1}>
       <View style={styles.bonus}>
         <Text style={styles.text0}>Bonuses</Text>
       </View>
       <View style={styles.container2}>
-        {bonus.map((bon) => (
-          <>
+        {bonus.map((bon, idx) => (
+          <View key={idx}>
             <TouchableOpacity>
               <View key={bon.id} style={{}}>
                 <Text style={styles.item}>
@@ -49,7 +50,7 @@ export default function BonusScreen() {
                 </Text>
               </View>
             </TouchableOpacity>
-          </>
+          </View>
         ))}
       </View>
     </View>
