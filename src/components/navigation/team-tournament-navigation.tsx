@@ -1,7 +1,7 @@
 import { Link } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from '~/components/common/button.comp'
+import { Button } from '~/components/common/button'
 import { NavigateContainer } from '~/components/common/navigate-container'
 
 export function TeamTournament() {

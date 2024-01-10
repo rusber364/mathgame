@@ -3,7 +3,7 @@ import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FlatList, StyleSheet } from 'react-native'
 
-import { Button } from '~/components/common/button.comp'
+import { Button } from '~/components/common/button'
 import { countriesNames } from '~/langs/countries'
 import { languageKeys } from '~/langs/translation'
 
