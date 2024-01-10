@@ -31,6 +31,6 @@ test('render languages screen', async () => {
   fireEvent.press(Button)
 
   expect(await screen.findByTestId('languages-screen-flat-list')).toHaveStyle({ padding: 15 })
-  expect(routerBack).toBeCalled()
+  expect(routerBack).toHaveBeenCalled()
   expect(i18n.language).toBe('ukr')
 })
