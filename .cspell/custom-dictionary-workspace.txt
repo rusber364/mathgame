@@ -6,3 +6,5 @@ supabase
 upsert
 pausecircleo
 playcircleo
+unimodules
+nent
