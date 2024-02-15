@@ -57,8 +57,8 @@
     "@types/react-native": "~0.73.0",
     "@types/react-test-renderer": "^18.0.7",
     "@types/url-parse": "^1.4.11",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
@@ -66,7 +66,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-native": "^4.1.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
     "happy-dom": "^13.3.1",
     "husky": "^9.0.6",
     "jest": "^29.7.0",
@@ -76,7 +76,7 @@
     "lint-staged": "^15.2.0",
     "npm-check-updates": "^16.14.13",
     "open": "^10.0.3",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "react-test-renderer": "^18.2.0",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
@@ -106,5 +106,6 @@
   "version": "0.3.0",
   "main": "expo-router/entry",
   "private": true,
-  "name": "mathgame"
+  "name": "mathgame",
+  "packageManager": "yarn@4.1.0"
 }
