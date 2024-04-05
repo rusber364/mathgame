@@ -89,6 +89,7 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "update:i": "ncu -i --format group",
+    "upgrade": "yarn upgrade-interactive",
     "format": "prettier --write ./src",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src app --color --fix",
     "types": "tsc --noEmit",
