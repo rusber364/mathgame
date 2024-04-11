@@ -1,4 +1,21 @@
 {
+  "scripts": {
+    "start": "expo start",
+    "build:android": "eas build --platform android",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "update:i": "ncu -i --format group",
+    "upgrade": "yarn upgrade-interactive",
+    "format": "prettier --write ./src",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src app --color --fix",
+    "types": "tsc --noEmit",
+    "check": "yarn lint & yarn types",
+    "test": "jest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "prepare": "husky"
+  },
   "dependencies": {
     "@babel/core": "^7.24.4",
     "@react-native-async-storage/async-storage": "1.21.0",
@@ -81,23 +98,6 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
-  },
-  "scripts": {
-    "start": "expo start",
-    "build:android": "eas build --platform android",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web",
-    "update:i": "ncu -i --format group",
-    "upgrade": "yarn upgrade-interactive",
-    "format": "prettier --write ./src",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src app --color --fix",
-    "types": "tsc --noEmit",
-    "check": "yarn lint & yarn types",
-    "test": "jest",
-    "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui",
-    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{tsx,ts}": [
